@@ -3,9 +3,9 @@ import image from "../../public/600x800.png"
 
 export default function Hero2() {
   return (
-    <div className="md:flex h-screen items-center">
-      <div className="md:w-1/2 bg-red-500 text-white p-5 h-full flex flex-col justify-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4">
+    <div className="h-screen flex flex-wrap items-center">
+      <div className="bg-red-500 text-white w-full md:w-1/2 p-5 h-full flex flex-col justify-center">
+        <h1 className="text-4xl font-bold text-center mb-4">
           About Us
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl text-center">
@@ -16,7 +16,7 @@ export default function Hero2() {
           Areas we specialise in are Body Composition, Rehabilitation and Athletic Performance.
         </p>
       </div>
-      <div className="md:w-1/2 h-full">
+      <div className="w-full md:w-1/2 h-full">
         <Image
           src={image}
           alt="Your Image Here"
@@ -24,5 +24,5 @@ export default function Hero2() {
         />
       </div>
     </div>
-  )
+  );
 }
