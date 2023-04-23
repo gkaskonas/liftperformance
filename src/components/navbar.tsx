@@ -1,53 +1,54 @@
-import { useState } from 'react';
-import { IoMenu } from 'react-icons/io5';
 import Link from 'next/link';
+import React, { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
-export default function NavBar() {
-    const [showMenu, setShowMenu] = useState(false);
+const NavBar = () => {
+    const [isOpen, setIsOpen] = useState(false);
 
-    function handleMenuToggle() {
-        setShowMenu(!showMenu);
-    }
+    const handleToggle = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
-        <div className="flex flex-col h-screen">
-            <nav className="bg-gray-800 px-4 py-3">
-                <div className="flex justify-between items-center">
-                    <Link href="/" className="text-white text-2xl font-bold">Logo
+        <nav className="flex items-center justify-between flex-wrap bg-gray-800 p-6 fixed w-full z-10 top-0">
+            <div className="flex items-center flex-shrink-0 text-white mr-6">
+                <span className="font-semibold text-xl tracking-tight">My Site</span>
+            </div>
+            <div className="block lg:hidden">
+                <button
+                    onClick={handleToggle}
+                    className="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
+                >
+                    {isOpen ? <FaTimes /> : <FaBars />}
+                </button>
+            </div>
+            <div
+                className={`${isOpen ? 'block' : 'hidden'
+                    } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
+            >
+                <div className="text-lg lg:flex-grow">
+                    <Link
+                        href=""
+                        className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
+                    >
+                        Docs
                     </Link>
-                    <button
-                        className="text-white block md:hidden"
-                        onClick={handleMenuToggle}
+                    <Link
+                        href="#responsive-header"
+                        className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
                     >
-                        <IoMenu size={28} />
-                    </button>
-                    <ul
-                        className={`${showMenu ? 'block' : 'hidden'
-                            } md:flex md:items-center md:space-x-20`}
+                        Examples
+                    </Link>
+                    <Link
+                        href="#responsive-header"
+                        className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white"
                     >
-                        <li>
-                            <Link href="/" className="text-white hover:text-gray-400">
-                                Home
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/team" className="text-white hover:text-gray-400">
-                                Team
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/about" className="text-white hover:text-gray-400">
-                                About
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/contact" className="text-white hover:text-gray-400">
-                                Contact
-                            </Link>
-                        </li>
-                    </ul>
+                        Blog
+                    </Link>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     );
-}
+};
+
+export default NavBar;
