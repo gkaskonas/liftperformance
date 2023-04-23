@@ -13,7 +13,7 @@ export default function TrainersList({ trainers }: { trainers: ITrainerProps[] }
     };
 
     return (
-        <div className="w-screen h-auto flex justify-center pb-16 pt-0">
+        <div className="flex justify-center">
             <div className="flex justify-center items-start ">
                 {trainers.map((trainer: ITrainerProps) => (
                     <div key={trainer.id} className="mx-16 large">

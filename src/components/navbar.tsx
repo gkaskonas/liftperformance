@@ -8,10 +8,12 @@ export default function NavBar() {
                     <ul className="flex items-center space-x-20">
                         <li>
                             <Link href="/" className="text-white  hover:text-gray-400">Home</Link>
-
                         </li>
                         <li>
-
+                            <Link href="/team" className="text-white hover:text-gray-400">Team
+                            </Link>
+                        </li>
+                        <li>
                             <Link href="/about" className="text-white hover:text-gray-400">About</Link>
                         </li>
                         <li>
