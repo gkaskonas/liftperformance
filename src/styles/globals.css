@@ -25,3 +25,8 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.large {
+  width: 450px;
+  height: 400px;
+}
