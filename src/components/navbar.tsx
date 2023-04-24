@@ -1,54 +1,81 @@
-import Link from 'next/link';
-import React, { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import Link from "next/link";
+import { useState } from "react";
 
-const NavBar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+export default function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
 
-    const handleToggle = () => {
-        setIsOpen(!isOpen);
-    };
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
 
-    return (
-        <nav className="flex items-center justify-between flex-wrap bg-gray-800 p-6 fixed w-full z-10 top-0">
-            <div className="flex items-center flex-shrink-0 text-white mr-6">
-                <span className="font-semibold text-xl tracking-tight">My Site</span>
-            </div>
-            <div className="block lg:hidden">
-                <button
-                    onClick={handleToggle}
-                    className="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
+  return (
+    <header aria-label="Site Header" className="bg-white">
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          <div className="md:flex md:items-center md:gap-12">
+            <a className="block text-teal-600" href="/">
+              <span className="sr-only">Home</span>
+            </a>
+          </div>
+
+          <div
+            className={`md:flex md:items-center md:gap-6 ${
+              isOpen ? "block" : "hidden"
+            }`}
+          >
+            <nav aria-label="Site Nav">
+              <ul className="flex items-center gap-6 text-sm">
+                <Link
+                  className="text-gray-500 transition hover:text-gray-500/75"
+                  href="/"
                 >
-                    {isOpen ? <FaTimes /> : <FaBars />}
-                </button>
-            </div>
-            <div
-                className={`${isOpen ? 'block' : 'hidden'
-                    } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
-            >
-                <div className="text-lg lg:flex-grow">
-                    <Link
-                        href=""
-                        className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
-                    >
-                        Docs
-                    </Link>
-                    <Link
-                        href="#responsive-header"
-                        className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
-                    >
-                        Examples
-                    </Link>
-                    <Link
-                        href="#responsive-header"
-                        className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white"
-                    >
-                        Blog
-                    </Link>
-                </div>
-            </div>
-        </nav>
-    );
-};
+                  Home
+                </Link>
+                <Link
+                  className="text-gray-500 transition hover:text-gray-500/75"
+                  href="/about"
+                >
+                  About
+                </Link>
+                <Link
+                  className="text-gray-500 transition hover:text-gray-500/75"
+                  href="/team"
+                >
+                  Team
+                </Link>
+              </ul>
+            </nav>
+          </div>
 
-export default NavBar;
+          <div className="flex items-center gap-4">
+            <div className="block md:hidden">
+              <button
+                className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+                onClick={handleToggle}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d={
+                      isOpen
+                        ? "M6 18L18 6M6 6l12 12"
+                        : "M4 6h16M4 12h16M4 18h16"
+                    }
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}

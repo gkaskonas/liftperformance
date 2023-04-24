@@ -1,49 +1,65 @@
 import Image, { StaticImageData } from "next/image";
 
-export interface ITrainerProps { id: number, imageUrl: StaticImageData; title: string; description: string; name: string }
+export interface ITrainerProps {
+  id: number;
+  imageUrl: StaticImageData;
+  title: string;
+  description: string;
+  name: string;
+}
 
-export default function Trainer({ trainer, onClick, onClose, selected }: { trainer: ITrainerProps | undefined, onClick?: () => void, onClose?: () => void, selected: boolean }) {
+export default function Trainer({
+  trainer,
+  onClick,
+  onClose,
+  selected,
+}: {
+  trainer: ITrainerProps | undefined;
+  onClick?: () => void;
+  onClose?: () => void;
+  selected: boolean;
+}) {
+  if (!trainer) throw new Error();
 
-    if (!trainer) throw new Error()
+  const { imageUrl, title, description, name } = trainer;
 
-    const { imageUrl, title, description, name } = trainer;
+  return selected ? (
+    <div className="bg-grey-600 flex w-1/2 justify-center px-10">
+      <Image
+        className="w-1/2  "
+        src={imageUrl}
+        alt={title}
+        width={500}
+        height={500}
+        onClick={onClick}
+      />
+      <div className="w-1/2 p-4">
+        <h1 className="text-white-700 mb-2 text-xl font-bold">{title}</h1>
+        <h2 className="text-lg font-bold text-white">{name}</h2>
+        <p className="break-normal py-5 text-left text-white">{description}</p>
+      </div>
+    </div>
+  ) : (
+    <a href="#" className="group relative block bg-black" onClick={onClick}>
+      <Image
+        alt={title}
+        src={imageUrl}
+        className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+      />
 
+      <div className="relative p-4 sm:p-6 lg:p-8">
+        <p className="text-sm font-medium uppercase tracking-widest text-pink-500">
+          {title}
+        </p>
 
-    return (
-        selected ?
-            <div className="bg-grey-600 w-1/2 px-10 justify-center flex">
-                <Image
-                    className="w-1/2  "
-                    src={imageUrl}
-                    alt={title}
-                    width={500}
-                    height={500}
-                    onClick={onClick} />
-                <div className="p-4 w-1/2">
-                    <h1 className="text-xl font-bold mb-2 text-white-700">{title}</h1>
-                    <h2 className="text-white font-bold text-lg">{name}</h2>
-                    <p className="text-white py-5 text-left break-normal">{description}</p>
-                </div>
-            </div>
-            :
-            <div className="bg-gray-700 shadow-lg  mx-5">
-                <div
-                    className="rounded-fu overflow-hidden cursor-pointer"
-                    onClick={onClick}
-                >
-                    <Image
-                        className="w-full h-full rounded-t-lg"
-                        src={imageUrl}
-                        alt={title}
-                        width={500}
-                        height={500}
+        <p className="text-xl font-bold text-white sm:text-2xl">{name}</p>
 
-                    />
-                </div>
-                <div className="p-4">
-                    <h2 className="text-lg font-bold mb-2 text-white-700">{title}</h2>
-                    <p className="text-white">{name}</p>
-                </div>
-            </div>
-    );
+        <div className="mt-32 sm:mt-48 lg:mt-64">
+          <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+            <p className="text-sm text-white">{description}</p>
+          </div>
+        </div>
+      </div>
+    </a>
+  );
 }

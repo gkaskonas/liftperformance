@@ -1,11 +1,20 @@
 export default function Hero() {
   return (
-    <div className="bg-local bg-cover bg-center bg-my_bg_image min-h-screen flex justify-center">
-      <div className="flex flex-col items-center justify-center relative z-10">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold text-center mb-8">Welcome to My Hero Component</h1>
-        <p className="text-xl md:text-2xl lg:text-3xl text-white font-medium text-center mb-12">Some catchy text about your hero message</p>
-        <a href="#" className="bg-blue-500 hover:bg-blue-600 text-white py-3 px-8 rounded-full text-lg md:text-xl lg:text-2xl font-bold shadow-lg transition duration-300 ease-in-out">Get Started</a>
+    <div className="flex min-h-screen justify-center bg-my_bg_image bg-cover bg-local bg-center ">
+      <div className="relative z-10 flex flex-col items-center justify-center">
+        <h1 className="mb-8 text-center text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+          Welcome to My Hero Component
+        </h1>
+        <p className="mb-12 text-center text-xl font-medium text-white md:text-2xl lg:text-3xl">
+          Some catchy text about your hero message
+        </p>
+        <a
+          href="#"
+          className="rounded-full bg-slate-700 px-8 py-3 text-lg font-bold text-white shadow-lg transition duration-300 ease-in-out hover:bg-gray-400 md:text-xl lg:text-2xl"
+        >
+          Get Started
+        </a>
       </div>
     </div>
-  )
+  );
 }
