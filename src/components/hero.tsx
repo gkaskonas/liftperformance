@@ -1,20 +1,17 @@
+import Image from "next/image";
+import trainers from "../../public/trainers.png"
+
 export default function Hero() {
   return (
-    <div className="flex min-h-screen justify-center bg-my_bg_image bg-cover bg-local bg-center ">
-      <div className="relative z-10 flex flex-col items-center justify-center">
-        <h1 className="mb-8 text-center text-4xl font-bold text-white md:text-5xl lg:text-6xl">
-          Welcome to My Hero Component
-        </h1>
-        <p className="mb-12 text-center text-xl font-medium text-white md:text-2xl lg:text-3xl">
-          Some catchy text about your hero message
-        </p>
-        <a
-          href="#"
-          className="rounded-full bg-slate-700 px-8 py-3 text-lg font-bold text-white shadow-lg transition duration-300 ease-in-out hover:bg-gray-400 md:text-xl lg:text-2xl"
-        >
-          Get Started
-        </a>
-      </div>
-    </div>
+    <div className="max-w-7xl mx-auto">
+      <section id="hero" className="flex flex-col-reverse justify-center sm:flex-row p-2 items-center gap-8 mb-12">
+        <article className="sm:w-1/2 ">
+          <h2 className="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-white mb-4">Unleash Your <span className="font-extrabold text-transparent bg-clip-text  bg-gradient-to-r from-red-600 to-yellow-500">Potential</span> at Our Sport Gym</h2>
+          <p className="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-400">Get Fit, Have Fun, and Reach Your Goals with Our Expert Trainers and State-of-the-Art Equipment.</p>
+          <p className="max-w-md text-2xl mt-4 text-center sm:text-left font-extrabold text-transparent bg-clip-text  bg-gradient-to-r from-red-600 to-yellow-500">Think Lift. Think Performance.</p>
+        </article>
+        <Image src={trainers} alt="trainers" className="w-1/2" />
+      </section>
+    </div >
   );
 }

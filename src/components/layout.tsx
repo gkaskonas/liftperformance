@@ -7,9 +7,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="flex h-screen flex-col">
       <NavBar />
       <main className="mt-0 flex-grow">{children}</main>
-      <Contact />
+      {/* <Contact /> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
