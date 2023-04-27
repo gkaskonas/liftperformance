@@ -56,13 +56,13 @@ export default function Team() {
             <Image src={trainer.image} alt={trainer.name} className="w-3/4 mb-6 hover:cursor-pointer" onClick={() => handleImageClick(index)} />
             <h3 className='text-2xl font-bold text-center text-white'>{trainer.name}</h3>
             <h3 className='text-xl font-bold text-center text-gray-500'>{trainer.title}</h3>
-            <h3 className='sm:hidden text-sm italic text-center text-white'>Click On Image to Learn More</h3>
+            <h3 className='lg:hidden text-sm italic text-center text-white'>Click On to Learn More</h3>
           </li>
         ))}
       </ul>
       {showModal && (
         <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-75 flex items-center justify-center z-50" onClick={() => setShowModal(false)}>
-          <div className="max-w-xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+          <div className="max-w-sm sm:max-w-lg max-h-sm sm:max-h-screen scroll-m-3 sticky mx-auto bg-gray-800 p-6 rounded-lg shadow-lg text-center">
             <Image src={selectedTrainer!.image} alt={selectedTrainer!.name} className="w-2/3 mb-6 mx-auto" />
             <h3 className="text-2xl font-bold mb-2">{selectedTrainer!.name}</h3>
             <p className="text-slate-300 text-xl font-bold py-5">{selectedTrainer!.title}</p>
@@ -70,6 +70,7 @@ export default function Team() {
           </div>
         </div>
       )}
+
     </section>
   );
 }
