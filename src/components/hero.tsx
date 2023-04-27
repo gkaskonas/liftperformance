@@ -3,7 +3,7 @@ import trainers from "../../public/trainers.png"
 
 export default function Hero() {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto bg-black">
       <section id="hero" className="flex flex-col-reverse justify-center sm:flex-row p-2 items-center gap-8 mb-12">
         <article className="sm:w-1/2 ">
           <h2 className="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-white mb-4">Unleash Your <span className="font-extrabold text-transparent bg-clip-text  bg-gradient-to-r from-red-600 to-yellow-500">Potential</span> at Our Sport Gym</h2>
