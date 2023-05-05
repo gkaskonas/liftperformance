@@ -64,7 +64,7 @@ export default function Team() {
         <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-75 flex items-center justify-center z-50" onClick={() => setShowModal(false)}>
           <div className="max-w-sm sm:max-w-lg max-h-sm sm:max-h-screen scroll-m-3 sticky mx-auto bg-gray-800 p-6 rounded-lg shadow-lg text-center">
             <Image src={selectedTrainer!.image} alt={selectedTrainer!.name} className="w-2/3 mb-6 mx-auto" />
-            <h3 className="text-2xl font-bold mb-2">{selectedTrainer!.name}</h3>
+            <h3 className="text-2xl font-bold mb-2 text-slate-300">{selectedTrainer!.name}</h3>
             <p className="text-slate-300 text-xl font-bold py-5">{selectedTrainer!.title}</p>
             <p className="mt-4 text-slate-300 text-lg">{selectedTrainer?.description}</p>
           </div>
