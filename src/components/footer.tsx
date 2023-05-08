@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 export default function Footer({ year }: { year: number }) {
-  console.log(year);
   return (
     <section aria-label="Site Footer" className="my-12 p-6">
       <h2 className="mb-6 text-center text-4xl font-bold text-white sm:text-5xl">

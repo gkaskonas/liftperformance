@@ -24,7 +24,6 @@ export default function Home({ year }: { year: number }) {
 }
 
 export async function getStaticProps() {
-  console.log("getStaticProps");
   return {
     props: {
       year: new Date().getFullYear(),
