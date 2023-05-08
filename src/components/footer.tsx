@@ -39,6 +39,7 @@ export default function Footer({ year }: { year: number }) {
         <iframe
           className="my-6 aspect-auto h-full w-full sm:w-1/2"
           src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1/F,%20Abdoolaly%20House,%2020%20Stanley%20Street,%20Central,%20Hong%20Kong+(Lift%20Performance)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          title="Google Map"
         ></iframe>
       </div>
       <h3 className="my-12 flex  place-items-center justify-center">
