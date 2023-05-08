@@ -1,5 +1,4 @@
 import { Head, Html, Main, NextScript } from "next/document";
-import Link from "next/link";
 
 export default function Document() {
   return (
@@ -13,9 +12,7 @@ export default function Document() {
           name="description"
           content="At Lift Performance, our elite coaches have one goal in mind - to elevate every aspect of your health and fitness. From the training sessions, to follow ups during your daily life, we are committed to keep you on track of your goals."
         />
-        <Link rel="canonical" href="https://liftperformance.vercel.app/" />
-        <Link rel="icon" href="/favicon.ico" />
-      </Head>{" "}
+      </Head>
       <body>
         <Main />
         <NextScript />

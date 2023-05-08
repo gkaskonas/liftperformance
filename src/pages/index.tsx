@@ -13,6 +13,12 @@ export default function Home({ year }: { year: number }) {
     <div className="bg-black">
       <Head>
         <title>Lift Performance</title>
+        <link
+          rel="canonical"
+          href="https://liftperformance.vercel.app/"
+          key="canonical"
+          title="canonical link"
+        />
       </Head>
       <NavBar />
       <Hero />
