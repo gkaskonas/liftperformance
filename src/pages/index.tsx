@@ -4,12 +4,27 @@ import Hero from "@/components/hero";
 import NavBar from "@/components/navbar";
 import Team from "@/components/team";
 import { Inter } from "next/font/google";
+import Head from "next/head";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ year }: { year: number }) {
   return (
     <div className="bg-black">
+      <Head>
+        <title>Lift Performance</title>
+        <meta
+          property="og:title"
+          content="Lift Performance | Personal Training | Hong Kong Island"
+        />
+        <meta
+          name="description"
+          content="At Lift Performance, our elite coaches have one goal in mind - to elevate every aspect of your health and fitness. From the training sessions, to follow ups during your daily life, we are committed to keep you on track of your goals."
+        />
+        <Link rel="canonical" href="https://liftperformance.vercel.app/" />
+        <Link rel="icon" href="/favicon.ico" />
+      </Head>
       <NavBar />
       <Hero />
       <hr className="mx-auto w-1/2 bg-white sm:w-1/3"></hr>
@@ -17,7 +32,6 @@ export default function Home({ year }: { year: number }) {
       <hr className="mx-auto w-1/2 bg-white sm:w-1/3"></hr>
       <Booking />
       <hr className="mx-auto w-1/2 bg-white sm:w-1/3"></hr>
-
       <Footer year={year} />
     </div>
   );

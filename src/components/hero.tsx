@@ -31,7 +31,13 @@ export default function Hero() {
             Book Now!
           </Link>
         </article>
-        <Image src={trainers} alt="trainers" className="w-2/3 sm:w-1/2" />
+        <Image
+          src={trainers}
+          alt="trainers"
+          className="w-2/3 sm:w-1/2"
+          placeholder="blur"
+          priority
+        />
       </section>
     </div>
   );
