@@ -9,24 +9,37 @@ export default function NavBar() {
   };
 
   return (
-    <header aria-label="Site Header" className="bg-gray-700 text-white sticky top-0 z-10">
-      <section className="max-w-4xl mx-auto p-4 flex items-center justify-between">
+    <header
+      aria-label="Site Header"
+      className="sticky top-0 z-10 bg-gray-700 text-white"
+    >
+      <section className="mx-auto flex max-w-4xl items-center justify-between p-4">
         <h1 className="text-3xl font-medium">
-          <Link href="/">
-            🏋️ LiftPerformance</Link>
+          <Link href="/">🏋️ LiftPerformance</Link>
         </h1>
         <div>
-          <button id="mobile-open-button" className="text-3xl sm:hidden focus:outline-none">&#9776;</button>
-          <nav className="hidden sm:block space-x-8 text-xl" aria-label="main">
-            <Link href="/" className="hover:opacity-80">Home</Link>
-            <Link href="#team" className="hover:opacity-80">Meet the Team</Link>
-            <Link href="#contact" className="hover:opacity-80">Contact</Link>
+          <button
+            id="mobile-open-button"
+            className="text-3xl focus:outline-none sm:hidden"
+          >
+            &#9776;
+          </button>
+          <nav className="hidden space-x-8 text-xl sm:block" aria-label="main">
+            <Link href="/" className="hover:opacity-80">
+              Home
+            </Link>
+            <Link href="#team" className="hover:opacity-80">
+              Meet the Team
+            </Link>
+            <Link href="#booking" className="hover:opacity-80">
+              Booking
+            </Link>
           </nav>
         </div>
         {/* <div className="flex items-center justify-between max-w-4xl mx-auto p-4 text-xl">
           <Link href="/">Home</Link>
         </div> */}
       </section>
-    </header >
+    </header>
   );
 }

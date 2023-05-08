@@ -1,4 +1,4 @@
-import Contact from "@/components/contact";
+import Booking from "@/components/booking";
 import Hero from "@/components/hero";
 import NavBar from "@/components/navbar";
 import Team from "@/components/team";
@@ -11,11 +11,11 @@ export default function Home() {
     <div className="bg-black">
       <NavBar />
       <Hero />
-      <hr className="mx-auto bg-white w-1/2"></hr>
+      <hr className="mx-auto w-1/2 bg-white sm:w-1/3"></hr>
       <Team />
-      <hr className="mx-auto bg-white w-1/2"></hr>
+      <hr className="mx-auto w-1/2 bg-white sm:w-1/3"></hr>
+      <Booking />
       {/* <Contact /> */}
-
     </div>
   );
 }

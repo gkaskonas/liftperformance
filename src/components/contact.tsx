@@ -1,11 +1,13 @@
-import Image from "next/image"
-import cover from "../../public/dumbell.webp"
+import Image from "next/image";
+import cover from "../../public/dumbell.webp";
 export default function Contact() {
   return (
-    <section id="contact" className="p-6 my-12">
-      <h2 className="text-4xl font-bold text-center sm:text-5xl mb-6 text-white">Contact Us</h2>
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col-reverse justify-center sm:flex-row p-2 items-center gap-8 mb-12">
+    <section id="contact" className="my-12 p-6">
+      <h2 className="mb-6 text-center text-4xl font-bold text-white sm:text-5xl">
+        Contact Us
+      </h2>
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-12 flex flex-col-reverse items-center justify-center gap-8 p-2 sm:flex-row">
           <form action="" className="space-y-4 text-gray-500">
             <div>
               <label className="sr-only text-gray-900">Name</label>
