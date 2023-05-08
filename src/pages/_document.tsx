@@ -10,7 +10,7 @@ export default function Document() {
         />
         <meta
           name="description"
-          content="At Lift Performance, our elite coaches have one goal in mind - to elevate every aspect of your health and fitness. From the training sessions, to follow ups during your daily life, we are committed to keep you on track of your goals."
+          content="At Lift Performance, our elite coaches have one goal in mind - to elevate every aspect of your health and fitness"
         />
       </Head>
       <body>
