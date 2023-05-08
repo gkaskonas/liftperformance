@@ -26,7 +26,7 @@ export default function Hero() {
           </p>
           <Link
             href="#booking"
-            className="mx-auto my-10 flex w-2/3 items-center justify-center rounded border border-slate-700 bg-slate-100 p-2 font-bold text-black hover:bg-gray-700 sm:ml-0 sm:w-1/2 sm:p-6"
+            className="text-large mx-auto my-10 flex w-2/3 items-center justify-center rounded border border-slate-700 bg-slate-100 p-2 font-bold text-black hover:bg-gray-700 sm:ml-0 sm:w-1/2 sm:p-6 sm:text-xl"
           >
             Book Now!
           </Link>

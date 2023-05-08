@@ -34,6 +34,9 @@ export default function NavBar() {
             <Link href="#booking" className="hover:opacity-80">
               Booking
             </Link>
+            <Link href="#contact" className="hover:opacity-80">
+              Contact
+            </Link>
           </nav>
         </div>
         {/* <div className="flex items-center justify-between max-w-4xl mx-auto p-4 text-xl">
