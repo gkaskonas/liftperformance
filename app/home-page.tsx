@@ -1,17 +1,20 @@
-import Booking from "@/components/booking";
-import Footer from "@/components/footer";
-import Hero from "@/components/hero";
-import NavBar from "@/components/navbar";
-import Services from "@/components/services";
-import Team from "@/components/team";
+"use client";
+
 import dynamic from "next/dynamic";
+import Booking from "./components/booking";
+import Footer from "./components/footer";
+import Hero from "./components/hero";
+import NavBar from "./components/navbar";
+import Services from "./components/services";
+import Team from "./components/team";
 
 import { Inter } from "next/font/google";
 import Head from "next/head";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ year }: { year: number }) {
-  const Testimonials = dynamic(() => import("../components/testimonials"), {
+  const Testimonials = dynamic(() => import("./components/testimonials"), {
     ssr: false,
   });
 
@@ -40,12 +43,4 @@ export default function Home({ year }: { year: number }) {
       <Footer year={year} />
     </div>
   );
-}
-
-export async function getStaticProps() {
-  return {
-    props: {
-      year: new Date().getFullYear(),
-    },
-  };
 }

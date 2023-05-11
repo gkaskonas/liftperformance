@@ -55,7 +55,7 @@ export default function Team() {
       <h2 className="mb-6 text-center text-4xl font-bold text-white sm:text-5xl">
         Meet the Team
       </h2>
-      <ul className="my-12 flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-8 py-12 sm:my-0 sm:flex-row">
+      <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-8 py-12 sm:my-0 sm:flex-row">
         {trainers.map((trainer: Trainer, index: number) => (
           <li
             key={index}

@@ -30,7 +30,7 @@ export default function NavBar() {
             className="text-md hidden space-x-4 md:text-xl lg:block"
             aria-label="main"
           >
-            <Link href="/" className="hover:opacity-80">
+            <Link href="#hero" className="hover:opacity-80">
               Home
             </Link>
             <Link href="#team" className="hover:opacity-80">
@@ -61,7 +61,10 @@ export default function NavBar() {
           className="flex min-h-screen flex-col items-center py-8"
           aria-label="mobile"
         >
-          <Link href="/" className="w-full py-6 text-center hover:opacity-90">
+          <Link
+            href="#hero"
+            className="w-full py-6 text-center hover:opacity-90"
+          >
             Home
           </Link>
           <Link
