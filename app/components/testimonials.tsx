@@ -35,20 +35,14 @@ export default function Testimonials() {
             style={{ backfaceVisibility: "hidden" }}
           >
             <p className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-              error amet numquam iure provident voluptate esse quasi, voluptas
-              nostrum quisquam!"
+              "I've been a member of Lift for over a year now, and it's been the
+              best decision I've ever made for my health and fitness. The
+              trainers are incredibly knowledgeable and supportive, and the
+              facility is always clean and well-maintained. I've seen amazing
+              results in my strength and endurance, and I can't imagine going
+              anywhere else. Thanks, Lift!"
             </p>
-            <div className="mb-6 mt-12 flex justify-center">
-              <img
-                src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
-                className="h-24 w-24 rounded-full shadow-lg dark:shadow-black/30"
-                alt="smaple image"
-              />
-            </div>
-            <p className="text-neutral-500 dark:text-neutral-300">
-              - Anna Morian
-            </p>
+            <p className="text-neutral-500 dark:text-neutral-300">- Emily K.</p>
           </div>
 
           <div
@@ -59,20 +53,14 @@ export default function Testimonials() {
             style={{ backfaceVisibility: "hidden" }}
           >
             <p className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
-              "Neque cupiditate assumenda in maiores repudiandae mollitia
-              adipisci maiores repudiandae mollitia consectetur adipisicing
-              architecto elit sed adipiscing elit."
+              "As a new mom, I was nervous about getting back into exercise, but
+              Lift's Pre and Postnatal Training program was exactly what I
+              needed. The trainers are so understanding and supportive, and the
+              workouts are challenging but not overwhelming. I feel stronger and
+              more confident than ever before, and I'm grateful to Lift for
+              helping me through this journey!"
             </p>
-            <div className="mb-6 mt-12 flex justify-center">
-              <img
-                src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(31).webp"
-                className="h-24 w-24 rounded-full shadow-lg dark:shadow-black/30"
-                alt="smaple image"
-              />
-            </div>
-            <p className="text-neutral-500 dark:text-neutral-300">
-              - Teresa May
-            </p>
+            <p className="text-neutral-500 dark:text-neutral-300">- Sarah L.</p>
           </div>
 
           <div
@@ -83,19 +71,15 @@ export default function Testimonials() {
             style={{ backfaceVisibility: "hidden" }}
           >
             <p className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
-              "Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur est laborum neque
-              cupiditate assumenda in maiores."
+              "I've tried a lot of gyms over the years, but Lift is by far the
+              best. The trainers truly care about your success and are always
+              pushing you to be your best self. The variety of classes and
+              equipment is amazing, and the community of members is so friendly
+              and welcoming. I always leave Lift feeling energized and
+              accomplished. Highly recommend!"
             </p>
-            <div className="mb-6 mt-12 flex justify-center">
-              <img
-                src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp"
-                className="h-24 w-24 rounded-full shadow-lg dark:shadow-black/30"
-                alt="smaple image"
-              />
-            </div>
             <p className="text-neutral-500 dark:text-neutral-300">
-              - Kate Allise
+              - Michael B.
             </p>
           </div>
         </div>
