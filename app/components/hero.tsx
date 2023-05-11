@@ -14,10 +14,10 @@ export default function Hero() {
             Unleash Your{" "}
             <span className="bg-gradient-to-r from-red-600 to-yellow-500  bg-clip-text font-extrabold text-transparent">
               Potential
-            </span>{" "}
+            </span>
             at Our Sport Gym
           </h2>
-          <p className="mt-4 max-w-md text-center text-2xl text-slate-400 sm:text-left">
+          <p className="mt-4 max-w-md text-center text-2xl text-slate-200 sm:text-left">
             Get Fit, Have Fun, and Reach Your Goals with Our Expert Trainers and
             State-of-the-Art Equipment.
           </p>

@@ -34,7 +34,7 @@ export default function Testimonials() {
             data-te-interval="4000"
             style={{ backfaceVisibility: "hidden" }}
           >
-            <p className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
+            <p className="mx-auto max-w-4xl text-xl italic text-slate-200">
               "I've been a member of Lift for over a year now, and it's been the
               best decision I've ever made for my health and fitness. The
               trainers are incredibly knowledgeable and supportive, and the
@@ -42,7 +42,7 @@ export default function Testimonials() {
               results in my strength and endurance, and I can't imagine going
               anywhere else. Thanks, Lift!"
             </p>
-            <p className="text-neutral-500 dark:text-neutral-300">- Emily K.</p>
+            <p className="text-slate-200">- Emily K.</p>
           </div>
 
           <div
@@ -52,7 +52,7 @@ export default function Testimonials() {
             data-te-interval="4000"
             style={{ backfaceVisibility: "hidden" }}
           >
-            <p className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
+            <p className="mx-auto max-w-4xl text-xl italic text-slate-200">
               "As a new mom, I was nervous about getting back into exercise, but
               Lift's Pre and Postnatal Training program was exactly what I
               needed. The trainers are so understanding and supportive, and the
@@ -60,7 +60,7 @@ export default function Testimonials() {
               more confident than ever before, and I'm grateful to Lift for
               helping me through this journey!"
             </p>
-            <p className="text-neutral-500 dark:text-neutral-300">- Sarah L.</p>
+            <p className="text-slate-200">- Sarah L.</p>
           </div>
 
           <div
@@ -70,7 +70,7 @@ export default function Testimonials() {
             data-te-interval="4000"
             style={{ backfaceVisibility: "hidden" }}
           >
-            <p className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
+            <p className="mx-auto max-w-4xl text-xl italic text-slate-200">
               "I've tried a lot of gyms over the years, but Lift is by far the
               best. The trainers truly care about your success and are always
               pushing you to be your best self. The variety of classes and
@@ -78,9 +78,7 @@ export default function Testimonials() {
               and welcoming. I always leave Lift feeling energized and
               accomplished. Highly recommend!"
             </p>
-            <p className="text-neutral-500 dark:text-neutral-300">
-              - Michael B.
-            </p>
+            <p className="text-slate-200">- Michael B.</p>
           </div>
         </div>
 
