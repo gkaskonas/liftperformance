@@ -4,6 +4,8 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
     './src/app/**/*.{js,ts,jsx,tsx}',
+    "./node_modules/tw-elements/dist/js/**/*.js"
+
   ],
   theme: {
     extend: {
@@ -12,9 +14,8 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'my_bg_image': "url('../../public/image.jpeg')",
-
       },
     },
   },
-  plugins: ["@tailwindcss/forms"],
+  plugins: ["@tailwindcss/forms", require("tw-elements/dist/plugin.cjs")],
 }
