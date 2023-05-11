@@ -10,10 +10,10 @@ export default function NavBar() {
   return (
     <header
       aria-label="Site Header"
-      className="sticky top-0 z-10 bg-gray-700 text-white"
+      className="sticky top-0 z-10 bg-gradient-to-r from-gray-800 to-red-800 text-white"
     >
       <section className="mx-auto flex max-w-4xl items-center justify-between p-4">
-        <h1 className="text-3xl font-medium">
+        <h1 className="text-2xl font-medium sm:text-3xl">
           <Link href="/" className="tracking-wide">
             🏋️ LiftPerformance
           </Link>
@@ -21,20 +21,29 @@ export default function NavBar() {
         <div>
           <button
             id="hamburger-button"
-            className="text-3xl focus:outline-none sm:hidden"
+            className="text-3xl focus:outline-none lg:hidden"
             onClick={toggle}
           >
             &#9776;
           </button>
-          <nav className="hidden space-x-8 text-xl sm:block" aria-label="main">
+          <nav
+            className="text-md hidden space-x-4 md:text-xl lg:block"
+            aria-label="main"
+          >
             <Link href="/" className="hover:opacity-80">
               Home
             </Link>
             <Link href="#team" className="hover:opacity-80">
-              Meet the Team
+              Team
             </Link>
             <Link href="#booking" className="hover:opacity-80">
               Booking
+            </Link>
+            <Link href="#services" className="hover:opacity-80">
+              Services
+            </Link>
+            <Link href="#testimonials" className="hover:opacity-80">
+              Testimonials
             </Link>
             <Link href="#contact" className="hover:opacity-80">
               Contact
@@ -66,6 +75,18 @@ export default function NavBar() {
             className="w-full py-6 text-center hover:opacity-90"
           >
             Booking
+          </Link>
+          <Link
+            href="#services"
+            className="w-full py-6 text-center hover:opacity-90"
+          >
+            Services
+          </Link>
+          <Link
+            href="#testimonials"
+            className="w-full py-6 text-center hover:opacity-90"
+          >
+            Testimonials
           </Link>
           <Link
             href="#contact"

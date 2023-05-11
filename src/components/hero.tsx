@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import trainers from "../../public/trainers.png";
+import trainers from "../../public/clipped_trainers.jpg";
 
 export default function Hero() {
   return (
-    <div className="mx-auto max-w-7xl sm:max-w-7xl ">
+    <div className="mx-auto max-w-7xl sm:max-w-7xl">
       <section
         id="hero"
         className="mb-12 flex flex-col-reverse items-center justify-center gap-8 p-2 sm:flex-row"
@@ -34,7 +34,7 @@ export default function Hero() {
         <Image
           src={trainers}
           alt="trainers"
-          className="w-2/3 sm:w-1/2"
+          className="mx-auto w-2/3 place-items-center justify-center py-0 sm:w-1/2"
           placeholder="blur"
           priority
         />

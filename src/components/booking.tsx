@@ -1,6 +1,6 @@
 export default function Booking() {
   return (
-    <section id="booking" className="my-12 p-6">
+    <section id="booking" className="my-12 mb-0 p-6">
       <h2 className="mb-0 text-center text-4xl font-bold text-white sm:text-5xl">
         Book Now!
       </h2>
