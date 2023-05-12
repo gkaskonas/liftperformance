@@ -8,13 +8,13 @@ export default function Footer({ year }: { year: number }) {
       </h2>
       <ul
         id="contact"
-        className="mx-auto my-12 flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-6 sm:grid sm:w-1/2 sm:grid-cols-3 sm:grid-rows-1"
+        className="xl:1/2 mx-auto my-12 flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-6 sm:grid sm:grid-cols-3 sm:grid-rows-1 sm:gap-0 lg:w-3/4"
       >
         <li className="flex flex-col items-center">
           <h3 className="mb-5 font-bold text-white underline underline-offset-4 sm:text-2xl">
             Address
           </h3>
-          <h2 className="w-1/2 text-left text-white sm:w-auto">
+          <h2 className="w-1/2 text-center text-white sm:w-auto">
             1/F, Abdoolaly House, 20 Stanley Street, Central, Hong Kong
           </h2>
         </li>
@@ -29,11 +29,13 @@ export default function Footer({ year }: { year: number }) {
             Email: liftphk@gmail.com
           </Link>
         </li>
-        <li className="flex flex-col items-center ">
+        <li className="flex flex-col items-center text-justify">
           <h3 className="mb-5 font-bold text-white underline underline-offset-4 sm:text-2xl">
-            Opening Hours
+            Hours
           </h3>
-          <h2 className="mb-2 text-white">Mon - Fri 7:00am - 8:00 pm</h2>
+          <h2 className="mb-2 text-center  text-white">
+            Mon - Fri 7:00am - 8:00 pm
+          </h2>
           <h2 className="text-white">Sat - Sun 7:00am - 4:00 pm</h2>
         </li>
       </ul>
