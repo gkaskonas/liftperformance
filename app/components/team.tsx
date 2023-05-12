@@ -93,8 +93,7 @@ export default function Team() {
               src={selectedTrainer!.image}
               alt={selectedTrainer!.name}
               className="mx-auto mb-6 w-2/3"
-              height={1024}
-              width={1024}
+              placeholder="blur"
             />
             <h3 className="mb-2 text-2xl font-bold text-slate-300">
               {selectedTrainer!.name}
