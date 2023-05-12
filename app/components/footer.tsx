@@ -46,7 +46,7 @@ export default function Footer({ year }: { year: number }) {
         ></iframe>
       </div>
       <h3 className="my-12 flex  place-items-center justify-center text-white">
-        Copyright @ {year} Lift Performance Limited All right reserved
+        Copyright @ {year} Lift Performance Limited
       </h3>
     </section>
   );
