@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "At Lift Performance, our elite coaches have one goal in mind - to elevate every aspect of your health and fitness",
   alternates: {
-    canonical: "https://liftperformance.vercel.app/",
+    canonical: "https://lift.peterkaskonas.com",
   },
 };
 
