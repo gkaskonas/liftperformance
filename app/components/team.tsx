@@ -68,7 +68,10 @@ export default function Team() {
               alt={trainer.name}
               className="mb-6 w-3/4 hover:cursor-pointer"
               onClick={() => handleImageClick(index)}
-              loading="lazy"
+              placeholder="blur"
+              sizes="(min-width: 60em) 24vw,
+              (min-width: 28em) 45vw,
+              100vw"
             />
             <h3 className="text-center text-2xl font-bold text-white">
               {trainer.name}
@@ -92,8 +95,9 @@ export default function Team() {
               src={selectedTrainer!.image}
               alt={selectedTrainer!.name}
               className="mx-auto mb-6 w-2/3"
-              placeholder="blur"
-              loading="lazy"
+              sizes="(min-width: 60em) 24vw,
+              (min-width: 28em) 45vw,
+              100vw"
             />
             <h3 className="mb-2 text-2xl font-bold text-slate-300">
               {selectedTrainer!.name}

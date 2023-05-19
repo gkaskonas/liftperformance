@@ -36,6 +36,9 @@ export default function Hero() {
           alt="trainers"
           className="mx-auto w-2/3 place-items-center justify-center py-0 sm:w-1/2"
           placeholder="blur"
+          sizes="(min-width: 60em) 24vw,
+                    (min-width: 28em) 45vw,
+                    100vw"
           priority
         />
       </section>
