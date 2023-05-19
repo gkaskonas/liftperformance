@@ -21,7 +21,7 @@ export default function Testimonials() {
       </div>
       <div
         id="carouselExampleCaptions"
-        className="relative mx-auto w-2/3"
+        className="relative mx-auto w-4/5 sm:w-2/3"
         data-te-carousel-init
         data-te-carousel-slide
       >
@@ -34,7 +34,7 @@ export default function Testimonials() {
             data-te-interval="4000"
             style={{ backfaceVisibility: "hidden" }}
           >
-            <p className="mx-auto max-w-4xl text-xl italic text-slate-200">
+            <p className="mx-auto max-w-4xl text-sm italic text-slate-200 sm:text-xl">
               "I've been a member of Lift for over a year now, and it's been the
               best decision I've ever made for my health and fitness. The
               trainers are incredibly knowledgeable and supportive, and the

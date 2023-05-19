@@ -21,28 +21,28 @@ export default function Team() {
       title: "Lead Coach / Co-Founder",
       image: jane,
       description:
-        "Jane’s continuous pursuit of coaching excellence, led to her scientific approach and laser focus on form and movement analysis - perfect for those seeking injury rehabilitation or mobility improvement. She is also experienced in both pre & post natal programs and is a qualified pilates reformer instructor. An ambitious, results driven person, Jane is passionate about helping clients make positive lifestyle changes, meet body shape goals and get strong from the inside out.",
+        "Experience transformative fitness with Jane, an expert in injury rehab, mobility improvement, and prenatal/postnatal programs. With a scientific approach, she helps clients make lifestyle changes, achieve body shape goals, and unleash inner strength. Get results with Jane's precision and passion.",
     },
     {
       name: "Eunice Lai",
       title: "Lead Coach / Co-Founder",
       image: eunice,
       description:
-        "Having overcome her own injuries from playing national level rugby, Eunice specialises in addressing the root cause of aches and pains our clients experience, and helps them to achieve painless living. She understands that with the physical stresses of today’s intense work culture and prolonged hours of sitting, it’s important to have a regular training regime. Eunice’s bespoke programs involve restoring strength, flexibility and endurance through the use of different mobility drills and an emphasis on client education of the importance and role these exercises play.",
+        "Eunice, a former national rugby player, specializes in identifying and addressing the root cause of clients' aches and pains. Her bespoke programs restore strength, flexibility, and endurance through tailored mobility drills and client education. Experience pain-free living and a revitalized body with Eunice's expert guidance.",
     },
     {
       name: "Dennis Cheng",
       title: "Lead Coach / Co-Founder",
       image: dennis,
       description:
-        "A highly qualified and experienced trainer, Dennis is also a natural physique competitor, placing 2nd in Hong Kong in 2021. Specialising in body transformation, he knows expertly how to balance fitness with diet and nutrition. As someone who is always striving to improve his own knowledge and training skills, he loves helping others do the same. His aim as a coach is to train clients at all levels of their fitness journey, guiding them to be healthier and stronger.",
+        "Meet Dennis, a highly qualified trainer and accomplished physique competitor. With expertise in body transformation and nutrition, he helps clients achieve their fitness goals. Whether you're a beginner or advanced, Dennis is dedicated to guiding you towards optimal health and strength. Elevate your fitness journey with his knowledge and support.",
     },
     {
       name: "Brian Lee",
       title: "Lead Coach / Co-Founder",
       image: brian,
       description:
-        "As an elite athlete and former national level sportsman Brian helps busy professionals develop their best physical shape. He deeply believes the effects of being strong and healthy are incomparable - boosting confidence, performance at work, and most importantly, longevity. His meticulous focus from training sessions to lifestyle choices are all geared towards clients achieving optimal performance. Whatever your goals are, Brian is with you 100%.",
+        "Brian, an elite athlete and former national sportsman, empowers busy professionals to achieve their peak physical shape. He understands the unparalleled benefits of strength and health, boosting confidence, performance, and longevity. From personalized training sessions to lifestyle choices, Brian's meticulous approach ensures optimal performance. Join Brian and unlock your full potential.",
     },
     // add more trainers here
   ];
@@ -68,8 +68,7 @@ export default function Team() {
               alt={trainer.name}
               className="mb-6 w-3/4 hover:cursor-pointer"
               onClick={() => handleImageClick(index)}
-              height={1024}
-              width={1024}
+              loading="lazy"
             />
             <h3 className="text-center text-2xl font-bold text-white">
               {trainer.name}
@@ -94,6 +93,7 @@ export default function Team() {
               alt={selectedTrainer!.name}
               className="mx-auto mb-6 w-2/3"
               placeholder="blur"
+              loading="lazy"
             />
             <h3 className="mb-2 text-2xl font-bold text-slate-300">
               {selectedTrainer!.name}
@@ -101,7 +101,7 @@ export default function Team() {
             <p className="py-5 text-xl font-bold text-slate-300">
               {selectedTrainer!.title}
             </p>
-            <p className="mt-4 text-lg text-slate-300">
+            <p className="mt-2 text-sm text-slate-300 sm:text-lg">
               {selectedTrainer?.description}
             </p>
           </div>
