@@ -52,7 +52,7 @@ export default function Testimonials() {
             data-te-interval="4000"
             style={{ backfaceVisibility: "hidden" }}
           >
-            <p className="mx-auto max-w-4xl text-xl italic text-slate-200">
+            <p className="mx-auto max-w-4xl text-sm italic text-slate-200 sm:text-xl">
               "As a new mom, I was nervous about getting back into exercise, but
               Lift's Pre and Postnatal Training program was exactly what I
               needed. The trainers are so understanding and supportive, and the
@@ -70,7 +70,7 @@ export default function Testimonials() {
             data-te-interval="4000"
             style={{ backfaceVisibility: "hidden" }}
           >
-            <p className="mx-auto max-w-4xl text-xl italic text-slate-200">
+            <p className="mx-auto max-w-4xl text-sm italic text-slate-200 sm:text-xl">
               "I've tried a lot of gyms over the years, but Lift is by far the
               best. The trainers truly care about your success and are always
               pushing you to be your best self. The variety of classes and
