@@ -61,10 +61,10 @@ export default function Services() {
               />
             </div>
             <div className="mx-auto w-3/4 text-center antialiased sm:w-auto">
-              <h5 className="my-4 mb-2 text-center text-xl font-bold leading-tight text-neutral-800 dark:text-neutral-50">
+              <h5 className="my-4 mb-2 text-center text-xl font-bold leading-tight text-neutral-50 dark:text-neutral-50 sm:text-2xl">
                 {service.name}
               </h5>
-              <p className="sm:text-md mx-auto text-sm text-neutral-200 antialiased lg:w-2/3">
+              <p className="sm:text-md mx-auto text-sm text-neutral-200 antialiased sm:text-lg lg:w-2/3">
                 {service.description}
               </p>
             </div>

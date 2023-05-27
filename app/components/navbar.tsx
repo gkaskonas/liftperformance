@@ -13,9 +13,9 @@ export default function NavBar() {
       className="sticky top-0 z-10 bg-gradient-to-r from-gray-800 to-red-800 text-white"
     >
       <section className="mx-auto flex max-w-4xl items-center justify-between p-4">
-        <h1 className="text-2xl font-medium sm:text-3xl">
-          <Link href="/" className="tracking-wide">
-            🏋️ LiftPerformance
+        <h1 className="text-2xl font-medium sm:text-2xl">
+          <Link href="#hero" className="tracking-wide">
+            🏋️ Lift Performance
           </Link>
         </h1>
         <div>
@@ -27,7 +27,7 @@ export default function NavBar() {
             &#9776;
           </button>
           <nav
-            className="text-md hidden space-x-4 md:text-xl lg:block"
+            className="text-md hidden space-x-3 md:text-xl lg:block"
             aria-label="main"
           >
             <Link href="#hero" className="hover:opacity-80">
@@ -45,6 +45,9 @@ export default function NavBar() {
             <Link href="#testimonials" className="hover:opacity-80">
               Testimonials
             </Link>
+            <Link href="#subscribe" className="hover:opacity-80">
+              Subscribe
+            </Link>
             <Link href="#contact" className="hover:opacity-80">
               Contact
             </Link>
@@ -55,7 +58,7 @@ export default function NavBar() {
         id="mobile-menu"
         onClick={toggle}
         style={{ display: showMe ? "block" : "none" }}
-        className="top-68 justify-content-center animate-open-menu absolute hidden w-full origin-top flex-col bg-black text-5xl"
+        className="top-68 justify-content-center animate-open-menu absolute hidden w-full origin-top flex-col bg-black text-3xl lg:text-5xl"
       >
         <nav
           className="flex min-h-screen flex-col items-center py-8"
@@ -63,37 +66,43 @@ export default function NavBar() {
         >
           <Link
             href="#hero"
-            className="w-full py-6 text-center hover:opacity-90"
+            className="w-full py-3 text-center hover:opacity-90"
           >
             Home
           </Link>
           <Link
             href="#team"
-            className="w-full py-6 text-center hover:opacity-90"
+            className="w-full py-3 text-center hover:opacity-90"
           >
             Meet the Team
           </Link>
           <Link
             href="#booking"
-            className="w-full py-6 text-center hover:opacity-90"
+            className="w-full py-3 text-center hover:opacity-90"
           >
             Booking
           </Link>
           <Link
             href="#services"
-            className="w-full py-6 text-center hover:opacity-90"
+            className="w-full py-3 text-center hover:opacity-90"
           >
             Services
           </Link>
           <Link
             href="#testimonials"
-            className="w-full py-6 text-center hover:opacity-90"
+            className="w-full py-3 text-center hover:opacity-90"
           >
             Testimonials
           </Link>
           <Link
+            href="#subscribe"
+            className="w-full py-3 text-center hover:opacity-90"
+          >
+            Subscribe
+          </Link>
+          <Link
             href="#contact"
-            className="w-full py-6 text-center hover:opacity-90"
+            className="w-full py-3 text-center hover:opacity-90"
           >
             Contact
           </Link>
