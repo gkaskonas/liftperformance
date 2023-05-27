@@ -17,11 +17,12 @@ export async function makeMailchimpRequest(email: string): Promise<string> {
   if (!AUDIENCE_ID) throw new Error("No audience id");
 
   try {
-    await client.lists.addListMember(AUDIENCE_ID, {
+    const response = await client.lists.addListMember(AUDIENCE_ID, {
       email_address: email,
-      status: "pending",
+      status: "subscribed",
     });
 
+    console.log(response);
     return "success";
   } catch (e: any) {
     throw new Error(e.message);
