@@ -22,7 +22,7 @@ export async function makeMailchimpRequest(email: string): Promise<string> {
       status: "subscribed",
     });
 
-    console.log(response);
+    console.log(response.status);
     return "success";
   } catch (e: any) {
     throw new Error(e.message);
