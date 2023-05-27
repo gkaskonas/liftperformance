@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Subscribe from "./mailchimp";
 
 export default function Footer({ year }: { year: number }) {
   return (
@@ -6,6 +7,8 @@ export default function Footer({ year }: { year: number }) {
       <h2 className="mb-6 text-center text-4xl font-bold text-white sm:text-5xl">
         Contact Us
       </h2>
+      <Subscribe />
+
       <ul
         id="contact"
         className="xl:1/2 mx-auto my-12 flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-6 sm:grid sm:grid-cols-3 sm:grid-rows-1 sm:gap-0 lg:w-3/4"

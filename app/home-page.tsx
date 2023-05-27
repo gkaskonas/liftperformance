@@ -10,7 +10,6 @@ import Team from "./components/team";
 
 import { Inter } from "next/font/google";
 import Head from "next/head";
-import Subscribe from "./components/mailchimp";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,8 +39,6 @@ export default function Home({ year }: { year: number }) {
       <Services />
       <hr className="mx-auto w-1/2 bg-white sm:w-1/3"></hr>
       <Testimonials />
-      <hr className="mx-auto w-1/2 bg-white sm:w-1/3"></hr>
-      <Subscribe />
       <hr className="mx-auto w-1/2 bg-white sm:w-1/3"></hr>
       <Footer year={year} />
     </div>

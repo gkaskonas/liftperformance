@@ -45,9 +45,6 @@ export default function NavBar() {
             <Link href="#testimonials" className="hover:opacity-80">
               Testimonials
             </Link>
-            <Link href="#subscribe" className="hover:opacity-80">
-              Subscribe
-            </Link>
             <Link href="#contact" className="hover:opacity-80">
               Contact
             </Link>
@@ -93,12 +90,6 @@ export default function NavBar() {
             className="w-full py-3 text-center hover:opacity-90"
           >
             Testimonials
-          </Link>
-          <Link
-            href="#subscribe"
-            className="w-full py-3 text-center hover:opacity-90"
-          >
-            Subscribe
           </Link>
           <Link
             href="#contact"

@@ -33,9 +33,6 @@ export default function Subscribe() {
 
   return (
     <section id="subscribe" className="my-12 mb-0 p-6">
-      <h2 className="mb-12 text-center text-4xl font-bold text-white sm:text-5xl">
-        Subscribe
-      </h2>
       <div className="flex flex-wrap items-center justify-center">
         <div className="w-full shrink-0 grow-0 basis-auto px-3 lg:w-10/12">
           <div className="grid items-center gap-x-6 lg:grid-cols-2">
@@ -70,19 +67,23 @@ export default function Subscribe() {
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                   onClick={subscribe}
-                  disabled={state === "Loading"}
+                  disabled={state === "Loading" || state === "Success"}
                 >
                   Subscribe
                 </button>
               </div>
+              {state === "Error" && (
+                <div className="text-white">{errorMsg}</div>
+              )}
+              {state === "Success" && (
+                <div className="text-white">
+                  Awesome, you've been subscribed!
+                </div>
+              )}
             </div>
           </div>
         </div>
       </div>
-      {state === "Error" && <div className="text-white">{errorMsg}</div>}
-      {state === "Success" && (
-        <div className="text-white">Awesome, you've been subscribed!</div>
-      )}
     </section>
   );
 }
