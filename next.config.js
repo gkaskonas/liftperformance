@@ -4,9 +4,9 @@ const nextConfig = {
   swcMinify: true,
   output: "export",
   env: {
-    MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY,
-    MAILCHIMP_AUDIENCE_ID: process.env.MAILCHIMP_AUDIENCE_ID,
-    MAILCHIMP_API_SERVER: process.env.MAILCHIMP_API_SERVER,
+    NEXT_PUBLIC_MAILCHIMP_API_KEY: process.env.NEXT_PUBLIC_MAILCHIMP_API_KEY,
+    NEXT_PUBLIC_MAILCHIMP_AUDIENCE_ID: process.env.NEXT_PUBLIC_MAILCHIMP_AUDIENCE_ID,
+    NEXT_PUBLIC_MAILCHIMP_API_SERVER: process.env.NEXT_PUBLIC_MAILCHIMP_API_SERVER,
   },
   images: {
     unoptimized: true,
