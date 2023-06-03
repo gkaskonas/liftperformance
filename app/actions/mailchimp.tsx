@@ -1,3 +1,5 @@
+"use server";
+
 import client from "@mailchimp/mailchimp_marketing";
 
 export async function makeMailchimpRequest(email: string): Promise<string> {
@@ -6,11 +8,11 @@ export async function makeMailchimpRequest(email: string): Promise<string> {
   }
 
   client.setConfig({
-    apiKey: process.env.NEXT_PUBLIC_MAILCHIMP_API_KEY,
-    server: process.env.NEXT_PUBLIC_MAILCHIMP_API_SERVER,
+    apiKey: process.env.MAILCHIMP_API_KEY,
+    server: process.env.MAILCHIMP_API_SERVER,
   });
 
-  const AUDIENCE_ID = process.env.NEXT_PUBLIC_MAILCHIMP_AUDIENCE_ID;
+  const AUDIENCE_ID = process.env.MAILCHIMP_AUDIENCE_ID;
 
   if (!AUDIENCE_ID) throw new Error("No audience id");
 
