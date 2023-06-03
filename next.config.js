@@ -13,6 +13,15 @@ const nextConfig = {
   async headers() {
     return [
       {
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "s-maxage=86400, public, max-age=86400"
+          }
+        ],
+      },
+      {
         source: '/(.*)',
         headers: [
           {
@@ -26,10 +35,14 @@ const nextConfig = {
           {
             key: 'Strict-Transport-Security',
             value: 'max-age=3571000; includeSubDomains; preload',
-          },
+          }],
+      },
+      {
+        source: '/:path*/(.html)',
+        headers: [
           {
             key: "Cache-Control",
-            value: "s-maxage=3600"
+            value: "public, max-age=0, s-maxage=0, must-revalidate"
           }
         ],
       },
