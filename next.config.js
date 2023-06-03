@@ -2,9 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    serverActions: true,
-  },
   output: "export",
   env: {
     MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY,

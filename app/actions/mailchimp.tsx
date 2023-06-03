@@ -1,5 +1,3 @@
-"use server";
-
 import client from "@mailchimp/mailchimp_marketing";
 
 export async function makeMailchimpRequest(email: string): Promise<string> {
