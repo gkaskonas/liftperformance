@@ -61,13 +61,13 @@ export default function Team() {
         {trainers.map((trainer: Trainer, index: number) => (
           <li
             key={index}
-            className="flex flex-col items-center rounded-3xl border border-solid border-gray-500 bg-black px-10 py-6 shadow-xl sm:max-w-md"
+            onClick={() => handleImageClick(index)}
+            className="flex flex-col items-center rounded-3xl border border-solid border-gray-500 bg-black px-10 py-6 shadow-xl hover:cursor-pointer sm:max-w-md"
           >
             <Image
               src={trainer.image}
               alt={trainer.name}
-              className="mb-6 w-3/4 hover:cursor-pointer"
-              onClick={() => handleImageClick(index)}
+              className="mb-6 w-3/4 "
               placeholder="blur"
               sizes="(min-width: 60em) 24vw,
               (min-width: 28em) 45vw,
