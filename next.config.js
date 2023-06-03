@@ -8,6 +8,9 @@ const nextConfig = {
     MAILCHIMP_AUDIENCE_ID: process.env.MAILCHIMP_AUDIENCE_ID,
     MAILCHIMP_API_SERVER: process.env.MAILCHIMP_API_SERVER,
   },
+  images: {
+    unoptimized: true,
+  }
   // async headers() {
   //   return [
   //     {
