@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import Booking from "./components/booking";
 import Footer from "./components/footer";
-import Hero from "./components/hero";
+import Hero2 from "./components/hero2";
 import NavBar from "./components/navbar";
 import Services from "./components/services";
 import Team from "./components/team";
@@ -30,8 +30,8 @@ export default function Home({ year }: { year: number }) {
         />
       </Head>
       <NavBar />
-      <Hero />
-      <hr className="mx-auto w-1/2 bg-white sm:w-1/3"></hr>
+      <Hero2 />
+      <hr className="mx-auto w-1/2 bg-white sm:w-1/3 mt-12 md:mt-2"></hr>
       <Team />
       <hr className="mx-auto w-1/2 bg-white sm:w-1/3"></hr>
       <Booking />
