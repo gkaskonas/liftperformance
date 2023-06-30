@@ -9,7 +9,7 @@ export default function Hero2() {
     <section>
       <div className="bg-black py-2 text-white">
         <div className="container mx-auto my-2 flex flex-col items-center md:my-6 md:flex-row">
-          <div className="flex w-full flex-col items-center justify-center p-8 lg:w-1/3 md:w-2/5">
+          <div className="flex w-full flex-col items-center justify-center p-8 md:w-3/4">
             <h2 className="mb-5 text-center font-sans text-2xl font-bold tracking-tight text-white sm:text-left sm:text-3xl xl:text-4xl sm:leading-none ">
               Unleash Your{" "}
               <span className="bg-gradient-to-r from-red-600 to-yellow-500  bg-clip-text font-extrabold text-transparent">
@@ -29,29 +29,29 @@ export default function Hero2() {
             </p>
             <Link
               href="#booking"
-              className="text-large mx-auto my-10 flex w-2/3 items-center justify-center rounded border border-slate-700 bg-slate-100 p-2 font-bold text-black hover:bg-gray-700 sm:ml-0 sm:w-1/2 sm:p-4 md:px-1 md:py-2 sm:text-xl"
+              className="text-large mx-auto my-10 flex  items-center justify-center rounded border border-slate-700 bg-slate-100 p-2 font-bold text-black hover:bg-gray-700 sm:ml-0 sm:w-2/3  md:py-2 sm:text-lg"
             >
               Book Now!
             </Link>
           </div>
-          <div className="flex flex-wrap justify-center ">
-            <div className="m-4 md:m-0">
+          <div className="flex flex-row justify-center ">
+            <div className="w-1/2">
               <Image
-                className="mt-14 hidden md:inline-block xl:mt-24 xl:ml-12 w-3/4"
+                className="mt-14 hidden md:inline-block xl:mt-24 xl:ml-12"
                 src={photo2}
                 alt=""
               />
             </div>
-            <div className="m-0 lg:m-4">
+            <div className="w-3/5">
               <Image
-                className="mb-4 hidden md:inline-block p-8 md:mt-0 md:p-0 xl:mt-2 w-4/5"
+                className="mb-4 hidden md:inline-block p-8 md:mt-0 md:p-0 xl:mt-2"
                 src={photo1}
                 alt=""
               />
             </div>
-            <div className="m-4 md:m-0">
+            <div className="w-1/2">
               <Image
-                className="mt-14 hidden lg:inline-block xl:mt-24 lg:w-3/4"
+                className="mt-14 hidden md:inline-block xl:mt-24"
                 src={photo3}
                 alt=""
               />
