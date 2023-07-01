@@ -8,7 +8,7 @@ export default function Booking() {
       </h2>
       <InlineWidget
         styles={{ height: "900px" }}
-        url="https://calendly.com/sherry_islamist088/consultation"
+        url="https://calendly.com/liftperformancehk/consultation"
       />
     </section>
   );
