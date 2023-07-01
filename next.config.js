@@ -27,6 +27,15 @@ const nextConfig = {
         ],
       },
       {
+        source: '/_next/image(.*)',
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "s-maxage=86400, public, max-age=86400"
+          }
+        ],
+      },
+      {
         source: '/(.*)',
         headers: [
           {
