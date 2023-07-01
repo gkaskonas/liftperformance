@@ -21,10 +21,10 @@ export default function Hero2() {
               Get Fit, Have Fun, and Reach Your Goals with Our Expert Trainers
               and State-of-the-Art Equipment.
             </p>
-            <p className="bg-gradient-to-r from-red-600 to-yellow-500 bg-clip-text  text-large  font-extrabold text-transparent text-left xl:text-4xl">
+            <p className="bg-gradient-to-r from-red-600 to-yellow-500 bg-clip-text  text-large  lg:text-2xl font-extrabold text-transparent text-left xl:text-4xl">
               Think Lift.
             </p>
-            <p className="bg-gradient-to-r from-red-600 to-yellow-500 bg-clip-text  text-large  font-extrabold text-transparent text-left xl:text-4xl">
+            <p className="bg-gradient-to-r from-red-600 to-yellow-500 bg-clip-text  text-large  font-extrabold text-transparent text-left xl:text-4xl lg:text-2xl lg:mt-2">
               Think Performance.
             </p>
             <Link
