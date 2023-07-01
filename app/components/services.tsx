@@ -45,32 +45,30 @@ export default function Services() {
         </h3>
       </div>
 
-      <div className="mx-auto list-none flex-col place-items-center items-center justify-center gap-2 text-center sm:w-2/3 lg:grid lg:grid-cols-2">
+      <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-8 sm:gap-2 py-12 sm:my-0 sm:flex-row">
         {services.map((service: Service, index: number) => (
           <li
-            className="items-center rounded-3xl  px-12 py-3 shadow-xl"
-            key={index}
+          className="flex flex-col items-cente bg-black px-10 py-6 shadow-xl md:max-w-xs lg:max-w-md"
+          key={index}
           >
             <div>
               <Image
-                className="mx-auto h-40 w-40 rounded-md sm:h-60 sm:w-60"
+                className="mx-auto"
                 src={service.image}
                 alt="service image"
-                width={512}
-                height={512}
               />
             </div>
-            <div className="mx-auto w-3/4 text-center antialiased sm:w-auto prose">
-              <h5 className="my-4 mb-2 text-center text-xl font-bold leading-tight text-neutral-50 dark:text-neutral-50 sm:text-xl">
+            <div className="mx-auto w-3/4 text-center antialiased sm:w-auto">
+              <h5 className="my-4 mb-2 text-center text-lg sm:text-xl font-bold leading-tight text-neutral-50 dark:text-neutral-50 ">
                 {service.name}
               </h5>
-              <p className="sm:text-md mx-auto text-sm md:w-2/3 text-neutral-200 antialiased md:text-lg lg:w-4/5">
+              <p className="sm:text-md mx-auto text-sm md:w-full text-neutral-200 antialiased md:text-lg lg:w-4/5 leading-tight text-center">
                 {service.description}
               </p>
             </div>
           </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }
