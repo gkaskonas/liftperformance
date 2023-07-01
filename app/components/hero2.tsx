@@ -39,21 +39,27 @@ export default function Hero2() {
               <Image
                 className="sm:mt-14 md:inline-block xl:mt-24 xl:ml-12"
                 src={photo2}
-                alt=""
+                alt="hero photo 2"
+                priority={true}
+                placeholder="blur"
               />
             </div>
             <div className="w-3/5">
               <Image
                 className="mb-4 hidden md:inline-block md:mt-0 xl:mt-2"
                 src={photo1}
-                alt=""
+                alt="hero photo 1"
+                priority={true}
+                placeholder="blur"
               />
             </div>
             <div className="sm:w-1/2 ml-0">
               <Image
                 className="mt-12 hidden md:inline-block xl:mt-24"
                 src={photo3}
-                alt=""
+                alt="hero photo 2"
+                priority={true}
+                placeholder="blur"
               />
             </div>
           </div>
