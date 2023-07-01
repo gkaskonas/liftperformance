@@ -57,26 +57,23 @@ export default function Team() {
       <h2 className="mb-6 text-center text-4xl font-bold text-white sm:text-5xl">
         Meet the Team
       </h2>
-      <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-8 py-12 sm:my-0 sm:flex-row">
+      <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-8 py-12 sm:my-0 md:flex-row">
         {trainers.map((trainer: Trainer, index: number) => (
           <li
             key={index}
             onClick={() => handleImageClick(index)}
-            className="flex flex-col items-center rounded-3xl border border-solid border-gray-500 bg-black px-10 py-6 shadow-xl hover:cursor-pointer sm:max-w-md"
+            className="flex flex-col items-center rounded-3xl border border-solid border-gray-500 bg-black px-10 py-6 shadow-xl hover:cursor-pointer sm:max-w-sm xl:max-w-md"
           >
             <Image
               src={trainer.image}
               alt={trainer.name}
-              className="mb-6 w-3/4 "
+              className="mb-6 w-3/4"
               placeholder="blur"
-              sizes="(min-width: 60em) 24vw,
-              (min-width: 28em) 45vw,
-              100vw"
             />
-            <h3 className="text-center text-2xl font-bold text-white">
+            <h3 className="text-center lg:text-2xl text-lg font-bold text-white">
               {trainer.name}
             </h3>
-            <h3 className="text-center text-lg font-bold text-slate-400">
+            <h3 className="text-center text-sm font-bold text-slate-400">
               {trainer.title}
             </h3>
             <h3 className="text-center text-sm italic text-white">
