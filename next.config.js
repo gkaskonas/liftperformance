@@ -8,7 +8,8 @@ const nextConfig = {
   images: {
     domains: [
       "images.unsplash.com"
-    ]
+    ],
+    minimumCacheTTL: 3600,
   },
   env: {
     MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY,
@@ -19,15 +20,6 @@ const nextConfig = {
     return [
       {
         source: '/_next/static/(.*)',
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "s-maxage=86400, public, max-age=86400"
-          }
-        ],
-      },
-      {
-        source: '/_next/image(.*)',
         headers: [
           {
             key: "Cache-Control",
