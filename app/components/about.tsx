@@ -76,7 +76,7 @@ export default function About() {
                   </p>
                 </div>
 
-                <p className="mb-0 text-neutral-500 dark:text-neutral-300 tracking-tight lg:text-xl text-white">
+                <p className="mb-0  dark:text-neutral-300 tracking-tight lg:text-xl text-white">
                   We believe the best way to do so is through a holistic
                   approach. From fitness, to nutrition, to mindset - we strive
                   to provide you the best information along with accountability
@@ -92,6 +92,7 @@ export default function About() {
                 src={about}
                 className="w-1/2 mx-auto rounded-lg shadow-lg dark:shadow-black/20 md:w-full"
                 alt="about us image"
+                loading="lazy"
               />
             </div>
           </div>

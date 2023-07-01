@@ -16,7 +16,7 @@ export default function NavBar() {
     >
       <section className="mx-auto flex max-w-4xl items-center justify-between py-1 xl:py-2">
           <Link href="#hero" className="tracking-wide">
-            <Image src={logo} alt="logo" className="w-1/3 md:w-1/5 lg:w-1/3 xl:w-2/5 h-full px-5 lg:mr-48 mr-12 md:mr-48"/>
+            <Image loading="lazy" src={logo} alt="logo" className="w-1/3 md:w-1/5 lg:w-1/3 xl:w-2/5 h-full px-5 lg:mr-48 mr-12 md:mr-48"/>
           </Link>
         <div>
           <button

@@ -6,7 +6,7 @@ export default function Booking() {
       <h2 className="mb-10 text-center text-4xl font-bold text-white sm:text-5xl">
         Book Now!
       </h2>
-      <InlineWidget
+      <InlineWidget 
         styles={{ height: "900px" }}
         url="https://calendly.com/liftperformancehk/consultation"
       />
