@@ -9,5 +9,5 @@ export default async function Page() {
   // Fetch data directly in a Server Component
   const year = await getYear();
   // Forward fetched data to your Client Component
-  return <HomePage year={year} />;
+  return <HomePage year={year}/>;
 }

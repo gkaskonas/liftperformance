@@ -3,7 +3,7 @@ import Subscribe from "./mailchimp";
 
 export default function Footer({ year }: { year: number }) {
   return (
-    <section aria-label="Site Footer" className="my-12">
+    <section aria-label="Site Footer" className="my-12 ">
       <h2 className="mb-6 text-center text-4xl font-bold text-white sm:text-5xl">
         Contact Us
       </h2>
