@@ -4,13 +4,13 @@ import about from "../../public/about.png";
 
 export default function About() {
   return (
-    <div className="container mx-auto my-24 md:px-6 bg-black">
-      <section className="mb-32">
+    <div className="container mx-auto my-0 md:px-6 bg-black">
+      <section className="mb-12">
         <div className="container mx-auto text-center lg:text-left xl:px-32">
           <div className="flex grid items-center md:grid-cols-2">
             <div className="mb-12 lg:mb-0">
               <div className="relative z-[1] block rounded-lg px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[30px] bg-[hsla(0,0%,5%,0.55)] shadow-black/20 md:px-12 lg:-mr-14">
-                <h2 className="mb-8 text-3xl font-bold text-white">Why               <span className="bg-gradient-to-r from-red-600 to-yellow-500  bg-clip-text font-extrabold text-transparent">
+                <h2 className="mb-8 text-3xl font-bold text-white text-center">Why               <span className="bg-gradient-to-r from-red-600 to-yellow-500  bg-clip-text font-extrabold text-transparent">
                 LIFT
               </span>{""}?</h2>
                 <p className="mb-8 pb-2 dark:text-neutral-300 lg:pb-0 tracking-tighter lg:text-xl text-white">
@@ -21,7 +21,7 @@ export default function About() {
                 </p>
 
                 <div className="mx-auto mb-8 flex flex-col md:flex-row md:justify-around lg:justify-between text-white"  >
-                  <p className="mx-auto mb-4 flex items-center md:mx-0 md:mb-2 lg:mb-0">
+                  <p className="mx-auto mb-4 flex items-center md:mx-0 md:mb-2 lg:mb-0 lg:text-lg">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -39,7 +39,7 @@ export default function About() {
                     Best team
                   </p>
 
-                  <p className="mx-auto mb-4 flex items-center md:mx-0 md:mb-2 lg:mb-0">
+                  <p className="mx-auto mb-4 flex items-center md:mx-0 md:mb-2 lg:mb-0 lg:text-lg">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -57,7 +57,7 @@ export default function About() {
                     Best quality
                   </p>
 
-                  <p className="mx-auto mb-2 flex items-center md:mx-0 lg:mb-0 text-white">
+                  <p className="mx-auto mb-2 flex items-center md:mx-0 lg:mb-0 text-white lg:text-lg">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

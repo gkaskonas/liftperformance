@@ -21,7 +21,7 @@ export default function NavBar() {
         <div>
           <button
             id="hamburger-button"
-            className="text-3xl focus:outline-none lg:hidden"
+            className="text-3xl focus:outline-none lg:hidden mr-5"
             onClick={toggle}
           >
             &#9776;
