@@ -62,7 +62,7 @@ export default function Team() {
           <li
             key={index}
             onClick={() => handleImageClick(index)}
-            className="flex flex-col items-center rounded-3xl border border-solid border-gray-500 bg-black px-10 py-6 shadow-xl hover:cursor-pointer sm:max-w-sm xl:max-w-md"
+            className="flex flex-col items-center rounded-3xl border border-solid border-gray-500 bg-black px-10 py-6 shadow-xl hover:cursor-pointer sm:max-w-sm"
           >
             <Image
               src={trainer.image}
