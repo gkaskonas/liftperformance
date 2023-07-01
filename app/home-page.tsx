@@ -25,7 +25,7 @@ export default function Home({ year }: { year: number }) {
         <title>Lift Performance</title>
         <link
           rel="canonical"
-          href="https://liftperformance.vercel.app/"
+          href="https://main.d1ism7h1btc0wa.amplifyapp.com/"
           key="canonical"
           title="canonical link"
         />
