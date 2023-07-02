@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import trainers from "../../public/clipped_trainers.jpg";
+import trainers from "../../public/trainers.png";
 
 export default function Hero() {
   return (
     <div className="mx-auto max-w-7xl sm:max-w-7xl">
       <section
         id="hero"
-        className="mb-12 flex flex-col-reverse items-center justify-center gap-8 p-2 sm:flex-row"
+        className="mb-12 flex flex-col-reverse items-center justify-center gap-8 p-2 md:flex-row"
       >
         <article className="items-center justify-center sm:w-1/2">
           <h2 className="mb-4 max-w-md text-center text-4xl font-bold text-white sm:text-left sm:text-5xl">
@@ -15,7 +15,7 @@ export default function Hero() {
             <span className="bg-gradient-to-r from-red-600 to-yellow-500  bg-clip-text font-extrabold text-transparent">
               Potential
             </span>{" "}
-            At Our Sport Gym
+            With Our Expert Trainers
           </h2>
           <p className="mt-4 max-w-md text-center text-2xl text-slate-200 sm:text-left">
             Get Fit, Have Fun, and Reach Your Goals with Our Expert Trainers and
@@ -36,9 +36,6 @@ export default function Hero() {
           alt="trainers"
           className="mx-auto w-2/3 place-items-center justify-center py-0 sm:w-1/2"
           placeholder="blur"
-          sizes="(min-width: 60em) 24vw,
-                    (min-width: 28em) 45vw,
-                    100vw"
           priority
         />
       </section>

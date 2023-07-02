@@ -1,8 +1,8 @@
 import Image, { StaticImageData } from "next/image";
-import group from "../../public/group_training.webp";
-import natal from "../../public/natal.webp";
-import pilates from "../../public/pilates.webp";
-import service1 from "../../public/service1.webp";
+import group from "../../public/group.jpg";
+import natal from "../../public/natal.jpg";
+import service1 from "../../public/personal.jpg";
+import pilates from "../../public/pilates.jpg";
 
 type Service = {
   name: string;
@@ -15,13 +15,13 @@ export default function Services() {
     {
       name: "1-to-1 training",
       description:
-        "Get personalized results with One-to-One Training! Our coaches will design a program tailored to your body and goals, starting with a 1-hour consultation. From the training floor to check-ins, we're committed to helping you achieve your health and fitness goals.",
+        "Get personalized results with One-to-One Training! Our coaches will design a program tailored to your body, starting with a 1-hour consultation. From the training floor to check-ins, we're committed to helping you achieve your goals.",
       image: service1,
     },
     {
       name: "Small Group Training ",
       description:
-        "Join Lift's Small Group Trainings for big results! Build muscle, improve cardio fitness, and lose weight in a supportive and motivating environment. Our coaches and your group will keep you working hard towards your goals.",
+        "Join Lift's Small Group Trainings for big results! Build muscle, improve cardio fitness, and lose weight in a supportive and motivating environment. Our coaches and your group will keep you working hard towards your helth and fitness goals.",
       image: group,
     },
     {
@@ -56,12 +56,12 @@ export default function Services() {
                 className="mx-auto h-40 w-40 rounded-md sm:h-60 sm:w-60"
                 src={service.image}
                 alt="service image"
-                width={1024}
-                height={1024}
+                width={512}
+                height={512}
               />
             </div>
             <div className="mx-auto w-3/4 text-center antialiased sm:w-auto">
-              <h5 className="my-4 mb-2 text-center text-xl font-bold leading-tight text-neutral-50 dark:text-neutral-50 sm:text-2xl">
+              <h5 className="my-4 mb-2 text-center text-xl font-bold leading-tight text-neutral-50 dark:text-neutral-50 sm:text-xl">
                 {service.name}
               </h5>
               <p className="sm:text-md mx-auto text-sm text-neutral-200 antialiased sm:text-lg lg:w-2/3">
