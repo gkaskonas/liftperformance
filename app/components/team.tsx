@@ -1,9 +1,9 @@
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
-import brian from "../../public/clipped_brian.png";
-import dennis from "../../public/clipped_dennis.png";
-import eunice from "../../public/clipped_eunice.png";
-import jane from "../../public/clipped_jane.png";
+import brian from "../../public/clipped_brian.jpg";
+import dennis from "../../public/clipped_dennis.jpg";
+import eunice from "../../public/clipped_eunice.jpg";
+import jane from "../../public/clipped_jane.jpg";
 
 type Trainer = {
   name: string;
@@ -69,6 +69,10 @@ export default function Team() {
               alt={trainer.name}
               className="mb-6 w-3/4"
               placeholder="blur"
+              loading="lazy"
+              sizes="(min-width: 60em) 24vw,
+              (min-width: 28em) 45vw,
+              100vw"
             />
             <h3 className="text-center lg:text-2xl text-lg font-bold text-white">
               {trainer.name}
@@ -91,6 +95,8 @@ export default function Team() {
             <Image
               src={selectedTrainer!.image}
               alt={selectedTrainer!.name}
+              loading="lazy"
+              placeholder="blur"
               className="mx-auto mb-6 w-2/3"
               sizes="(min-width: 60em) 24vw,
               (min-width: 28em) 45vw,

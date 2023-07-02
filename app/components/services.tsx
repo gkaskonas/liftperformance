@@ -1,8 +1,8 @@
 import Image, { StaticImageData } from "next/image";
-import group from "../../public/group.jpg";
-import natal from "../../public/natal.jpg";
-import service1 from "../../public/personal.jpg";
-import pilates from "../../public/pilates.jpg";
+import group from "../../public/group.jpeg";
+import natal from "../../public/natal.jpeg";
+import service1 from "../../public/personal.jpeg";
+import pilates from "../../public/pilates.jpeg";
 
 type Service = {
   name: string;
@@ -33,7 +33,7 @@ export default function Services() {
     {
       name: "Pre & Post-Natal Training",
       description:
-        "Prepare for motherhood and recover with our Pre and Postnatal Training! Our program addresses common pregnancy-related injuries, stabilizes your pelvis postpartum, and repairs and strengthens your muscles. Trust us to support you on this exciting journey!",
+        "Prepare for motherhood and recover with our Pre and Postnatal Training! Our program addresses common pregnancy-related injuries, stabilizes your pelvis postpartum, and repairs and strengthens your muscles. Trust us to support you on this journey!",
       image: natal,
     },
   ];
@@ -56,6 +56,8 @@ export default function Services() {
                 className="mx-auto"
                 src={service.image}
                 alt="service image"
+                loading="lazy"
+                placeholder="blur"
               />
             </div>
             <div className="mx-auto w-3/4 text-center antialiased sm:w-auto">

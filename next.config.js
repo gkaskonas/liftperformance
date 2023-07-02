@@ -6,9 +6,7 @@ const nextConfig = {
     serverActions: true,
   },
   images: {
-    domains: [
-      "images.unsplash.com"
-    ],
+    formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 3600,
   },
   env: {
