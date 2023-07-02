@@ -7,7 +7,7 @@ export default function Booking() {
       <h2 className="mb-10 text-center text-4xl font-bold text-white sm:text-5xl">
         Book Now!
       </h2>
-      <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload"/>
+      <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" async/>
       <InlineWidget url="https://calendly.com/liftperformancehk/consultation" iframeTitle="Calendly Appointment" styles={{height: "850px", width: "80%", marginLeft: "auto", marginRight: "auto"}}/>
     </section>
   );
