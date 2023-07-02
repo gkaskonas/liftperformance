@@ -5,6 +5,10 @@ const nextConfig = {
   experimental: {
     serverActions: true,
   },
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 3600,
+  },
   env: {
     MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY,
     MAILCHIMP_AUDIENCE_ID: process.env.MAILCHIMP_AUDIENCE_ID,

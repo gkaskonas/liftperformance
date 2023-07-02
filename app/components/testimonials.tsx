@@ -35,14 +35,13 @@ export default function Testimonials() {
             style={{ backfaceVisibility: "hidden" }}
           >
             <p className="mx-auto max-w-4xl text-sm italic text-slate-200 sm:text-xl">
-              "I've been a member of Lift for over a year now, and it's been the
-              best decision I've ever made for my health and fitness. The
-              trainers are incredibly knowledgeable and supportive, and the
-              facility is always clean and well-maintained. I've seen amazing
-              results in my strength and endurance, and I can't imagine going
-              anywhere else. Thanks, Lift!"
+              "Lift Performance is conveniently located in Central and the
+              equipment is just exactly what I need. The scale is just about
+              right and it won’t make you feel it’s too crowded at one time. The
+              trainers understand their clients needs and won’t overdo nor
+              oversell anything. It just ticks all the boxes!"
             </p>
-            <p className="text-slate-200">- Emily K.</p>
+            <p className="text-slate-200">- Cathy W.</p>
           </div>
 
           <div
@@ -53,14 +52,12 @@ export default function Testimonials() {
             style={{ backfaceVisibility: "hidden" }}
           >
             <p className="mx-auto max-w-4xl text-sm italic text-slate-200 sm:text-xl">
-              "As a new mom, I was nervous about getting back into exercise, but
-              Lift's Pre and Postnatal Training program was exactly what I
-              needed. The trainers are so understanding and supportive, and the
-              workouts are challenging but not overwhelming. I feel stronger and
-              more confident than ever before, and I'm grateful to Lift for
-              helping me through this journey!"
+              "My PT sessions with Jane have always been tough, but measured.
+              She has increased my strength, corrected imbalance and my form. I
+              have benefited from her consistent dedication to learning her
+              craft!"
             </p>
-            <p className="text-slate-200">- Sarah L.</p>
+            <p className="text-slate-200">- Bradley</p>
           </div>
 
           <div
@@ -71,14 +68,58 @@ export default function Testimonials() {
             style={{ backfaceVisibility: "hidden" }}
           >
             <p className="mx-auto max-w-4xl text-sm italic text-slate-200 sm:text-xl">
-              "I've tried a lot of gyms over the years, but Lift is by far the
-              best. The trainers truly care about your success and are always
-              pushing you to be your best self. The variety of classes and
-              equipment is amazing, and the community of members is so friendly
-              and welcoming. I always leave Lift feeling energized and
-              accomplished. Highly recommend!"
+              "Ever since I started training with Eunice I look forward to every
+              session and the consistency is definitely paying off! She knows
+              how to push me while always looking out my form and accommodating
+              my personal needs. Oh and the products in the shower area are
+              great too!"
             </p>
-            <p className="text-slate-200">- Michael B.</p>
+            <p className="text-slate-200">- Kasia</p>
+          </div>
+
+          <div
+            className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item
+            data-te-pause={false}
+            data-te-interval="4000"
+            style={{ backfaceVisibility: "hidden" }}
+          >
+            <p className="mx-auto max-w-4xl text-sm italic text-slate-200 sm:text-xl">
+              "LIFT is a stylishly renovated boutique gym, in a great Central
+              location. The instructors are passionate, experienced and go out
+              of their way to make me feel welcome there."
+            </p>
+            <p className="text-slate-200">- JK</p>
+          </div>
+          <div
+            className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item
+            data-te-pause={false}
+            data-te-interval="4000"
+            style={{ backfaceVisibility: "hidden" }}
+          >
+            <p className="mx-auto max-w-4xl text-sm italic text-slate-200 sm:text-xl">
+              "Dennis is an incredible trainer who is very passionate about his
+              clients and programs. His encouragement and constant motivation
+              push me to heights I never thought possible. I find myself always
+              looking forward to his next session."
+            </p>
+            <p className="text-slate-200">- Clara</p>
+          </div>
+          <div
+            className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item
+            data-te-pause={false}
+            data-te-interval="4000"
+            style={{ backfaceVisibility: "hidden" }}
+          >
+            <p className="mx-auto max-w-4xl text-sm italic text-slate-200 sm:text-xl">
+              "I have been training with Brian for three years now, and having
+              worked with several trainers before he is by far the best. I love
+              training with him because of his great attitude and his attention
+              to form and technique."
+            </p>
+            <p className="text-slate-200">- Jon</p>
           </div>
         </div>
 

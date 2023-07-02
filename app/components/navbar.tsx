@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import logo from "../../public/lift-logo-1.png"
 
 export default function NavBar() {
   const [showMe, setShowMe] = useState(false);
@@ -10,24 +12,22 @@ export default function NavBar() {
   return (
     <header
       aria-label="Site Header"
-      className="sticky top-0 z-10 bg-gradient-to-r from-gray-800 to-red-800 text-white"
+      className="sticky top-0 z-10 bg-gradient-to-r from-gray-950 to-red-900 text-white"
     >
-      <section className="mx-auto flex max-w-4xl items-center justify-between p-4">
-        <h1 className="text-2xl font-medium sm:text-2xl">
+      <section className="mx-auto flex max-w-4xl items-center justify-between py-1 xl:py-2">
           <Link href="#hero" className="tracking-wide">
-            🏋️ Lift Performance
+            <Image loading="lazy" src={logo} alt="logo" className="w-1/3 md:w-1/5 lg:w-1/3 xl:w-2/5 h-full px-5 lg:mr-48 mr-12 md:mr-48"/>
           </Link>
-        </h1>
         <div>
           <button
             id="hamburger-button"
-            className="text-3xl focus:outline-none lg:hidden"
+            className="text-3xl focus:outline-none lg:hidden mr-5"
             onClick={toggle}
           >
             &#9776;
           </button>
           <nav
-            className="text-md hidden space-x-3 md:text-xl lg:block"
+            className="text-md hidden space-x-3 md:text-xl xl:text-2xl lg:block "
             aria-label="main"
           >
             <Link href="#hero" className="hover:opacity-80">

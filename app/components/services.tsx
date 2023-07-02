@@ -1,8 +1,8 @@
 import Image, { StaticImageData } from "next/image";
-import group from "../../public/group.jpg";
-import natal from "../../public/natal.jpg";
-import service1 from "../../public/personal.jpg";
-import pilates from "../../public/pilates.jpg";
+import group from "../../public/group.jpeg";
+import natal from "../../public/natal.jpeg";
+import service1 from "../../public/personal.jpeg";
+import pilates from "../../public/pilates.jpeg";
 
 type Service = {
   name: string;
@@ -33,7 +33,7 @@ export default function Services() {
     {
       name: "Pre & Post-Natal Training",
       description:
-        "Prepare for motherhood and recover with our Pre and Postnatal Training! Our program addresses common pregnancy-related injuries, stabilizes your pelvis postpartum, and repairs and strengthens your muscles. Trust us to support you on this exciting journey!",
+        "Prepare for motherhood and recover with our Pre and Postnatal Training! Our program addresses common pregnancy-related injuries, stabilizes your pelvis postpartum, and repairs and strengthens your muscles. Trust us to support you on this journey!",
       image: natal,
     },
   ];
@@ -45,32 +45,32 @@ export default function Services() {
         </h3>
       </div>
 
-      <div className="mx-auto list-none flex-col place-items-center items-center justify-center gap-2 text-center sm:w-2/3 lg:grid lg:grid-cols-2">
+      <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-8 sm:gap-2 py-12 sm:my-0 sm:flex-row">
         {services.map((service: Service, index: number) => (
           <li
-            className="items-center rounded-3xl  px-12 py-3 shadow-xl"
-            key={index}
+          className="flex flex-col items-cente bg-black px-10 py-6 shadow-xl md:max-w-xs lg:max-w-md"
+          key={index}
           >
             <div>
               <Image
-                className="mx-auto h-40 w-40 rounded-md sm:h-60 sm:w-60"
+                className="mx-auto"
                 src={service.image}
                 alt="service image"
-                width={512}
-                height={512}
+                loading="lazy"
+                placeholder="blur"
               />
             </div>
             <div className="mx-auto w-3/4 text-center antialiased sm:w-auto">
-              <h5 className="my-4 mb-2 text-center text-xl font-bold leading-tight text-neutral-50 dark:text-neutral-50 sm:text-xl">
+              <h5 className="my-4 mb-2 text-center text-lg sm:text-xl font-bold leading-tight text-neutral-50 dark:text-neutral-50 ">
                 {service.name}
               </h5>
-              <p className="sm:text-md mx-auto text-sm text-neutral-200 antialiased sm:text-lg lg:w-2/3">
+              <p className="sm:text-md mx-auto text-sm md:w-full text-neutral-200 antialiased md:text-lg lg:w-4/5 leading-tight text-center">
                 {service.description}
               </p>
             </div>
           </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "At Lift Performance, our elite coaches have one goal in mind - to elevate every aspect of your health and fitness",
   alternates: {
-    canonical: "https://lift.peterkaskonas.com",
+    canonical: "https://liftperformance.net",
   },
 };
 
@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className="bg-black">
+      <body className="bg-black">{children}</body>
     </html>
   );
 }
