@@ -11,7 +11,7 @@ export default function Booking() {
         loading="lazy"
         width="80%"
         src="https://calendly.com/liftperformancehk/consultation?embed_type=Inline&embed_domain=1"
-        className="mx-auto mb-0 h-[850px]"></iframe>
+        className="mx-auto mb-0 h-[850px] sm:h-[1000px] xl:h-[800px]"></iframe>
     </section>
   );
 }
