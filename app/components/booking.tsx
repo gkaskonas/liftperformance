@@ -1,6 +1,3 @@
-import Script from "next/script";
-import { InlineWidget } from "react-calendly";
-
 export default function Booking() {
   return (
     <section id="booking" className="my-12 mb-10">
@@ -11,7 +8,8 @@ export default function Booking() {
         loading="lazy"
         width="80%"
         src="https://calendly.com/liftperformancehk/consultation?embed_type=Inline&embed_domain=1"
-        className="mx-auto mb-0 h-[850px] sm:h-[1000px] xl:h-[800px]"></iframe>
+        className="mx-auto mb-0 h-[850px] sm:h-[1000px] xl:h-[800px]"
+      ></iframe>
     </section>
   );
 }
