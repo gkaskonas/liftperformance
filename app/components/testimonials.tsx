@@ -31,7 +31,7 @@ export default function Testimonials() {
             data-te-carousel-active
             data-te-carousel-item
             data-te-pause={false}
-            data-te-interval="4000"
+            data-te-interval="5000"
             style={{ backfaceVisibility: "hidden" }}
           >
             <p className="mx-auto max-w-4xl text-sm italic text-slate-200 sm:text-xl">
@@ -48,7 +48,7 @@ export default function Testimonials() {
             className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item
             data-te-pause={false}
-            data-te-interval="4000"
+            data-te-interval="5000"
             style={{ backfaceVisibility: "hidden" }}
           >
             <p className="mx-auto max-w-4xl text-sm italic text-slate-200 sm:text-xl">
@@ -64,7 +64,7 @@ export default function Testimonials() {
             className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item
             data-te-pause={false}
-            data-te-interval="4000"
+            data-te-interval="5000"
             style={{ backfaceVisibility: "hidden" }}
           >
             <p className="mx-auto max-w-4xl text-sm italic text-slate-200 sm:text-xl">
@@ -81,7 +81,7 @@ export default function Testimonials() {
             className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item
             data-te-pause={false}
-            data-te-interval="4000"
+            data-te-interval="5000"
             style={{ backfaceVisibility: "hidden" }}
           >
             <p className="mx-auto max-w-4xl text-sm italic text-slate-200 sm:text-xl">
@@ -95,7 +95,7 @@ export default function Testimonials() {
             className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item
             data-te-pause={false}
-            data-te-interval="4000"
+            data-te-interval="5000"
             style={{ backfaceVisibility: "hidden" }}
           >
             <p className="mx-auto max-w-4xl text-sm italic text-slate-200 sm:text-xl">
@@ -110,7 +110,7 @@ export default function Testimonials() {
             className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item
             data-te-pause={false}
-            data-te-interval="4000"
+            data-te-interval="5000"
             style={{ backfaceVisibility: "hidden" }}
           >
             <p className="mx-auto max-w-4xl text-sm italic text-slate-200 sm:text-xl">
