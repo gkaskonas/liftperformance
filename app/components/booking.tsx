@@ -1,5 +1,4 @@
 import Script from "next/script";
-import { InlineWidget } from "react-calendly";
 
 export default function Booking() {
   return (
