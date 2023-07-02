@@ -40,9 +40,9 @@ export default function Services() {
   return (
     <section id="services" aria-label="Services" className="my-12">
       <div className="mx-auto max-w-2xl text-center">
-        <h3 className="mb-6 text-center text-4xl font-bold text-white sm:text-5xl">
+        <h1 className="mb-6 text-center text-4xl font-bold text-white sm:text-5xl">
           Services
-        </h3>
+        </h1>
       </div>
 
       <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-8 sm:gap-2 py-12 sm:my-0 sm:flex-row">

@@ -54,9 +54,9 @@ export default function Team() {
 
   return (
     <section id="team" className="my-12 px-6">
-      <h2 className="mb-6 text-center text-4xl font-bold text-white sm:text-5xl">
+      <h1 className="mb-6 text-center text-4xl font-bold text-white sm:text-5xl">
         Meet the Team
-      </h2>
+      </h1>
       <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-8 sm:gap-2 py-12 sm:my-0 sm:flex-row">
         {trainers.map((trainer: Trainer, index: number) => (
           <li
@@ -69,7 +69,7 @@ export default function Team() {
               alt={trainer.name}
               className="mb-6 w-3/4"
               placeholder="blur"
-              loading="lazy"
+              priority={true}
               sizes="(min-width: 60em) 24vw,
               (min-width: 28em) 45vw,
               100vw"
@@ -95,16 +95,13 @@ export default function Team() {
             <Image
               src={selectedTrainer!.image}
               alt={selectedTrainer!.name}
-              loading="lazy"
               placeholder="blur"
               className="mx-auto mb-6 w-2/3"
-              sizes="(min-width: 60em) 24vw,
-              (min-width: 28em) 45vw,
-              100vw"
+              priority={true}
             />
-            <h3 className="mb-2 text-2xl font-bold text-slate-300">
+            <h1 className="mb-2 text-2xl font-bold text-slate-300">
               {selectedTrainer!.name}
-            </h3>
+            </h1>
             <p className="py-5 text-xl font-bold text-slate-300">
               {selectedTrainer!.title}
             </p>
