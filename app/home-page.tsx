@@ -25,7 +25,7 @@ export default function Home({ year }: { year: number }) {
         <title>Lift Performance</title>
         <link
           rel="canonical"
-          href="https://main.d1ism7h1btc0wa.amplifyapp.com/"
+          href="https://liftperformance.net"
           key="canonical"
           title="canonical link"
         />
