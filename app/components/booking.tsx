@@ -8,7 +8,11 @@ export default function Booking() {
         Book Now!
       </h2>
       <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" async/>
-      <InlineWidget url="https://calendly.com/liftperformancehk/consultation" iframeTitle="Calendly Appointment" styles={{height: "850px", width: "80%", marginLeft: "auto", marginRight: "auto"}}/>
+      <iframe
+        loading="lazy"
+        width="80%"
+        src="https://calendly.com/liftperformancehk/consultation?embed_type=Inline&embed_domain=1"
+        className="mx-auto mb-0 h-[850px] sm:h-[1000px] xl:h-[800px]"></iframe>
     </section>
   );
 }
