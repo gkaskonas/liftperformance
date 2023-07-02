@@ -6,7 +6,6 @@ const nextConfig = {
     serverActions: true,
   },
   images: {
-    formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 600,
   },
   env: {
