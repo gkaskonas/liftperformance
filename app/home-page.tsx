@@ -25,7 +25,7 @@ export default function Home({ year }: { year: number }) {
         <title>Lift Performance</title>
         <link
           rel="canonical"
-          href="https://liftperformance.net/"
+          href="https://www.liftperformance.net/"
           key="canonical"
           title="canonical link"
         />
