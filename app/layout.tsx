@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import "./styles/globals.css";
+import { Suspense } from "react";
+import Analytics from "./components/analytiics";
 
 export const metadata: Metadata = {
   title: "Lift Performance | Personal Training | Hong Kong Island",
@@ -20,7 +22,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-black">
-      <body className="bg-black">{children}</body>
+      <body className="bg-black">
+        <Suspense>
+          <Analytics />
+        </Suspense>
+        {children}</body>
     </html>
   );
 }
