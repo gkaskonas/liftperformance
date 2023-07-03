@@ -21,7 +21,7 @@ export default function Testimonials() {
       </div>
       <div
         id="carouselExampleCaptions"
-        className="relative mx-auto w-4/5 sm:w-2/3"
+        className="relative mx-auto w-4/5 sm:w-2/3  mb-5"
         data-te-carousel-init
         data-te-carousel-slide
       >
@@ -30,7 +30,7 @@ export default function Testimonials() {
             className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-active
             data-te-carousel-item
-            data-te-pause={false}
+            data-te-pause="hover"
             data-te-interval="5000"
             style={{ backfaceVisibility: "hidden" }}
           >
@@ -47,7 +47,7 @@ export default function Testimonials() {
           <div
             className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item
-            data-te-pause={false}
+            data-te-pause="hover"
             data-te-interval="5000"
             style={{ backfaceVisibility: "hidden" }}
           >
@@ -63,7 +63,7 @@ export default function Testimonials() {
           <div
             className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item
-            data-te-pause={false}
+            data-te-pause="hover"
             data-te-interval="5000"
             style={{ backfaceVisibility: "hidden" }}
           >
@@ -80,7 +80,7 @@ export default function Testimonials() {
           <div
             className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item
-            data-te-pause={false}
+            data-te-pause="hover"
             data-te-interval="5000"
             style={{ backfaceVisibility: "hidden" }}
           >
@@ -89,12 +89,12 @@ export default function Testimonials() {
               location. The instructors are passionate, experienced and go out
               of their way to make me feel welcome there."
             </p>
-            <p className="text-slate-200">- JK</p>
+            <p className="text-slate-200 mb-7">- JK</p>
           </div>
           <div
             className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item
-            data-te-pause={false}
+            data-te-pause="hover"
             data-te-interval="5000"
             style={{ backfaceVisibility: "hidden" }}
           >
@@ -109,7 +109,7 @@ export default function Testimonials() {
           <div
             className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item
-            data-te-pause={false}
+            data-te-pause="hover"
             data-te-interval="5000"
             style={{ backfaceVisibility: "hidden" }}
           >

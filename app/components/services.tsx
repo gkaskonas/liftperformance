@@ -58,6 +58,7 @@ export default function Services() {
                 alt="service image"
                 loading="lazy"
                 placeholder="blur"
+                width={384}
               />
             </div>
             <div className="mx-auto w-3/4 text-center antialiased sm:w-auto">

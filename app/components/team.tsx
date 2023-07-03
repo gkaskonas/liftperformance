@@ -57,7 +57,7 @@ export default function Team() {
       <h1 className="mb-6 text-center text-4xl font-bold text-white sm:text-5xl">
         Meet the Team
       </h1>
-      <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-8 sm:gap-2 py-12 sm:my-0 sm:flex-row">
+      <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-8 sm:gap-2 py-12 sm:my-0 sm:flex-row lg:gap-10 xl:gap-12">
         {trainers.map((trainer: Trainer, index: number) => (
           <li
             key={index}
@@ -92,12 +92,15 @@ export default function Team() {
           onClick={() => setShowModal(false)}
         >
           <div className="max-h-sm sticky mx-auto max-w-sm scroll-m-3 rounded-lg bg-gray-800 p-6 text-center shadow-lg sm:max-h-screen sm:max-w-lg">
-            <Image
+          <Image
               src={selectedTrainer!.image}
               alt={selectedTrainer!.name}
               placeholder="blur"
               className="mx-auto mb-6 w-2/3"
               priority={true}
+              sizes="(min-width: 60em) 24vw,
+              (min-width: 28em) 45vw,
+              100vw"
             />
             <h1 className="mb-2 text-2xl font-bold text-slate-300">
               {selectedTrainer!.name}

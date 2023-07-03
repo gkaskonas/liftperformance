@@ -7,6 +7,7 @@ const nextConfig = {
   },
   images: {
     minimumCacheTTL: 600,
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   env: {
     MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY,

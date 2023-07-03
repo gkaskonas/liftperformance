@@ -23,8 +23,8 @@ export default function About() {
                   are committed to keep you on track of your goals.
                 </p>
 
-                <div className="mx-auto mb-8 flex flex-col text-white md:flex-row md:justify-around lg:justify-between">
-                  <p className="mx-auto mb-4 flex items-center md:mx-0 md:mb-2 lg:mb-0 lg:text-lg">
+                <div className="mx-auto mb-8 flex flex-col text-white md:flex-row md:justify-around lg:justify-between ">
+                  <p className="mx-auto mb-4 flex items-center md:mx-0 md:mb-2 lg:mb-0 lg:text-lg text-sm">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

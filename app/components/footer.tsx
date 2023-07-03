@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Subscribe from "./mailchimp";
+import {SiWhatsapp} from "react-icons/si"
+import {MdOutlineEmail} from "react-icons/md"
 
 export default function Footer({ year }: { year: number }) {
   return (
@@ -25,11 +27,13 @@ export default function Footer({ year }: { year: number }) {
           <h3 className="mb-5 font-bold text-white underline underline-offset-4 sm:text-2xl">
             Contact
           </h3>
-          <Link href="https://wa.link/y05vhp" className="mb-2 text-white">
-            Whatsapp: 6772 8838
+          <Link href="https://wa.link/y05vhp" className="mx-auto mb-2 flex flex-row text-white md:flex-row md:justify-around lg:justify-between ">
+            <SiWhatsapp className="mr-2"/>
+            6772 8838
           </Link>
-          <Link href="mailto:liftphk@gmail.com" className="text-white">
-            Email: liftphk@gmail.com
+          <Link href="mailto:liftphk@gmail.com" className="mx-auto mb-2 flex flex-row text-white md:flex-row md:justify-around lg:justify-between ">
+            <MdOutlineEmail className="mr-2"/>
+            liftphk@gmail.com
           </Link>
         </li>
         <li className="flex flex-col items-center text-justify">
@@ -45,7 +49,7 @@ export default function Footer({ year }: { year: number }) {
       <div className="flex place-items-center items-center justify-center">
         <iframe
           loading="lazy"
-          className="sm:w-1/2"
+          className="sm:w-2/3"
           title="Google Map"
           src="https://maps.google.com/maps?&amp;hl=en&amp;q=Lift%20Performance,%201/F,%20Abdoolaly%20House,%2020%20Stanley%20Street,%20Central,%20Hong%20Kong%20+(Lift%20Performance)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         ></iframe>
