@@ -32,7 +32,7 @@ export default function NavBar() {
         </Link>
       </div>
       <div className="navbar-center hidden flex-row sm:flex ">
-        <ul className="menu menu-horizontal space-x-7 px-1 text-white  sm:text-lg lg:text-2xl xl:text-3xl shadow-xl">
+        <ul className="menu menu-horizontal space-x-7 px-1 text-white  sm:text-lg lg:text-2xl xl:text-3xl ">
           <Link href="#team" className="hover:opacity-80">
             Team
           </Link>
