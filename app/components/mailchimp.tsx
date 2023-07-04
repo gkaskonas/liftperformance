@@ -37,10 +37,10 @@ export default function Subscribe() {
         <div className="w-full shrink-0 grow-0 basis-auto px-3 lg:w-10/12">
           <div className="grid items-center gap-x-6 lg:grid-cols-2">
             <div className="mb-10 lg:mb-0">
-              <h2 className="text-center text-2xl font-bold text-white dark:text-white sm:text-3xl">
+              <h2 className="text-center text-2xl font-bold  dark: sm:text-3xl">
                 Do not miss any updates!
                 <br />
-                <span className="bg-gradient-to-r from-red-600 to-yellow-500 bg-clip-text text-transparent">
+                <span className="text-red-700">
                   Subscribe to the newsletter
                 </span>
               </h2>
@@ -63,7 +63,7 @@ export default function Subscribe() {
                 />
                 <button
                   type="submit"
-                  className="inline-block rounded bg-red-600 px-7 py-3 text-sm font-medium uppercase leading-snug text-white shadow-md transition duration-150 ease-in-out hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg"
+                  className="btn btn-primary text-white"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                   onClick={subscribe}
@@ -73,10 +73,10 @@ export default function Subscribe() {
                 </button>
               </div>
               {state === "Error" && (
-                <div className="text-white">{errorMsg}</div>
+                <div className="">{errorMsg}</div>
               )}
               {state === "Success" && (
-                <div className="text-white">
+                <div className="">
                   Awesome, you've been subscribed!
                 </div>
               )}

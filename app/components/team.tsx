@@ -54,45 +54,41 @@ export default function Team() {
 
   return (
     <section id="team" className="my-12 px-6">
-      <h1 className="mb-6 text-center text-4xl font-bold text-white sm:text-5xl">
+      <h1 className="mx-auto text-center text-4xl font-bold  sm:text-5xl">
         Meet the Team
       </h1>
-      <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-8 sm:gap-2 py-12 sm:my-0 sm:flex-row lg:gap-10 xl:gap-12">
+      <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-8 py-12 sm:my-0 sm:flex-row sm:gap-2 lg:gap-10 xl:gap-12">
         {trainers.map((trainer: Trainer, index: number) => (
-          <li
-            key={index}
-            onClick={() => handleImageClick(index)}
-            className="flex flex-col items-center rounded-3xl border border-solid border-gray-500 bg-black px-10 py-6 shadow-xl hover:cursor-pointer md:max-w-xs lg:max-w-md"
-          >
+          <div 
+          key={index}
+          onClick={() => handleImageClick(index)} className="card sm:w-96 shadow-md">
+            <figure className="">
             <Image
               src={trainer.image}
               alt={trainer.name}
-              className="mb-6 w-3/4"
+              className="w-3/4"
               placeholder="blur"
               priority={true}
               sizes="(min-width: 60em) 24vw,
               (min-width: 28em) 45vw,
               100vw"
             />
-            <h3 className="text-center lg:text-2xl text-lg font-bold text-white">
-              {trainer.name}
-            </h3>
-            <h3 className="text-center text-sm font-bold text-slate-400">
-              {trainer.title}
-            </h3>
-            <h3 className="text-center text-sm italic text-white">
-              Click To Learn More
-            </h3>
-          </li>
+            </figure>
+            <div className="card-body items-center">
+              <h1 className="card-title">{trainer.name}</h1>
+              <h2 className="font-bold">{trainer.title}</h2>
+              <p className="text-sm">Click to Learn More</p>
+            </div>
+          </div>
         ))}
       </ul>
       {showModal && (
         <div
-          className="fixed bottom-0 left-0 right-0 top-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+          className="fixed bottom-0 left-0 right-0 top-0 z-50 flex items-center justify-center  backdrop-blur-md"
           onClick={() => setShowModal(false)}
         >
-          <div className="max-h-sm sticky mx-auto max-w-sm scroll-m-3 rounded-lg bg-gray-800 p-6 text-center shadow-lg sm:max-h-screen sm:max-w-lg">
-          <Image
+          <div className="max-h-sm sticky mx-auto max-w-sm scroll-m-3 rounded-lg bg-gray-800 p-6 text-center text-white shadow-lg sm:max-h-screen sm:max-w-lg">
+            <Image
               src={selectedTrainer!.image}
               alt={selectedTrainer!.name}
               placeholder="blur"
@@ -102,13 +98,9 @@ export default function Team() {
               (min-width: 28em) 45vw,
               100vw"
             />
-            <h1 className="mb-2 text-2xl font-bold text-slate-300">
-              {selectedTrainer!.name}
-            </h1>
-            <p className="py-5 text-xl font-bold text-slate-300">
-              {selectedTrainer!.title}
-            </p>
-            <p className="mt-2 text-sm text-slate-300 sm:text-lg">
+            <h1 className="mb-2 text-2xl font-bold">{selectedTrainer!.name}</h1>
+            <p className="py-5 text-xl font-bold">{selectedTrainer!.title}</p>
+            <p className="mt-2 text-sm sm:text-lg">
               {selectedTrainer?.description}
             </p>
           </div>

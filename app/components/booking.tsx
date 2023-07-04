@@ -3,7 +3,7 @@ import Script from "next/script";
 export default function Booking() {
   return (
     <section id="booking" className="my-12 mb-10">
-      <h2 className="mb-10 text-center text-4xl font-bold text-white sm:text-5xl">
+      <h2 className="mb-10 text-center text-4xl font-bold  sm:text-5xl">
         Book Now!
       </h2>
       <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" async/>

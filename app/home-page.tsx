@@ -20,7 +20,7 @@ export default function Home({ year }: { year: number }) {
   });
 
   return (
-    <div className="bg-black">
+    <div className="" data-theme="light">
       <Head>
         <title>Lift Performance</title>
         <link
@@ -30,18 +30,17 @@ export default function Home({ year }: { year: number }) {
           title="canonical link"
         />
       </Head>
-      <NavBar />
       <Hero2 />
-      <hr className="mx-auto w-1/2 bg-white sm:w-1/3 mt-12 md:mt-2"></hr>
+      <hr className="mx-auto w-1/2 bg-black sm:w-1/3 mt-12 md:mt-2"></hr>
       <Team />
       <About />
-      <hr className="mx-auto w-1/2 bg-white sm:w-1/3"></hr>
+      <hr className="mx-auto w-1/2 bg-black sm:w-1/3"></hr>
       <Booking />
-      <hr className="mx-auto w-1/2 bg-white sm:w-1/3"></hr>
+      <hr className="mx-auto w-1/2 bg-black sm:w-1/3"></hr>
       <Services />
-      <hr className="mx-auto w-1/2 bg-white sm:w-1/3"></hr>
+      <hr className="mx-auto w-1/2 bg-black sm:w-1/3"></hr>
       <Testimonials />
-      <hr className="mx-auto w-1/2 bg-white sm:w-1/3"></hr>
+      <hr className="mx-auto w-1/2 bg-black sm:w-1/3"></hr>
       <Footer year={year} />
     </div>
   );

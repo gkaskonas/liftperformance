@@ -13,7 +13,7 @@ type Service = {
 export default function Services() {
   const services: Service[] = [
     {
-      name: "1-to-1 training",
+      name: "1-to-1 Training",
       description:
         "Get personalized results with One-to-One Training! Our coaches will design a program tailored to your body, starting with a 1-hour consultation. From the training floor to check-ins, we're committed to helping you achieve your goals.",
       image: service1,
@@ -40,19 +40,16 @@ export default function Services() {
   return (
     <section id="services" aria-label="Services" className="my-12">
       <div className="mx-auto max-w-2xl text-center">
-        <h1 className="mb-6 text-center text-4xl font-bold text-white sm:text-5xl">
+        <h1 className="mb-6 text-center text-4xl font-bold  sm:text-5xl">
           Services
         </h1>
       </div>
 
-      <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-8 sm:gap-2 py-12 sm:my-0 sm:flex-row">
+      <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-8 py-12 sm:my-0 sm:flex-row sm:gap-2">
         {services.map((service: Service, index: number) => (
-          <li
-          className="flex flex-col items-cente bg-black px-10 py-6 shadow-xl md:max-w-xs lg:max-w-md"
-          key={index}
-          >
-            <div>
-              <Image
+          <div className="card w-96 bg-base-100 shadow-xl">
+            <figure>
+            <Image
                 className="mx-auto"
                 src={service.image}
                 alt="service image"
@@ -60,16 +57,12 @@ export default function Services() {
                 placeholder="blur"
                 width={384}
               />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">{service.name}</h2>
+              <p>{service.description}</p>
             </div>
-            <div className="mx-auto w-3/4 text-center antialiased sm:w-auto">
-              <h5 className="my-4 mb-2 text-center text-lg sm:text-xl font-bold leading-tight text-neutral-50 dark:text-neutral-50 ">
-                {service.name}
-              </h5>
-              <p className="sm:text-md mx-auto text-sm md:w-full text-neutral-200 antialiased md:text-lg lg:w-4/5 leading-tight text-center">
-                {service.description}
-              </p>
-            </div>
-          </li>
+          </div>
         ))}
       </ul>
     </section>

@@ -2,6 +2,14 @@ import { Metadata } from "next";
 import "./styles/globals.css";
 import { Suspense } from "react";
 import Analytics from "./components/analytiics";
+import { M_PLUS_1 } from 'next/font/google'
+
+// If loading a variable font, you don't need to specify the font weight
+const inter = M_PLUS_1({
+  subsets: ['latin'],
+  display: 'swap',
+})
+
 
 export const metadata: Metadata = {
   title: "Lift Performance | Personal Training | Hong Kong Island",
@@ -21,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-black">
-      <body className="bg-black">
+    <html lang="en" data-theme="light" className={inter.className}>
+      <body className="scroll-smooth">
         <Suspense>
           <Analytics />
         </Suspense>

@@ -1,104 +1,93 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import logo from "../../public/lift-logo-1.png"
+import logo from "../../public/lift-logo-1.png";
 
 export default function NavBar() {
   const [showMe, setShowMe] = useState(false);
   function toggle() {
     setShowMe(!showMe);
-  }
+    if (!showMe) {
+      //@ts-ignore
+    window.my_modal_5.showModal();
+    }
+    else {
+      //@ts-ignore
+    window.my_modal_5.close();
+    }
 
+
+  
+  }
   return (
-    <header
-      aria-label="Site Header"
-      className="sticky top-0 z-10 bg-gradient-to-r from-gray-950 to-red-900 text-white"
-    >
-      <section className="mx-auto flex max-w-4xl items-center justify-between py-1 xl:py-2">
-          <Link href="#hero" className="tracking-wide">
-            <Image loading="lazy" src={logo} alt="logo" className="w-1/3 md:w-1/5 lg:w-1/3 xl:w-2/5 h-full px-5 lg:mr-48 mr-12 md:mr-48"/>
+    <div className="navbar sticky text-xl text-white">
+      <div className="navbar-start">
+        <Link href="#hero" className="">
+          <Image
+            loading="lazy"
+            src={logo}
+            alt="logo"
+            className="w-1/4 sm:w-1/2 xl:w-1/4"
+          />
+        </Link>
+      </div>
+      <div className="navbar-center hidden flex-row sm:flex ">
+        <ul className="menu menu-horizontal space-x-7 px-1 text-white  sm:text-lg lg:text-2xl xl:text-3xl shadow-xl">
+          <Link href="#team" className="hover:opacity-80">
+            Team
           </Link>
-        <div>
-          <button
-            id="hamburger-button"
-            className="text-3xl focus:outline-none lg:hidden mr-5"
-            onClick={toggle}
-          >
-            &#9776;
-          </button>
-          <nav
-            className="text-md hidden space-x-3 md:text-xl xl:text-2xl lg:block "
-            aria-label="main"
-          >
-            <Link href="#hero" className="hover:opacity-80">
-              Home
-            </Link>
-            <Link href="#team" className="hover:opacity-80">
-              Team
-            </Link>
-            <Link href="#booking" className="hover:opacity-80">
-              Booking
-            </Link>
-            <Link href="#services" className="hover:opacity-80">
-              Services
-            </Link>
-            <Link href="#testimonials" className="hover:opacity-80">
-              Testimonials
-            </Link>
-            <Link href="#contact" className="hover:opacity-80">
-              Contact
-            </Link>
-          </nav>
-        </div>
-      </section>
-      <section
-        id="mobile-menu"
-        onClick={toggle}
-        style={{ display: showMe ? "block" : "none" }}
-        className="top-68 justify-content-center animate-open-menu absolute hidden w-full origin-top flex-col bg-black text-3xl lg:text-5xl"
-      >
-        <nav
-          className="flex min-h-screen flex-col items-center py-8"
-          aria-label="mobile"
-        >
-          <Link
-            href="#hero"
-            className="w-full py-3 text-center hover:opacity-90"
-          >
-            Home
-          </Link>
-          <Link
-            href="#team"
-            className="w-full py-3 text-center hover:opacity-90"
-          >
-            Meet the Team
-          </Link>
-          <Link
-            href="#booking"
-            className="w-full py-3 text-center hover:opacity-90"
-          >
+          <Link href="#booking" className="hover:opacity-80">
             Booking
           </Link>
-          <Link
-            href="#services"
-            className="w-full py-3 text-center hover:opacity-90"
-          >
+          <Link href="#services" className="hover:opacity-80">
             Services
           </Link>
-          <Link
-            href="#testimonials"
-            className="w-full py-3 text-center hover:opacity-90"
-          >
+          <Link href="#testimonials" className="hover:opacity-80">
             Testimonials
           </Link>
-          <Link
-            href="#contact"
-            className="w-full py-3 text-center hover:opacity-90"
-          >
+          <Link href="#contact" className="hover:opacity-80">
             Contact
           </Link>
-        </nav>
-      </section>
-    </header>
+        </ul>
+      </div>
+      <div className="navbar-end">
+        <label
+          tabIndex={0}
+          className="btn-ghost btn sm:hidden"
+          onClick={toggle}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-9 w-9"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h8m-8 6h16"
+            />
+          </svg>
+        </label>
+        {/* Open the modal using ID.showModal() method */}
+        <dialog
+          id="my_modal_5"
+          className="modal modal-bottom text-white"
+        >
+          <form method="dialog" className="modal-box modal-bottom">
+            <ul className="flex flex-col gap-y-5">
+            
+              <Link href="#team" className="btn bg-transparent border-none" onClick={toggle}>Team</Link>
+              <Link href="#booking" className="btn bg-transparent border-none" onClick={toggle}>Booking</Link>
+              <Link href="#services" className="btn bg-transparent border-none" onClick={toggle}>Services</Link>
+              <Link href="#testimonials" className="btn bg-transparent border-none" onClick={toggle}>Testimonials</Link>
+              <Link href="#contact" className="btn bg-transparent border-none" onClick={toggle}>Contact</Link>
+              </ul>
+          </form>
+        </dialog>
+      </div>
+    </div>
   );
 }
