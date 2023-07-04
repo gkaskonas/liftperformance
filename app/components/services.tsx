@@ -3,6 +3,7 @@ import group from "../../public/group.jpeg";
 import natal from "../../public/natal.jpeg";
 import service1 from "../../public/personal.jpeg";
 import pilates from "../../public/pilates.jpeg";
+import flexibility from "../../public/flexibility_clipped.jpg";
 
 type Service = {
   name: string;
@@ -36,21 +37,27 @@ export default function Services() {
         "Prepare for motherhood and recover with our Pre and Postnatal Training! Our program addresses common pregnancy-related injuries, stabilizes your pelvis postpartum, and repairs and strengthens your muscles. Trust us to support you on this journey!",
       image: natal,
     },
+    {
+      name: "Flexibility & Mobility Training",
+      description:
+        "Enhance your flexibility and mobility with our transformative training program. From beginners to advanced practitioners, our class offers a diverse range of exercises that cater to all skill levels. Join us today and unlock the full potential of your body's movement capabilities!",
+      image: flexibility,
+    },
   ];
   return (
     <section id="services" aria-label="Services" className="my-12">
       <div className="mx-auto max-w-2xl text-center">
-        <h1 className="mb-6 text-center text-4xl font-bold  sm:text-5xl">
+        <h1 className="mb-2 text-center text-4xl font-bold  sm:text-5xl">
           Services
         </h1>
       </div>
 
-      <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-8 py-12 sm:my-0 sm:flex-row sm:gap-2">
+      <ul className="flex list-none flex-col place-items-center items-center justify-center gap-10 py-12 sm:my-0 sm:flex-row flex-wrap sm:gap-5">
         {services.map((service: Service, index: number) => (
-          <div className="card w-96 bg-base-100 shadow-xl">
+          <div className="card w-96 shadow-lg"  key={index}>
             <figure>
             <Image
-                className="mx-auto"
+                className="mx-auto w-3/4"
                 src={service.image}
                 alt="service image"
                 loading="lazy"
@@ -58,9 +65,9 @@ export default function Services() {
                 width={384}
               />
             </figure>
-            <div className="card-body">
+            <div className="flex flex-grow card-body items-center prose text-black">
               <h2 className="card-title">{service.name}</h2>
-              <p>{service.description}</p>
+              <p className="text-sm">{service.description}</p>
             </div>
           </div>
         ))}

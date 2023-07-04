@@ -20,7 +20,7 @@ export default function Footer({ year }: { year: number }) {
             Address
           </h3>
           <h2 className="w-1/2 text-center  sm:w-auto">
-            1/F, Abdoolaly House, 20 Stanley Street, Central, Hong Kong
+            1/F, Abdoolally House, 20 Stanley Street, Central, Hong Kong
           </h2>
         </li>
         <li className="flex flex-col items-center ">

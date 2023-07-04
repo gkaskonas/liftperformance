@@ -30,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="light" className={inter.className}>
-      <body className="scroll-smooth">
+      <body className="scroll-smooth overflow-x-hidden">
         <Suspense>
           <Analytics />
         </Suspense>

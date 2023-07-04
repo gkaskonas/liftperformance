@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import logo from "../../public/lift-logo-1.png";
 
+
 export default function NavBar() {
   const [showMe, setShowMe] = useState(false);
   function toggle() {
@@ -20,14 +21,14 @@ export default function NavBar() {
   
   }
   return (
-    <div className="navbar sticky text-xl text-white">
+    <div className="navbar top-0 z-10 absolute text-xl text-white">
       <div className="navbar-start">
         <Link href="#hero" className="">
           <Image
             loading="lazy"
             src={logo}
             alt="logo"
-            className="w-1/4 sm:w-1/2 xl:w-1/4"
+            className="w-1/4 sm:w-1/3 xl:w-1/4 ml-10"
           />
         </Link>
       </div>
@@ -50,7 +51,7 @@ export default function NavBar() {
           </Link>
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end sm:hidden">
         <label
           tabIndex={0}
           className="btn-ghost btn sm:hidden"
@@ -74,7 +75,7 @@ export default function NavBar() {
         {/* Open the modal using ID.showModal() method */}
         <dialog
           id="my_modal_5"
-          className="modal modal-bottom text-white"
+          className="modal modal-middle text-white"
         >
           <form method="dialog" className="modal-box modal-bottom">
             <ul className="flex flex-col gap-y-5">

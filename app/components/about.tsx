@@ -3,13 +3,13 @@ import about from "../../public/about.jpg";
 
 export default function About() {
   return (
-    <div className="container mx-auto my-0  md:px-6 text-white">
+    <div className="container mx-auto my-0  md:px-6 ">
       <section className="mb-12">
         <div className="container mx-auto text-center lg:text-left xl:px-32">
-          <div className="flex grid items-center md:grid-cols-2">
+          <div className="flex grid items-center sm:grid-cols-2">
             <div className="mb-12 lg:mb-0">
-              <div className="relative z-[1] block rounded-lg bg-slate-900 px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] shadow-black/20 backdrop-blur-[30px] md:px-12 lg:-mr-14">
-              <h1 className="mb-8 text-center text-3xl font-bold text-white">
+              <div className="relative z-[1] block rounded-lg bg-slate-50 px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] shadow-black/20 backdrop-blur-[30px] sm:px-12 lg:-mr-14 prose text-black">
+              <h1 className="mb-8 text-center text-3xl font-bold ">
                   Why LIFT?
                 </h1>
                 <p className="mb-8 pb-2 tracking-tighter  lg:pb-0 lg:text-xl text-sm">

@@ -1,44 +1,24 @@
-import Image from "next/image";
-import photo1 from "../../public/hero.jpg";
+
 import NavBar from "./navbar";
+import Link from "next/link";
 
 export default function Hero2() {
   return (
-  
-<section className="flex flex-col w-full mb-[270px] sm:mb-[500px] md:mb-[550px] lg:mb-0">
-  <Image
-    alt='Hero Picture'
-    src={photo1}
-    fill
-    className="object-cover absolute"
-  />
-  <NavBar />
-    
-      <div
-        className="relative mx-auto max-w-screen-2xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
-      >
-        <div className="max-w-xl text-center lg:mb-[500px]">
-          <h1 className="text-3xl font-extrabold sm:text-5xl text-white mb-5">
+    <div className="hero min-h-screen bg-[url('/hero.webp')]">
+        <div className="hero-overlay bg-opacity-30"></div>
+      <div className="hero-content text-center text-neutral-content">
+        <NavBar />
+        <div className="mb-[200px] lg:mb-[300px] sm:mb-5 max-w-2xl prose">
+          <h1 className="mb-10 text-2xl sm:text-2xl font-bold text-slate-50">
             Unleash your potential with our expert trainers
-  
           </h1>
-    
-          <p className="mt-4 max-w-lg sm:text-xl/relaxed text-white">
-          Get Fit, Have Fun, and Reach Your Goals with Our Expert Trainers
-              and State-of-the-Art Equipment.
+          <p className="text-xl max-w-lg text-left sm:max-w-sm text-slate-50">
+            Get Fit, Have Fun, and Reach Your Goals with Our Expert Trainers and
+            State-of-the-Art Equipment.
           </p>
-    
-          <div className="mt-8 gap-4 text-center">
-            <a
-              href="#"
-              className="btn btn-primary btn-lg"
-            >
-              Book now
-            </a>
-    
-          </div>
+          <Link href="#booking" className="flex w-1/4 mt-5 btn-primary btn">Book Now</Link>
         </div>
       </div>
-    </section>
-    );
+    </div>
+  );
 }

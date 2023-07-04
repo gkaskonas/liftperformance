@@ -31,16 +31,16 @@ export default function Home({ year }: { year: number }) {
         />
       </Head>
       <Hero2 />
-      <hr className="mx-auto w-1/2 bg-black sm:w-1/3 mt-12 md:mt-2"></hr>
+      <div className="h-5 border-b-4 border-black text-2xl text-center mx-auto w-1/3"/>
       <Team />
       <About />
-      <hr className="mx-auto w-1/2 bg-black sm:w-1/3"></hr>
+      <div className="h-5 border-b-4 border-black text-2xl mx-auto w-1/2  sm:w-1/3"/>
       <Booking />
-      <hr className="mx-auto w-1/2 bg-black sm:w-1/3"></hr>
+      <div className="h-5 border-b-4  text-2xl mx-auto w-1/2 border-black sm:w-1/3"/>
       <Services />
-      <hr className="mx-auto w-1/2 bg-black sm:w-1/3"></hr>
+      <div className="h-5 border-b-4 border-black text-2xl mx-auto w-1/2  sm:w-1/3"/>
       <Testimonials />
-      <hr className="mx-auto w-1/2 bg-black sm:w-1/3"></hr>
+      <div className="h-5 border-b-4  text-2xl mx-auto w-1/2 border-black sm:w-1/3"/>
       <Footer year={year} />
     </div>
   );
