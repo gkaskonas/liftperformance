@@ -57,18 +57,18 @@ export default function Team() {
       <h1 className="mx-auto text-center text-4xl font-bold  sm:text-5xl">
         Meet the Team
       </h1>
-      <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-2 py-12 sm:my-0 sm:flex-row sm:gap-5 lg:mx-auto lg:w-4/5">
+      <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-2 py-12 sm:my-0 sm:flex-row sm:gap-5 lg:mx-auto lg:w-3/4">
         {trainers.map((trainer: Trainer, index: number) => (
           <div
             key={index}
             onClick={() => handleImageClick(index)}
-            className="w-82 card"
+            className="w-68 xl:w-[380px] 2xl:w-[330px] card"
           >
             <figure className="">
               <Image
                 src={trainer.image}
                 alt={trainer.name}
-                className="w-1/2 lg:w-4/5"
+                className="w-1/2 lg:w-full"
                 placeholder="blur"
                 priority={true}
                 sizes="(min-width: 60em) 24vw,
@@ -94,7 +94,7 @@ export default function Team() {
               src={selectedTrainer!.image}
               alt={selectedTrainer!.name}
               placeholder="blur"
-              className="mx-auto mb-6 w-2/3"
+              className="mx-auto mb-6 w-2/3 xl:w-1/2"
               priority={true}
               sizes="(min-width: 60em) 24vw,
               (min-width: 28em) 45vw,

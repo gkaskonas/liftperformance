@@ -21,7 +21,7 @@ export default function Testimonials() {
       </div>
       <div
         id="carouselExampleCaptions"
-        className="relative mx-auto w-4/5 sm:w-2/3  mb-5"
+        className="relative mx-auto w-4/5 sm:w-2/3 lg:w-3/4 xl:w-1/2  mb-5"
         data-te-carousel-init
         data-te-carousel-slide
       >
@@ -34,7 +34,7 @@ export default function Testimonials() {
             data-te-interval="5000"
             style={{ backfaceVisibility: "hidden" }}
           >
-            <p className="mx-auto max-w-xl text-sm italic  sm:text-lg mb-0">
+            <p className="mx-auto max-w-xl xl:max-w-3xl text-sm italic  sm:text-lg mb-0">
               "Lift Performance is conveniently located in Central and the
               equipment is just exactly what I need. The scale is just about
               right and it won’t make you feel it’s too crowded at one time. The

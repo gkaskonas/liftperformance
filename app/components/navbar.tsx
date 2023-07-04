@@ -28,12 +28,12 @@ export default function NavBar() {
             loading="lazy"
             src={logo}
             alt="logo"
-            className="w-1/4 sm:w-1/3 xl:w-1/4 ml-10"
+            className="w-1/4 sm:w-1/3 lg:w-1/5 xl:w-1/6 ml-10"
           />
         </Link>
       </div>
       <div className="navbar-center hidden flex-row sm:flex ">
-        <ul className="menu menu-horizontal space-x-7 px-1 text-white  sm:text-lg lg:text-2xl xl:text-3xl ">
+        <ul className="menu menu-horizontal space-x-7 px-1 text-white  sm:text-lg lg:text-xl">
           <Link href="#team" className="hover:opacity-80">
             Team
           </Link>
@@ -75,18 +75,21 @@ export default function NavBar() {
         {/* Open the modal using ID.showModal() method */}
         <dialog
           id="my_modal_5"
-          className="modal modal-middle text-white"
+          className="modal modal-middle"
         >
-          <form method="dialog" className="modal-box modal-bottom">
+          <form method="dialog" className="modal-box bg-transparent">
             <ul className="flex flex-col gap-y-5">
             
-              <Link href="#team" className="btn bg-transparent border-none" onClick={toggle}>Team</Link>
-              <Link href="#booking" className="btn bg-transparent border-none" onClick={toggle}>Booking</Link>
-              <Link href="#services" className="btn bg-transparent border-none" onClick={toggle}>Services</Link>
-              <Link href="#testimonials" className="btn bg-transparent border-none" onClick={toggle}>Testimonials</Link>
-              <Link href="#contact" className="btn bg-transparent border-none" onClick={toggle}>Contact</Link>
+              <Link href="#team" className="text-2xl btn bg-transparent border-none text-white" onClick={toggle}>Team</Link>
+              <Link href="#booking" className="text-2xl text-white hover:underline btn bg-transparent border-none" onClick={toggle}>Booking</Link>
+              <Link href="#services" className="text-2xl text-white hover:underline btn bg-transparent border-none" onClick={toggle}>Services</Link>
+              <Link href="#testimonials" className="text-2xl text-white hover:underline btn bg-transparent border-none" onClick={toggle}>Testimonials</Link>
+              <Link href="#contact" className="text-2xl text-white hover:underline btn bg-transparent border-none" onClick={toggle}>Contact</Link>
               </ul>
           </form>
+          <form method="dialog" className="modal-backdrop">
+    <button>close</button>
+  </form>
         </dialog>
       </div>
     </div>

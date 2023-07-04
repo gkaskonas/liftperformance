@@ -8,6 +8,7 @@ import { M_PLUS_1 } from 'next/font/google'
 const inter = M_PLUS_1({
   subsets: ['latin'],
   display: 'swap',
+  preload: true,
 })
 
 

@@ -8,11 +8,11 @@ export default function About() {
         <div className="container mx-auto text-center lg:text-left xl:px-32">
           <div className="flex grid items-center sm:grid-cols-2">
             <div className="mb-12 lg:mb-0">
-              <div className="relative z-[1] block rounded-lg bg-slate-50 px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] shadow-black/20 backdrop-blur-[30px] sm:px-12 lg:-mr-14 prose text-black">
+              <div className="relative z-[1] block rounded-lg bg-slate-50 px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] shadow-black/20 backdrop-blur-[30px] 2xl:translate-x-28 sm:px-2 md:-mr-14 prose text-black">
               <h1 className="mb-8 text-center text-3xl font-bold ">
                   Why LIFT?
                 </h1>
-                <p className="mb-8 pb-2 tracking-tighter  lg:pb-0 lg:text-xl text-sm">
+                <p className="mb-2 pb-2 tracking-tighter  lg:pb-0 lg:text-xl text-sm">
                   At Lift Performance, our elite coaches have one goal in mind -
                   to elevate every aspect of your health and fitness. From the
                   training sessions, to follow ups during your daily life, we
@@ -20,7 +20,7 @@ export default function About() {
                 </p>
 
                 <div className="mx-auto mb-8 flex flex-col  md:flex-row md:justify-around lg:justify-between ">
-                  <p className="mx-auto mb-4 flex items-center text-sm md:mx-0 md:mb-2 lg:mb-0 lg:text-lg">
+                  <p className="mx-auto mb-4 flex items-center  md:mx-0 md:mb-2 lg:mb-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

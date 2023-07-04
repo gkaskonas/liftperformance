@@ -66,8 +66,8 @@ export default function Services() {
               />
             </figure>
             <div className="flex flex-grow card-body items-center prose text-black">
-              <h2 className="card-title">{service.name}</h2>
-              <p className="text-sm">{service.description}</p>
+              <h2 className="text-lg mb-0 mt-0">{service.name}</h2>
+              <p className="text-sm md:text-base">{service.description}</p>
             </div>
           </div>
         ))}
