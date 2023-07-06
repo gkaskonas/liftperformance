@@ -2,17 +2,23 @@
 
 import client from "@mailchimp/mailchimp_marketing";
 
-export async function makeMailchimpRequest(email: string): Promise<string> {
+export interface IProps {
+  apiKey: string,
+  server: string,
+  audienceId: string,
+}
+
+export async function makeMailchimpRequest(email: string, props: IProps): Promise<string> {
   if (!email || !email.length) {
     throw new Error("Email is required");
   }
 
   client.setConfig({
-    apiKey: process.env.MAILCHIMP_API_KEY,
-    server: process.env.MAILCHIMP_API_SERVER,
+    apiKey: props.apiKey,
+    server: props.server
   });
 
-  const AUDIENCE_ID = process.env.MAILCHIMP_AUDIENCE_ID;
+  const AUDIENCE_ID = props.audienceId
 
   if (!AUDIENCE_ID) throw new Error("No audience id");
 

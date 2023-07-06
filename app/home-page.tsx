@@ -11,10 +11,15 @@ import Team from "./components/team";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import About from "./components/about";
+import { IProps } from "./actions/mailchimp";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({ year }: { year: number }) {
+export interface IHomeProps extends IProps {
+  year: number,
+}
+
+export default function Home(props: IHomeProps) {
   const Testimonials = dynamic(() => import("./components/testimonials"), {
     ssr: false,
   });
@@ -41,7 +46,7 @@ export default function Home({ year }: { year: number }) {
       <div className="h-5 border-b-4 border-black text-2xl mx-auto w-1/2  sm:w-1/3"/>
       <Testimonials />
       <div className="h-5 border-b-4  text-2xl mx-auto w-1/2 border-black sm:w-1/3"/>
-      <Footer year={year} />
+      <Footer {...props} />
     </div>
   );
 }
