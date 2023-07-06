@@ -30,7 +30,7 @@ export default function Home(props: IHomeProps) {
         <title>Lift Performance</title>
         <link
           rel="canonical"
-          href="https://www.liftperformance.net/"
+          href="https://liftperformance.net/"
           key="canonical"
           title="canonical link"
         />

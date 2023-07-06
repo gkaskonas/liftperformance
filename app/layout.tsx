@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Lift Performance | Personal Training | Hong Kong Island",
   description:
     "At Lift Performance, our elite coaches have one goal in mind - to elevate every aspect of your health and fitness",
-    metadataBase: new URL('https://www.liftperformance.net'),
+    metadataBase: new URL('https://liftperformance.net'),
   alternates: {
     canonical: "/",
   },
