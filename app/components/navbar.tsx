@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import logo from "../../public/lift-logo-1.png";
+import logo from "../../public/photos/lift-logo-1.png";
 
 
 export default function NavBar() {
@@ -33,21 +33,26 @@ export default function NavBar() {
         </Link>
       </div>
       <div className="navbar-center hidden flex-row sm:flex ">
-        <ul className="menu menu-horizontal space-x-7 px-1 text-white  sm:text-lg lg:text-xl">
-          <Link href="#team" className="hover:opacity-80">
+        <ul className="menu menu-horizontal space-x-7 px-1 text-white  sm:text-lg lg:text-xl transition duration-300">
+          <Link href="#team" className="group text-white transition duration-300">
             Team
+            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
           </Link>
-          <Link href="#booking" className="hover:opacity-80">
+          <Link href="#booking" className="group text-white transition duration-300">
             Booking
+            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
           </Link>
-          <Link href="#services" className="hover:opacity-80">
+          <Link href="#services" className="group text-white transition duration-300">
             Services
+            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
           </Link>
-          <Link href="#testimonials" className="hover:opacity-80">
+          <Link href="#testimonials" className="group text-white transition duration-300">
             Testimonials
+            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
           </Link>
-          <Link href="#contact" className="hover:opacity-80">
+          <Link href="#contact" className="group text-white transition duration-300">
             Contact
+            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
           </Link>
         </ul>
       </div>

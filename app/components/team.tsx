@@ -1,9 +1,9 @@
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
-import brian from "../../public/clipped_brian.jpg";
-import dennis from "../../public/clipped_dennis.jpg";
-import eunice from "../../public/clipped_eunice.jpg";
-import jane from "../../public/clipped_jane.jpg";
+import brian from "../../public/photos/clipped_brian.jpg";
+import dennis from "../../public/photos/clipped_dennis.jpg";
+import eunice from "../../public/photos/clipped_eunice.jpg";
+import jane from "../../public/photos/clipped_jane.jpg";
 
 type Trainer = {
   name: string;

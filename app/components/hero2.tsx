@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Hero2() {
   return (
-    <div className="hero min-h-screen bg-[url('/hero.webp')]">
+    <div className="hero min-h-screen bg-[url('/photos/hero.webp')]">
         <div className="hero-overlay bg-opacity-30"></div>
       <div className="hero-content text-center text-neutral-content">
         <NavBar />

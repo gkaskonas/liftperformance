@@ -1,9 +1,9 @@
 import Image, { StaticImageData } from "next/image";
-import group from "../../public/group.jpeg";
-import natal from "../../public/natal.jpeg";
-import service1 from "../../public/personal.jpeg";
-import pilates from "../../public/pilates.jpeg";
-import flexibility from "../../public/flexibility_clipped.jpg";
+import group from "../../public/photos/group.jpeg";
+import natal from "../../public/photos/natal.jpeg";
+import service1 from "../../public/photos/personal.jpeg";
+import pilates from "../../public/photos/pilates.jpeg";
+import flexibility from "../../public/photos/flexibility_clipped.jpg";
 
 type Service = {
   name: string;
@@ -54,10 +54,10 @@ export default function Services() {
 
       <ul className="flex list-none flex-col place-items-center items-center justify-center gap-10 py-12 sm:my-0 sm:flex-row flex-wrap sm:gap-5">
         {services.map((service: Service, index: number) => (
-          <div className="card w-96 shadow-lg"  key={index}>
-            <figure>
+          <div className="card w-[354px] shadow-lg"  key={index}>
+            <figure className="mb-0">
             <Image
-                className="mx-auto w-3/4"
+                className="mx-auto w-3/4  rounded-lg mb-0"
                 src={service.image}
                 alt="service image"
                 loading="lazy"
@@ -65,9 +65,9 @@ export default function Services() {
                 width={384}
               />
             </figure>
-            <div className="flex flex-grow card-body items-center prose text-black">
+            <div className="flex flex-grow card-body items-center prose py-2 text-black">
               <h2 className="text-lg mb-0 mt-0">{service.name}</h2>
-              <p className="text-sm md:text-base">{service.description}</p>
+              <p className="text-sm md:text-base leading-tight">{service.description}</p>
             </div>
           </div>
         ))}
