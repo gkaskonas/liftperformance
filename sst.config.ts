@@ -22,7 +22,7 @@ export default {
       });
       const site = new NextjsSite(stack, "site", {
         bind: [MAILCHIMP_API_KEY, MAILCHIMP_API_SERVER, MAILCHIMP_AUDIENCE_ID],
-        edge: true,
+        warm: 2,
         environment: {
           NEXT_PUBLIC_VERCEL_ENV: app.stage === "prod" ? "production": "development",
           NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID : "GTM-KWXC4F4",
