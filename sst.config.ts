@@ -22,7 +22,6 @@ export default {
       });
       const site = new NextjsSite(stack, "site", {
         bind: [MAILCHIMP_API_KEY, MAILCHIMP_API_SERVER, MAILCHIMP_AUDIENCE_ID],
-        warm: 1,
         edge: true,
         environment: {
           NEXT_PUBLIC_VERCEL_ENV: app.stage === "prod" ? "production": "development",
