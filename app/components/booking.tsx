@@ -1,26 +1,33 @@
-import Script from "next/script";
+import { PopupWidget } from "react-calendly";
 
-export default function Booking() {
+export default function Calendly() {
+
+  const getRootEelement = () => {
+    const element = document.getElementById("hero");
+
+    if (!element) {
+      throw new Error("Root element not found");
+    }
+    return element;
+  };
   return (
-    <section id="booking" className="my-12 mb-10">
-      <h2 className="mb-10 text-center text-4xl font-bold  sm:text-5xl">
-        Book Now!
-      </h2>
-      <Script
-        src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="lazyOnload"
-        async
+      <PopupWidget
+        url="https://calendly.com/liftperformancehk/consultation"
+        rootElement={getRootEelement()}
+        text="Book Now!"
+        textColor="#ffffff"
+        color="#BF1E2C"
+        branding={false}
+        pageSettings={
+          {
+            hideEventTypeDetails: true,
+             hideGdprBanner: true,
+             hideLandingPageDetails: true,
+          }
+        }
+        
       />
-      <div className="relative mx-auto mb-0 h-[850px] sm:h-[1000px] lg:h-[850px] w-4/5 ">
-        <iframe
-          loading="lazy"
-          width="100%"
-          src="https://calendly.com/liftperformancehk/consultation?embed_type=Inline&embed_domain=1"
-          className="absolute left-0 top-0 h-full w-full overscroll-y-none"
-          title="Booking form"
-          style={{ width: "100%", height: "100%" }}
-        ></iframe>
-      </div>
-    </section>
   );
 }
+
+

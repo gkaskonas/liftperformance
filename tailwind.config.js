@@ -6,6 +6,9 @@ module.exports = {
   ],
   plugins: ["@tailwindcss/forms", require("@tailwindcss/typography"), require("tw-elements/dist/plugin.cjs"), require("daisyui")],
   theme: {
+    container: {
+      center: true,
+    },
     screens: {
       "sm": "640px",
       "md": "768px",
@@ -19,7 +22,7 @@ module.exports = {
     themes: [{
       light: {
         ...require("daisyui/src/theming/themes")["[data-theme=light]"],
-        primary: "red",
+        primary: "#BF1E2C",
       }
     },
     ],

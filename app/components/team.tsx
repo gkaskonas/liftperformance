@@ -57,12 +57,13 @@ export default function Team() {
       <h1 className="mx-auto text-center text-4xl font-bold  sm:text-5xl">
         Meet the Team
       </h1>
+      <div className="container mx-auto">
       <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-2 py-12 sm:my-0 sm:flex-row sm:gap-5 lg:mx-auto lg:w-3/4">
         {trainers.map((trainer: Trainer, index: number) => (
           <div
             key={index}
             onClick={() => handleImageClick(index)}
-            className="w-68 xl:w-[380px] 2xl:w-[330px] card"
+            className="w-68 xl:w-[340px] 2xl:w-[250px] card"
           >
             <figure className="">
               <Image
@@ -78,12 +79,13 @@ export default function Team() {
             </figure>
             <div className="card-body items-center">
               <h1 className="card-title">{trainer.name}</h1>
-              <h2 className="font-bold">{trainer.title}</h2>
+              <h2 className="font-bold text-sm">{trainer.title}</h2>
               <p className="text-sm">Click to Learn More</p>
             </div>
           </div>
         ))}
       </ul>
+      </div>
       {showModal && (
         <div
           className="fixed bottom-0 left-0 right-0 top-0 z-50 flex items-center justify-center  backdrop-blur-md"

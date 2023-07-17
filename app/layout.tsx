@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="light" className={inter.className}>
+    <html lang="en" data-theme="light" className={inter.className} id="root">
       <body className="scroll-smooth overflow-x-hidden">
         <Suspense>
           <Analytics />

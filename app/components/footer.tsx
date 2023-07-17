@@ -6,7 +6,7 @@ import { IHomeProps } from "@/home-page";
 
 export default function Footer(props: IHomeProps) {
   return (
-    <section aria-label="Site Footer" className="my-12 ">
+    <section aria-label="Site Footer" className="my-12">
       <h2 className="mb-6 text-center text-4xl font-bold  sm:text-5xl">
         Contact Us
       </h2>

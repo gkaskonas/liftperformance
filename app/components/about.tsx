@@ -3,10 +3,10 @@ import about from "../../public/photos/about.jpg";
 
 export default function About() {
   return (
-    <div className="container mx-auto my-0  md:px-6 ">
+    <div className="container mx-auto my-0 w-4/5 md:px-6 ">
       <section className="mb-12">
         <div className="container mx-auto text-center lg:text-left xl:px-32">
-          <div className="flex grid items-center sm:grid-cols-2 ">
+          <div className="flex sm:grid items-center sm:grid-cols-2 ">
             <div className="mb-12 lg:mb-0">
               <div className="relative z-[1] block rounded-lg bg-slate-50 px-6 py-12 3xl:py-24 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] shadow-black/20 backdrop-blur-[30px] 2xl:translate-x-72 sm:px-2 md:-mr-14 prose text-black">
               <h1 className="mb-8 text-center text-3xl font-bold ">
@@ -19,7 +19,7 @@ export default function About() {
                   are committed to keep you on track of your goals.
                 </p>
 
-                <div className="mx-auto mb-8 flex flex-col  md:flex-row md:justify-around lg:justify-between ">
+                <div className="mx-auto mb-8 flex flex-col  md:flex-row md:justify-around lg:justify-between font-bold">
                 <p className="mx-auto mb-4 flex items-center md:mx-0 md:mb-2 lg:mb-0 lg:text-lg">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
