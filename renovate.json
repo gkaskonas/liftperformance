@@ -1,6 +1,38 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
-  ]
+    "config:base",
+    ":semanticCommitTypeAll(ci)",
+    "github>whitesource/merge-confidence:beta",
+    "schedule:earlyMondays"
+  ],
+  "separateMajorMinor": true,
+  "labels": ["dependencies :package:", ":rocket: merge it!"],
+  "packageRules": [
+    {
+      "packagePatterns": ["^eslint"],
+      "packageNames": ["@typescript-eslint/eslint-plugin", "prettier", "jest", "ts-jest"],
+      "groupName": "testing",
+      "automerge": true
+    },
+    {
+      "packagePatterns": ["^@types/"],
+      "groupName": "types",
+      "automerge": true
+    },
+    {
+      "allowedVersions": "<19",
+      "packageNames": ["@types/node"]
+    },
+    {
+      "packageNames": ["constructs", "aws-cdk-lib", "aws-cdk"],
+      "groupName": "aws-cdk",
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "addLabels": ["area/security"]
+  }
 }
