@@ -6,33 +6,44 @@
     "github>whitesource/merge-confidence:beta",
     "schedule:earlyMondays"
   ],
-  "separateMajorMinor": true,
   "labels": ["dependencies :package:", ":rocket: merge it!"],
   "packageRules": [
     {
-      "packagePatterns": ["^eslint"],
-      "packageNames": ["@typescript-eslint/eslint-plugin", "prettier", "jest", "ts-jest"],
-      "groupName": "testing",
-      "automerge": true
+      "groupName": "all dependencies",
+      "groupSlug": "all",
+      "matchPackagePatterns": ["*"]
     },
     {
-      "packagePatterns": ["^@types/"],
+      "automerge": true,
+      "groupName": "testing",
+      "packageNames": [
+        "@typescript-eslint/eslint-plugin",
+        "prettier",
+        "jest",
+        "ts-jest"
+      ],
+      "packagePatterns": ["^eslint"]
+    },
+    {
+      "automerge": true,
       "groupName": "types",
-      "automerge": true
+      "packagePatterns": ["^@types/"]
     },
     {
       "allowedVersions": "<19",
       "packageNames": ["@types/node"]
     },
     {
-      "packageNames": ["constructs", "aws-cdk-lib", "aws-cdk"],
+      "automerge": true,
       "groupName": "aws-cdk",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
+      "packageNames": ["constructs", "aws-cdk-lib", "aws-cdk", "sst"]
     }
   ],
+  "pinVersions": true,
+  "separateMajorMinor": true,
   "vulnerabilityAlerts": {
-    "enabled": true,
-    "addLabels": ["area/security"]
+    "addLabels": ["area/security"],
+    "enabled": true
   }
 }
