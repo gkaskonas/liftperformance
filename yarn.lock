@@ -23,12 +23,12 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@aws-cdk/asset-awscli-v1@^2.2.177":
+"@aws-cdk/asset-awscli-v1@^2.2.177", "@aws-cdk/asset-awscli-v1@^2.2.200":
   version "2.2.200"
   resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.200.tgz#6ead533f73f705ad7350eb46955e2538e50cd013"
   integrity sha512-Kf5J8DfJK4wZFWT2Myca0lhwke7LwHcHBo+4TvWOGJrFVVKVuuiLCkzPPRBQQVDj0Vtn2NBokZAz8pfMpAqAKg==
 
-"@aws-cdk/asset-kubectl-v20@^2.1.1":
+"@aws-cdk/asset-kubectl-v20@^2.1.1", "@aws-cdk/asset-kubectl-v20@^2.1.2":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@aws-cdk/asset-kubectl-v20/-/asset-kubectl-v20-2.1.2.tgz#d8e20b5f5dc20128ea2000dc479ca3c7ddc27248"
   integrity sha512-3M2tELJOxQv0apCIiuKQ4pAbncz9GuLwnKFqxifWfe77wuMxyTRPmxssYHs42ePqzap1LT6GDcPygGs+hHstLg==
@@ -37,6 +37,11 @@
   version "2.0.165"
   resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.165.tgz#c169599d83beceea7e638082ef9833997f04c85d"
   integrity sha512-bsyLQD/vqXQcc9RDmlM1XqiFNO/yewgVFXmkMcQkndJbmE/jgYkzewwYGrBlfL725hGLQipXq19+jwWwdsXQqg==
+
+"@aws-cdk/asset-node-proxy-agent-v5@^2.0.165":
+  version "2.0.166"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.166.tgz#467507db141cd829ff8aa9d6ea5519310a4276b8"
+  integrity sha512-j0xnccpUQHXJKPgCwQcGGNu4lRiC1PptYfdxBIH1L4dRK91iBxtSQHESRQX+yB47oGLaF/WfNN/aF3WXwlhikg==
 
 "@aws-cdk/aws-apigatewayv2-alpha@^2.84.0-alpha.0":
   version "2.84.0-alpha.0"
@@ -2827,6 +2832,25 @@ aws-cdk-lib@2.84.0:
     table "^6.8.1"
     yaml "1.10.2"
 
+aws-cdk-lib@2.88.0:
+  version "2.88.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.88.0.tgz#72d165cb7dc168c5fa3b22caaacd8d33364866fc"
+  integrity sha512-bmhokh30HVeqlotWaoEmK7mKB9SJbJwpbsiVgmYe3JcMu8DposHQqaIPI7LnC+dg015tZaxUsExxOYBEw+vntQ==
+  dependencies:
+    "@aws-cdk/asset-awscli-v1" "^2.2.200"
+    "@aws-cdk/asset-kubectl-v20" "^2.1.2"
+    "@aws-cdk/asset-node-proxy-agent-v5" "^2.0.165"
+    "@balena/dockerignore" "^1.0.2"
+    case "1.6.3"
+    fs-extra "^11.1.1"
+    ignore "^5.2.4"
+    jsonschema "^1.4.1"
+    minimatch "^3.1.2"
+    punycode "^2.3.0"
+    semver "^7.5.4"
+    table "^6.8.1"
+    yaml "1.10.2"
+
 aws-crt@^1.15.9:
   version "1.15.22"
   resolved "https://registry.yarnpkg.com/aws-crt/-/aws-crt-1.15.22.tgz#a193d5d4c61b9e290ba1ee4289abd655cabd2780"
@@ -3503,6 +3527,11 @@ constructs@10.1.156:
   version "10.1.156"
   resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.156.tgz#3ccd82b7f07e8921d015f1ae9317f851ff6b87d4"
   integrity sha512-BTZ3Kyt++/YFlph/ioqbDhzSKVMqHRHvc99FxU4b705ZP6s2IkDxMLCMinC70USMTJWFbO1p02Egux7sk4q07A==
+
+constructs@10.2.69:
+  version "10.2.69"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.69.tgz#5bb06693b317140fe310797ffd52c0d6cc595913"
+  integrity sha512-0AiM/uQe5Uk6JVe/62oolmSN2MjbFQkOlYrM3fFGZLKuT+g7xlAI10EebFhyCcZwI2JAcWuWCmmCAyCothxjuw==
 
 content-disposition@0.5.2:
   version "0.5.2"
@@ -7028,7 +7057,7 @@ sst-aws-cdk@2.84.0:
   optionalDependencies:
     fsevents "2.3.2"
 
-sst@^2.19.0:
+sst@2.22.3:
   version "2.22.3"
   resolved "https://registry.yarnpkg.com/sst/-/sst-2.22.3.tgz#b0e6f55d394da9bf611d9fc7653f1d361a9dcaee"
   integrity sha512-tOjsfZqSYvphE2HZVW4wMxrtKtBWSCFeEc2MMt6EMUo6rapXhnlIv31rD5u4Y4C6zKA27tQ7/PsO0clPhj3Ouw==
