@@ -3,6 +3,7 @@ import "./styles/globals.css";
 import { Suspense } from "react";
 import Analytics from "./components/analytiics";
 import { M_PLUS_1 } from "next/font/google";
+import "tw-elements/dist/css/tw-elements.min.css";
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = M_PLUS_1({

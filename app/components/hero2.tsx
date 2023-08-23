@@ -12,13 +12,13 @@ export default function Hero2() {
 
   return (
     <section>
-      <div className="hero bg-[url('/photos/hero_latest.webp')] bg-cover bg-no-repeat bg-top min-h-[50vh] sm:min-h-[80vh] xl:min-h-screen" id="hero">
-        <div className="z-0 inset-x-0 flex flex-col w-[90%] min-h-[50vh] sm:min-h-[80vh]">
+      <div className="hero bg-[url('/photos/hero_latest.webp')] bg-cover bg-no-repeat bg-top min-h-[70vh] sm:min-h-[80vh] xl:min-h-[90vh]" id="hero">
+        <div className="z-0 inset-x-0 flex flex-col w-[90%] min-h-[70vh] sm:min-h-[80vh]">
           <Image
             loading="lazy"
             src={logo}
             alt="logo"
-            className="flex mb-10 mt-14 xl:mt-0 max-w-xs xl:max-w-lg"
+            className="flex mb-10 mt-14 xl:mt-0 w-1/5 xl:w-[10%]"
             placeholder="blur"
             width={128}
           />

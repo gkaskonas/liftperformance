@@ -4,7 +4,7 @@ import Footer from "./components/footer";
 import Hero2 from "./components/hero2";
 import Services from "./components/services";
 import Team from "./components/team";
-import Testimonials from "./components/testimonials";
+
 
 import { Inter } from "next/font/google";
 import Head from "next/head";
@@ -13,7 +13,7 @@ import { IProps } from "./actions/mailchimp";
 import dynamic from "next/dynamic";
 import NavBar from "./components/navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: [ "latin" ] });
 
 export interface IHomeProps extends IProps {
   year: number;
@@ -21,6 +21,10 @@ export interface IHomeProps extends IProps {
 
 export default function Home(props: IHomeProps) {
   const Calendly = dynamic(() => import("./components/booking"), {
+    ssr: false,
+  });
+
+  const Testimonials = dynamic(() => import("./components/testimonials"), {
     ssr: false,
   });
 

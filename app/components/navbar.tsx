@@ -69,7 +69,7 @@ export default function NavBar() {
             <span className="block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full"></span>
 
           </Link>
-          <CalendlyButton buttonClassNames="flex bg-white text-center text-base px-1 py-0 text-bold rounded-lg" />
+          <CalendlyButton buttonClassNames="flex bg-white text-center text-base px-1 py-0 text-bold rounded-lg hover:shadow hover:bg-slate-100" />
 
         </ul>
       </div>
