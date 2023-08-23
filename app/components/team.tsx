@@ -13,8 +13,8 @@ type Trainer = {
 };
 
 export default function Team() {
-  const [showModal, setShowModal] = useState(false);
-  const [selectedTrainer, setSelectedTrainer] = useState<Trainer | null>(null); // specify the type of selectedTrainer
+  const [ showModal, setShowModal ] = useState(false);
+  const [ selectedTrainer, setSelectedTrainer ] = useState<Trainer | null>(null); // specify the type of selectedTrainer
   const trainers: Trainer[] = [
     {
       name: "Jane Cheung",
@@ -48,7 +48,7 @@ export default function Team() {
   ];
 
   const handleImageClick = (index: number) => {
-    setSelectedTrainer(trainers[index]);
+    setSelectedTrainer(trainers[ index ]);
     setShowModal(true);
   };
 
@@ -58,33 +58,33 @@ export default function Team() {
         Meet the Team
       </h1>
       <div className="container mx-auto">
-      <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-2 py-12 sm:my-0 sm:flex-row sm:gap-5 lg:mx-auto lg:w-3/4">
-        {trainers.map((trainer: Trainer, index: number) => (
-          <div
-            key={index}
-            onClick={() => handleImageClick(index)}
-            className="w-68 xl:w-[340px] 2xl:w-[250px] card"
-          >
-            <figure className="">
-              <Image
-                src={trainer.image}
-                alt={trainer.name}
-                className="w-1/2 lg:w-full"
-                placeholder="blur"
-                priority={true}
-                sizes="(min-width: 60em) 24vw,
+        <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-2 py-12 sm:my-0 sm:flex-row sm:gap-5 lg:mx-auto lg:w-3/4">
+          {trainers.map((trainer: Trainer, index: number) => (
+            <div
+              key={index}
+              onClick={() => handleImageClick(index)}
+              className="w-68 card xl:w-[340px] 2xl:w-[250px]"
+            >
+              <figure className="">
+                <Image
+                  src={trainer.image}
+                  alt={trainer.name}
+                  className="w-full lg:w-full"
+                  placeholder="blur"
+                  priority={true}
+                  sizes="(min-width: 60em) 24vw,
               (min-width: 28em) 45vw,
               100vw"
-              />
-            </figure>
-            <div className="card-body items-center">
-              <h1 className="card-title">{trainer.name}</h1>
-              <h2 className="font-bold text-sm">{trainer.title}</h2>
-              <p className="text-sm">Click to Learn More</p>
+                />
+              </figure>
+              <div className="card-body items-center">
+                <h1 className="card-title">{trainer.name}</h1>
+                <h2 className="text-sm font-bold">{trainer.title}</h2>
+                <p className="text-sm">Click to Learn More</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </ul>
+          ))}
+        </ul>
       </div>
       {showModal && (
         <div

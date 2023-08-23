@@ -1,9 +1,10 @@
 "use client";
+import { getBookingButtonText } from "@/lib/utils";
 import { Suspense, useState } from "react";
 import { PopupModal } from "react-calendly";
 import Skeleton from "react-loading-skeleton";
 
-export default function CalendlyButton() {
+export default function CalendlyButton({ buttonClassNames }: { buttonClassNames: string }) {
   const getRootEelement = () => {
     const element = document.getElementById("root");
 
@@ -13,32 +14,27 @@ export default function CalendlyButton() {
     return element;
   };
 
-  const [showModal, setShowModal] = useState(false);
+  const [ showModal, setShowModal ] = useState(false);
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <button
         onClick={() => setShowModal(true)}
-        className="bg-white  uppercase btn flex items-center justify-center text-center text-xl lg:text-2xl text-black"
+        className={buttonClassNames}
       >
-        Book now
+        {getBookingButtonText()}
       </button>
       <PopupModal
         url="https://calendly.com/liftperformancehk/consultation"
         onModalClose={() => setShowModal(false)}
         open={showModal}
-        
         rootElement={getRootEelement()}
-
-        pageSettings={
-          {
-            hideEventTypeDetails: true,
-             hideGdprBanner: true,
-             hideLandingPageDetails: true,
-
-          }
-        }
+        pageSettings={{
+          hideEventTypeDetails: true,
+          hideGdprBanner: true,
+          hideLandingPageDetails: true,
+        }}
       />
-    </Suspense>
+    </Suspense >
   );
 }

@@ -34,7 +34,7 @@ export default function Testimonials() {
           id="item1"
           className="carousel-item flex w-full flex-col  items-center"
         >
-          <p className="mx-auto w-3/4 sm:max-w-xl xl:max-w-3xl text-sm italic  sm:text-lg">
+          <p className="mx-auto w-3/4 text-sm italic sm:max-w-xl sm:text-lg  xl:max-w-3xl">
             "Lift Performance is conveniently located in Central and the
             equipment is just exactly what I need. The scale is just about right
             and it won't make you feel it's too crowded at one time. The

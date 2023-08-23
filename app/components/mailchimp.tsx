@@ -1,7 +1,6 @@
 import { IProps, makeMailchimpRequest } from "@/actions/mailchimp";
 import { useState } from "react";
 
-
 export default function Subscribe(props: IProps) {
   "use client";
   const [email, setEmail] = useState("");
@@ -9,7 +8,7 @@ export default function Subscribe(props: IProps) {
   const [errorMsg, setErrorMsg] = useState("");
 
   const subscribe = async (e: any) => {
-    "use client"
+    "use client";
     e.preventDefault();
     setState("Loading");
 
@@ -39,7 +38,7 @@ export default function Subscribe(props: IProps) {
         <div className="w-full shrink-0 grow-0 basis-auto px-3 lg:w-10/12">
           <div className="grid items-center gap-x-6 lg:grid-cols-2">
             <div className="mb-10 lg:mb-0">
-              <h2 className="text-center text-2xl font-bold  dark: sm:text-3xl">
+              <h2 className="dark: text-center text-2xl  font-bold sm:text-3xl">
                 Do not miss any updates!
                 <br />
                 <span className="text-red-700">
@@ -65,7 +64,7 @@ export default function Subscribe(props: IProps) {
                 />
                 <button
                   type="submit"
-                  className="btn btn-primary text-white"
+                  className="btn-primary btn text-white"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                   onClick={subscribe}
@@ -74,13 +73,9 @@ export default function Subscribe(props: IProps) {
                   Subscribe
                 </button>
               </div>
-              {state === "Error" && (
-                <div className="">{errorMsg}</div>
-              )}
+              {state === "Error" && <div className="">{errorMsg}</div>}
               {state === "Success" && (
-                <div className="">
-                  Awesome, you've been subscribed!
-                </div>
+                <div className="">Awesome, you've been subscribed!</div>
               )}
             </div>
           </div>

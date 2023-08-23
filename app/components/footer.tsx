@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Subscribe from "./mailchimp";
-import {SiWhatsapp} from "react-icons/si"
-import {MdOutlineEmail} from "react-icons/md"
+import { SiWhatsapp } from "react-icons/si";
+import { MdOutlineEmail } from "react-icons/md";
 import { IHomeProps } from "@/home-page";
 
 export default function Footer(props: IHomeProps) {
@@ -28,12 +28,18 @@ export default function Footer(props: IHomeProps) {
           <h3 className="mb-5 font-bold  underline underline-offset-4 sm:text-2xl">
             Contact
           </h3>
-          <Link href="https://wa.link/y05vhp" className="mx-auto mb-2 flex flex-row  md:flex-row md:justify-around lg:justify-between ">
-            <SiWhatsapp className="mr-2"/>
+          <Link
+            href="https://wa.link/y05vhp"
+            className="mx-auto mb-2 flex flex-row  md:flex-row md:justify-around lg:justify-between "
+          >
+            <SiWhatsapp className="mr-2" />
             6772 8838
           </Link>
-          <Link href="mailto:liftphk@gmail.com" className="mx-auto mb-2 flex flex-row  md:flex-row md:justify-around lg:justify-between ">
-            <MdOutlineEmail className="mr-2"/>
+          <Link
+            href="mailto:liftphk@gmail.com"
+            className="mx-auto mb-2 flex flex-row  md:flex-row md:justify-around lg:justify-between "
+          >
+            <MdOutlineEmail className="mr-2" />
             liftphk@gmail.com
           </Link>
         </li>
@@ -41,16 +47,14 @@ export default function Footer(props: IHomeProps) {
           <h3 className="mb-5 font-bold  underline underline-offset-4 sm:text-2xl">
             Hours
           </h3>
-          <h2 className="mb-2 text-center  ">
-            Mon - Fri 7:00am - 8:00 pm
-          </h2>
+          <h2 className="mb-2 text-center  ">Mon - Fri 7:00am - 8:00 pm</h2>
           <h2 className="">Sat - Sun 7:00am - 4:00 pm</h2>
         </li>
       </ul>
-      <div className="relative w-4/5 mx-auto sm:h-96 h-80">
+      <div className="relative mx-auto h-80 w-4/5 sm:h-96">
         <iframe
           loading="lazy"
-          className="absolute top-0 left-0 w-full h-full"
+          className="absolute left-0 top-0 h-full w-full"
           title="Google Map"
           src="https://maps.google.com/maps?&amp;hl=en&amp;q=Lift%20Performance,%201/F,%20Abdoolaly%20House,%2020%20Stanley%20Street,%20Central,%20Hong%20Kong%20+(Lift%20Performance)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         ></iframe>

@@ -1,7 +1,7 @@
+import { getBookingButtonText } from "@/lib/utils";
 import { PopupWidget } from "react-calendly";
 
 export default function Calendly() {
-
   const getRootEelement = () => {
     const element = document.getElementById("hero");
 
@@ -11,23 +11,18 @@ export default function Calendly() {
     return element;
   };
   return (
-      <PopupWidget
-        url="https://calendly.com/liftperformancehk/consultation"
-        rootElement={getRootEelement()}
-        text="Book Now!"
-        textColor="#ffffff"
-        color="#BF1E2C"
-        branding={false}
-        pageSettings={
-          {
-            hideEventTypeDetails: true,
-             hideGdprBanner: true,
-             hideLandingPageDetails: true,
-          }
-        }
-        
-      />
+    <PopupWidget
+      url="https://calendly.com/liftperformancehk/consultation"
+      rootElement={getRootEelement()}
+      text={getBookingButtonText()}
+      textColor="#ffffff"
+      color="#BF1E2C"
+      branding={false}
+      pageSettings={{
+        hideEventTypeDetails: true,
+        hideGdprBanner: true,
+        hideLandingPageDetails: true,
+      }}
+    />
   );
 }
-
-

@@ -16,13 +16,12 @@ import NavBar from "./components/navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export interface IHomeProps extends IProps {
-  year: number,
+  year: number;
 }
 
 export default function Home(props: IHomeProps) {
-
   const Calendly = dynamic(() => import("./components/booking"), {
-    ssr: false
+    ssr: false,
   });
 
   return (
@@ -37,7 +36,7 @@ export default function Home(props: IHomeProps) {
         />
       </Head>
       <NavBar />
-      <Calendly/>
+      <Calendly />
       <Hero2 />
       <Team />
       <About />

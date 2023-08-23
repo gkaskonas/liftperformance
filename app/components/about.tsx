@@ -6,21 +6,21 @@ export default function About() {
     <div className="container mx-auto my-0 w-4/5 md:px-6 ">
       <section className="mb-12">
         <div className="container mx-auto text-center lg:text-left xl:px-32">
-          <div className="flex sm:grid items-center sm:grid-cols-2 ">
+          <div className="flex items-center sm:grid sm:grid-cols-2 ">
             <div className="mb-12 lg:mb-0">
-              <div className="relative z-[1] block rounded-lg bg-slate-50 px-6 py-12 3xl:py-24 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] shadow-black/20 backdrop-blur-[30px] 2xl:translate-x-72 sm:px-2 md:-mr-14 prose text-black">
-              <h1 className="mb-8 text-center text-3xl font-bold ">
+              <div className="prose relative z-[1] block rounded-lg bg-slate-50 px-6 py-12 text-black shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] shadow-black/20 backdrop-blur-[30px] sm:px-2 md:-mr-14 2xl:translate-x-56 3xl:py-24">
+                <h1 className="mb-8 text-center text-3xl font-bold ">
                   Why LIFT?
                 </h1>
-                <p className="mb-2 pb-2 tracking-tighter  lg:pb-0 lg:text-lg text-sm">
+                <p className="mb-2 pb-2 text-sm  tracking-tighter lg:pb-0 lg:text-lg">
                   At Lift Performance, our elite coaches have one goal in mind -
                   to elevate every aspect of your health and fitness. From the
                   training sessions, to follow ups during your daily life, we
                   are committed to keep you on track of your goals.
                 </p>
 
-                <div className="mx-auto mb-8 flex flex-col  md:flex-row md:justify-around lg:justify-between font-bold">
-                <p className="mx-auto mb-4 flex items-center md:mx-0 md:mb-2 lg:mb-0 lg:text-lg">
+                <div className="mx-auto mb-8 flex flex-col  font-bold md:flex-row md:justify-around lg:justify-between">
+                  <p className="mx-auto mb-4 flex items-center md:mx-0 md:mb-2 lg:mb-0 lg:text-lg">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -75,7 +75,7 @@ export default function About() {
                   </p>
                 </div>
 
-                <p className="mb-0  tracking-tight   lg:text-lg text-sm">
+                <p className="mb-0  text-sm   tracking-tight lg:text-lg">
                   We believe the best way to do so is through a holistic
                   approach. From fitness, to nutrition, to mindset - we strive
                   to provide you the best information along with accountability
@@ -89,7 +89,7 @@ export default function About() {
             <div>
               <Image
                 src={about}
-                className="hidden sm:block mx-auto sm:w-1/2 shadow-black/20 rounded-lg shadow-lg md:w-full"
+                className="mx-auto hidden rounded-lg shadow-lg shadow-black/20 sm:block sm:w-1/2 md:w-full"
                 alt="about us image"
                 loading="lazy"
               />

@@ -51,27 +51,25 @@ export default function Services() {
           Services
         </h1>
       </div>
-      <div className="container mx-auto p-6">
-        <div className="gap-2 mt-10 sm:flex-row flex flex-col sm:flex-wrap ">
+      <div className="gap-2 sm:gap-5 mt-10 sm:flex-grow flex flex-col sm:w-full">
         {services.map((service: Service, index: number) => (
-          <div className="card w-60 shadow-lg item-stretch mx-auto flex-grow-1 mt-5 "  key={index}>
+          <div className="card lg:card-side max-w-5xl mx-auto" key={index}>
             <figure className="mb-0">
-            <Image
-                className="mx-auto w-3/4  rounded-lg mb-0"
+              <Image
+                className="rounded-lg w-[95%] object-cover object-center"
                 src={service.image}
                 alt="service image"
                 loading="lazy"
                 placeholder="blur"
-                width={384}
+                width={2048}
               />
             </figure>
-            <div className="card-body items-center prose py-2 text-black">
-              <h2 className="text-base mb-0 mt-0 text-center">{service.name}</h2>
-              <p className="text-sm md:text-sm leading-tight mb-5 text-left">{service.description}</p>
+            <div className="card-body max-w-2xl">
+              <h2 className="text-2xl mb-15 mt-0 text-center card-title">{service.name}</h2>
+              <p className="text-lg leading-tight mt-10 text-left">{service.description}</p>
             </div>
           </div>
         ))}
-      </div>
       </div>
     </section>
   );

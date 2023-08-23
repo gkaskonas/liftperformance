@@ -1,23 +1,23 @@
 // Analytics.tsx
-"use client"
+"use client";
 
-import { GTM_ID, pageview } from "@/lib/gtm"
-import { usePathname, useSearchParams } from "next/navigation"
-import Script from "next/script"
-import { useEffect } from "react"
+import { GTM_ID, pageview } from "@/lib/gtm";
+import { usePathname, useSearchParams } from "next/navigation";
+import Script from "next/script";
+import { useEffect } from "react";
 
 export default function Analytics() {
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     if (pathname) {
-      pageview(pathname)
+      pageview(pathname);
     }
-  }, [pathname, searchParams])
+  }, [pathname, searchParams]);
 
   if (process.env.NEXT_PUBLIC_VERCEL_ENV !== "production") {
-    return null
+    return null;
   }
 
   return (
@@ -44,5 +44,5 @@ export default function Analytics() {
         }}
       />
     </>
-  )
+  );
 }
