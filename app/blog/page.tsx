@@ -127,7 +127,7 @@ export default async function Page() {
               </div>
 
               <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pl-6">
-                <h3 className="mb-4 text-2xl font-bold">{blog.title}</h3>
+                <a href={`/blog/${blog.id}`} className="mb-4 text-2xl font-bold">{blog.title}</a>
                 <p className="mb-6 text-sm text-neutral-500 dark:text-neutral-400">
                   Published <u>{new Date(blog.publishedAt).toDateString()}</u> by {blog.publishedBy.name}
                 </p>

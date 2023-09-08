@@ -47,6 +47,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
     const blog = await getBlog(params.slug)
 
+    const length = blog.content.json?.children.length
+
     return (
         <div className="" data-theme="light">
             <Head>
@@ -75,9 +77,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
                     </h1>
 
                     <article className="prose flex flex-col w-full text-lg text-justify max-w-4xl">
-                        {blog.content.json?.children.map((child) => {
+                        {blog.content.json?.children.map((child, index: number) => {
                             if (child.type === "paragraph") {
-                                return <p className="mt-2 mb-0">{child.children[ 0 ].text}</p>
+                                return (<div className="flex flex-col items-center">
+
+                                    <p className="mt-2 mb-0">{child.children[ 0 ].text}</p>
+                                    {index === length! - 1 && <CalendlyButton buttonClassNames="mt-10 btn btn-ghost flex px-10 bg-black text-white text-bold text-2xl text-center" />}
+                                </div>)
                             }
                             if (child.type === "heading-two") {
                                 return <h2 className="bold">{child.children[ 0 ].text}</h2>
@@ -92,7 +98,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                             if (child.type === "image") {
                                 return (<div className="flex flex-col items-center">
                                     <Image src={child.src} width={child.width} height={child.height} alt="image" />
-                                    <CalendlyButton buttonClassNames="mt-10 btn btn-ghost flex px-10 bg-black text-white text-bold text-2xl text-center" />
+                                    <CalendlyButton buttonClassNames="mb-5 btn btn-ghost flex px-10 bg-black text-white text-bold text-2xl text-center" />
 
                                 </div>)
                             }

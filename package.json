@@ -38,10 +38,11 @@
     "aws-cdk-lib": "2.95.0",
     "constructs": "10.2.69",
     "daisyui": "3.0.2",
+    "encoding": "^0.1.13",
+    "esbuild": "0.19.2",
     "prettier": "3.0.0",
     "prettier-plugin-tailwindcss": "0.4.1",
     "serve": "14.2.0",
-    "sst": "2.24.26",
-    "esbuild": "0.19.2"
+    "sst": "2.24.26"
   }
 }
