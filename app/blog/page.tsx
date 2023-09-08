@@ -91,7 +91,7 @@ export interface IPost {
 
 const QUERY = gql`
   {
-    posts {
+    posts(orderBy: createdAt_DESC) {
     id
     title
     excerpt
