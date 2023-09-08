@@ -6,6 +6,46 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import Head from "next/head";
 import Image from "next/image"
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Lift Performance Blog",
+  description:
+    "Discover fitness tips, workout plans, nutrition guides, and expert advice to achieve your gym goals. Elevate your fitness journey with our gym blog's valuable insights and stay motivated on the path to a healthier you.",
+  metadataBase: new URL("https://liftperformance.net"),
+  alternates: {
+    canonical: "/blog",
+  },
+  icons: [
+    {
+      rel: "icon",
+      url: "/favicon-16x16.png",
+      type: "image/png",
+      sizes: "16x16",
+    },
+    {
+      rel: "icon",
+      url: "/favicon-32x32.png",
+      type: "image/png",
+      sizes: "32x32",
+    },
+    {
+      rel: "apple-touch-icon",
+      url: "/apple-touch-icon.png",
+      type: "image/png",
+      sizes: "180x180",
+    },
+    {
+      rel: "manifest",
+      url: "/site.webmanifest",
+      sizes: "180x180",
+    },
+    {
+      rel: "mask-icon",
+      url: "/safari-pinned-tab.svg",
+    }
+  ]
+};
 
 export interface IBlog {
   posts: IPost[]
@@ -93,20 +133,8 @@ export default async function Page() {
 
   const blogs = await getBlogs()
 
-
-  console.log(blogs)
-
   return (
     <div className="" data-theme="light">
-      <Head>
-        <title>Lift Performance Blog</title>
-        <link
-          rel="canonical"
-          href="https://liftperformance.net/blog"
-          key="canonical"
-          title="canonical link"
-        />
-      </Head>
       <div className="container my-24 mx-auto md:px-6">
         <section className="mb-32">
           <h2 className="mb-16 text-center text-2xl font-bold">Latest Blogs</h2>

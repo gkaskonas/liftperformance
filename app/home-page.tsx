@@ -7,7 +7,6 @@ import Team from "./components/team";
 
 
 import { Inter } from "next/font/google";
-import Head from "next/head";
 import About from "./components/about";
 import { IProps } from "./actions/mailchimp";
 import dynamic from "next/dynamic";
@@ -30,15 +29,6 @@ export default function Home(props: IHomeProps) {
 
   return (
     <div className="" data-theme="light">
-      <Head>
-        <title>Lift Performance</title>
-        <link
-          rel="canonical"
-          href="https://liftperformance.net/"
-          key="canonical"
-          title="canonical link"
-        />
-      </Head>
       <NavBar />
       <Calendly />
       <Hero2 />

@@ -63,7 +63,7 @@ export default function Team() {
             <div
               key={index}
               onClick={() => handleImageClick(index)}
-              className="w-68 card xl:w-[340px] 2xl:w-[250px] 4xl:w-[300px]"
+              className="w-68 card lg:w-[350px] xl:w-[340px] 2xl:w-[250px] 4xl:w-[300px]"
             >
               <figure className="">
                 <Image

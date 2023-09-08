@@ -16,7 +16,7 @@ export default function Hero2() {
             loading="lazy"
             src={logo}
             alt="logo"
-            className="flex mb-10 mt-14 xl:mt-0 w-1/5 xl:w-[5%]"
+            className="flex mb-10 mt-14 xl:mt-0 w-1/5 lg:w-[10%] xl:w-[5%]"
             placeholder="blur"
             width={128}
           />
@@ -26,24 +26,20 @@ export default function Hero2() {
           <CalendlyButton buttonClassNames="btn btn-ghost flex w-2/3 xl:w-1/4 sm:w-1/3 bg-black text-white text-bold text-center text-base sm:text-lg" />
         </div>
       </div>
-      <div className="container m-0 mx-auto max-w-2xl">
-        <div className="prose mx-auto flex max-w-xl flex-col gap-5 sm:flex-row lg:max-w-3xl xl:max-w-4xl">
-          <div className="flex w-[90%] mx-auto flex-col">
-            <p className="flex text-left tracking-tighter text-black lg:text-lg">
-              Welcome to our prestigious gym, where we redefine fitness and
-              wellness. Our expert team of personal trainers is dedicated to
-              helping you unlock your true potential. Whether you're a seasoned
-              fitness enthusiast or just starting your journey, we are here to
-              guide and support you every step of the way. Discover the
-              transformative power of personalized training, tailored nutrition
-              plans, and a supportive community that inspires you to reach new
-              heights. Elevate your mind, body, and spirit with us, and embrace
-              a lifestyle that leads to lasting health and success. Are you
-              ready to embark on the path to greatness? Join us today and
-              unleash the hero within you!
-            </p>
-          </div>
-        </div>
+      <div className="container mt-10 mx-auto xl:max-w-5xl max-w-2xl">
+        <p className="flex text-left tracking-tighter text-black lg:text-2xl mb-10">
+          Welcome to our prestigious gym, where we redefine fitness and
+          wellness. Our expert team of personal trainers is dedicated to
+          helping you unlock your true potential. Whether you're a seasoned
+          fitness enthusiast or just starting your journey, we are here to
+          guide and support you every step of the way. Discover the
+          transformative power of personalized training, tailored nutrition
+          plans, and a supportive community that inspires you to reach new
+          heights. Elevate your mind, body, and spirit with us, and embrace
+          a lifestyle that leads to lasting health and success. Are you
+          ready to embark on the path to greatness? Join us today and
+          unleash the hero within you!
+        </p>
       </div>
     </section>
   );

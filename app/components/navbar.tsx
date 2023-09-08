@@ -97,10 +97,10 @@ export default function NavBar() {
         {/* Open the modal using ID.showModal() method */}
         <dialog id="my_modal_5" className="modal modal-bottom">
           <form method="dialog" className="modal-box bg-black bg-opacity-50">
-            <ul className="flex flex-col gap-y-5">
+            <ul className="flex flex-col gap-y-10">
               <Link
                 href="#team"
-                className="btn border-none bg-transparent text-2xl text-white"
+                className="btn border-none bg-transparent text-2xl lg:text-4xl text-white"
                 onClick={toggle}
               >
                 Team
@@ -108,25 +108,34 @@ export default function NavBar() {
 
               <Link
                 href="#services"
-                className="btn border-none bg-transparent text-2xl text-white hover:underline"
+                className="btn border-none bg-transparent text-2xl lg:text-4xl text-white hover:underline"
                 onClick={toggle}
               >
                 Services
               </Link>
               <Link
                 href="#testimonials"
-                className="btn border-none bg-transparent text-2xl text-white hover:underline"
+                className="btn border-none bg-transparent text-2xl lg:text-4xl text-white hover:underline"
                 onClick={toggle}
               >
                 Testimonials
               </Link>
               <Link
                 href="#contact"
-                className="btn border-none bg-transparent text-2xl text-white hover:underline"
+                className="btn border-none bg-transparent text-2xl lg:text-4xl text-white hover:underline"
                 onClick={toggle}
               >
                 Contact
               </Link>
+              <Link
+                href="/blog"
+                className="btn border-none bg-transparent text-2xl lg:text-4xl text-white hover:underline"
+                onClick={toggle}
+              >
+                Blog
+              </Link>
+              <CalendlyButton buttonClassNames="btn border-none bg-transparent text-2xl lg:text-4xl text-white" text="Book Your Free Consult" />
+
             </ul>
           </form>
           <form method="dialog" className="modal-backdrop">

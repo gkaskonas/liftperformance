@@ -5,6 +5,8 @@ import Head from "next/head";
 import Image from "next/image"
 import dynamic from "next/dynamic";
 
+
+
 interface IBlogPost {
     post: IPost
 }
@@ -63,7 +65,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             <div className="container my-24 mx-auto md:px-6">
                 <section className="">
                     <Image src={blog.coverImage.url} width={blog.coverImage.width} height={blog.coverImage.height}
-                        className="mb-6 w-2/3 rounded-lg shadow-lg dark:shadow-black/20" alt="cover image" />
+                        className="mb-6 xl:w-2/3 rounded-lg shadow-lg dark:shadow-black/20" alt="cover image" />
 
                     <div className="mb-6 flex items-center">
                         <div>
@@ -85,20 +87,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
                                     {index === length! - 1 && <CalendlyButton buttonClassNames="mt-10 btn btn-ghost flex px-10 bg-black text-white text-bold text-2xl text-center" />}
                                 </div>)
                             }
-                            if (child.type === "heading-two") {
-                                return <h2 className="bold">{child.children[ 0 ].text}</h2>
-                            }
-                            if (child.type === "heading-three") {
-                                return (<div>
-
-                                    <h3 className="">{child.children[ 0 ].text}</h3>
-                                </div>
-                                )
+                            if (child.type === "heading-two" || child.type === "heading-three") {
+                                return <h2 className="bold text-left">{child.children[ 0 ].text}</h2>
                             }
                             if (child.type === "image") {
                                 return (<div className="flex flex-col items-center">
                                     <Image src={child.src} width={child.width} height={child.height} alt="image" />
-                                    <CalendlyButton buttonClassNames="mb-5 btn btn-ghost flex px-10 bg-black text-white text-bold text-2xl text-center" />
+                                    <CalendlyButton buttonClassNames="mb-5 btn btn-ghost flex px-10 bg-black text-white text-bold text-xl text-center" />
 
                                 </div>)
                             }

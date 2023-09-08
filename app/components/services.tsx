@@ -51,22 +51,22 @@ export default function Services() {
           Services
         </h1>
       </div>
-      <div className="gap-2 sm:gap-5 mt-10 sm:flex-grow flex flex-col sm:w-full">
+      <div className="gap-2 sm:gap-5 mt-10 sm:flex-grow flex flex-col sm:w-[90%]">
         {services.map((service: Service, index: number) => (
-          <div className="card lg:card-side max-w-5xl mx-auto" key={index}>
+          <div className={(index % 2 === 0) ? "card lg:card-side max-w-5xl mx-auto" : "card lg:card-side max-w-5xl mx-auto lg:flex-row-reverse"} key={index}>
             <figure className="mb-0">
-              <div className="w-full">
+              <div className="w-[90%]">
                 <Image
                   className="object-contain w-full "
                   src={service.image}
                   alt="service image"
                   loading="lazy"
                   placeholder="blur"
-                  width={1200}
+                  width={1000}
                 />
               </div>
             </figure>
-            <div className="card-body max-w-2xl">
+            <div className="card-body max-w-xl">
               <h2 className="text-2xl mb-15 mt-0 text-center card-title">{service.name}</h2>
               <p className="text-lg xl:text-xl leading-tight mt-4 text-left">{service.description}</p>
             </div>
