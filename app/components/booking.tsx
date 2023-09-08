@@ -12,7 +12,7 @@ export default function Calendly() {
   };
   return (
     <PopupWidget
-      url="https://calendly.com/liftperformancehk/consultation"
+      url="https://calendly.com/liftperformancehk/free-inperson-video-consultation"
       rootElement={getRootEelement()}
       text={getBookingButtonText()}
       textColor="#ffffff"

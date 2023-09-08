@@ -39,16 +39,16 @@ export default function Testimonials() {
                     className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
-                        <img src="https://mdbcdn.b-cdn.net/img/new/ecommerce/vertical/027.jpg" alt="Trendy Pants and Shoes"
+                        <img src="https://mdbcdn.b-cdn.net/img/new/ecommerce/vertical/026.jpg" alt="Trendy Pants and Shoes"
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg" />
                       </div>
                       <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
                         <div className="px-6 py-12 md:px-12">
                           <h2 className="mb-2 text-3xl font-bold text-red-700">
-                            Cathy W
+                            Bradley
                           </h2>
                           <p className="mb-6 text-black">
-                            "Lift Performance is conveniently located in Central and the equipment is just exactly what I need. The scale is just about right and it won't make you feel it's too crowded at one time. The trainers understand their clients needs and won't overdo nor oversell anything. It just ticks all the boxes!"
+                            "My PT sessions with Jane have always been tough, but measured. She has increased my strength, corrected imbalance and my form. I have benefited from her consistent dedication to learning her craft!"
                           </p>
                         </div>
                       </div>
@@ -89,16 +89,16 @@ export default function Testimonials() {
                     className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
-                        <img src="https://mdbcdn.b-cdn.net/img/new/ecommerce/vertical/027.jpg" alt="Trendy Pants and Shoes"
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Jessica_Ennis_%28May_2010%29_cropped.jpg" alt="Trendy Pants and Shoes"
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg" />
                       </div>
                       <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
                         <div className="px-6 py-12 md:px-12">
                           <h2 className="mb-2 text-3xl font-bold text-red-700">
-                            Cathy W
+                            Kasia
                           </h2>
                           <p className="mb-6 text-black">
-                            "Lift Performance is conveniently located in Central and the equipment is just exactly what I need. The scale is just about right and it won't make you feel it's too crowded at one time. The trainers understand their clients needs and won't overdo nor oversell anything. It just ticks all the boxes!"
+                            "Ever since I started training with Eunice I look forward to every session and the consistency is definitely paying off! She knows how to push me while always looking out my form and accommodating my personal needs. Oh and the products in the shower area are great too!"
                           </p>
                         </div>
                       </div>

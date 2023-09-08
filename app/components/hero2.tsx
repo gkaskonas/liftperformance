@@ -2,8 +2,6 @@ import dynamic from "next/dynamic";
 import logo from "../../public/photos/logo.png";
 import Image from "next/image";
 
-
-
 export default function Hero2() {
 
   const CalendlyButton = dynamic(() => import("../components/booking2"), {
@@ -12,20 +10,20 @@ export default function Hero2() {
 
   return (
     <section>
-      <div className="hero bg-[url('/photos/hero_latest.webp')] bg-cover bg-no-repeat bg-top min-h-[70vh] sm:min-h-[80vh] xl:min-h-[90vh]" id="hero">
-        <div className="z-0 inset-x-0 flex flex-col w-[90%] min-h-[70vh] sm:min-h-[80vh]">
+      <div className="hero bg-[url('/photos/hero_latest.webp')] bg-cover bg-no-repeat bg-top min-h-[75vh] sm:min-h-[80vh] xl:min-h-[90vh]" id="hero">
+        <div className="z-0 inset-x-0 flex flex-col w-[90%] min-h-[80vh] sm:min-h-[80vh]">
           <Image
             loading="lazy"
             src={logo}
             alt="logo"
-            className="flex mb-10 mt-14 xl:mt-0 w-1/5 xl:w-[10%]"
+            className="flex mb-10 mt-14 xl:mt-0 w-1/5 xl:w-[5%]"
             placeholder="blur"
             width={128}
           />
           <h1 className="mb-10 text-xl font-bold text-slate-950 sm:text-lg md:text-4xl 2xl:text-5xl w-2/3 xl:w-1/2">
             Unleash your potential with our expert trainers
           </h1>
-          <CalendlyButton buttonClassNames="btn btn-ghost flex w-2/3 xl:w-1/4 sm:w-1/3 bg-black text-white text-bold text-center text-lg text-bold" />
+          <CalendlyButton buttonClassNames="btn btn-ghost flex w-2/3 xl:w-1/4 sm:w-1/3 bg-black text-white text-bold text-center text-base sm:text-lg" />
         </div>
       </div>
       <div className="container m-0 mx-auto max-w-2xl">

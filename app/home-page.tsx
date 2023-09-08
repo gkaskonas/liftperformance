@@ -42,9 +42,9 @@ export default function Home(props: IHomeProps) {
       <NavBar />
       <Calendly />
       <Hero2 />
-      <Team />
       <About />
       <Services />
+      <Team />
       <Testimonials />
       <Footer {...props} />
     </div>

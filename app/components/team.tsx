@@ -63,7 +63,7 @@ export default function Team() {
             <div
               key={index}
               onClick={() => handleImageClick(index)}
-              className="w-68 card xl:w-[340px] 2xl:w-[250px]"
+              className="w-68 card xl:w-[340px] 2xl:w-[250px] 4xl:w-[300px]"
             >
               <figure className="">
                 <Image
@@ -71,10 +71,6 @@ export default function Team() {
                   alt={trainer.name}
                   className="w-full lg:w-full"
                   placeholder="blur"
-                  priority={true}
-                  sizes="(min-width: 60em) 24vw,
-              (min-width: 28em) 45vw,
-              100vw"
                 />
               </figure>
               <div className="card-body items-center">

@@ -55,18 +55,20 @@ export default function Services() {
         {services.map((service: Service, index: number) => (
           <div className="card lg:card-side max-w-5xl mx-auto" key={index}>
             <figure className="mb-0">
-              <Image
-                className="rounded-lg w-[95%] object-cover object-center"
-                src={service.image}
-                alt="service image"
-                loading="lazy"
-                placeholder="blur"
-                width={2048}
-              />
+              <div className="w-full">
+                <Image
+                  className="object-contain w-full "
+                  src={service.image}
+                  alt="service image"
+                  loading="lazy"
+                  placeholder="blur"
+                  width={1200}
+                />
+              </div>
             </figure>
             <div className="card-body max-w-2xl">
               <h2 className="text-2xl mb-15 mt-0 text-center card-title">{service.name}</h2>
-              <p className="text-lg leading-tight mt-10 text-left">{service.description}</p>
+              <p className="text-lg xl:text-xl leading-tight mt-4 text-left">{service.description}</p>
             </div>
           </div>
         ))}

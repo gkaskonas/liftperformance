@@ -3,7 +3,14 @@ import { getBookingButtonText } from "@/lib/utils";
 import { Suspense, useState, useEffect } from "react";
 import { PopupModal } from "react-calendly";
 
-export default function CalendlyButton({ buttonClassNames }: { buttonClassNames: string }) {
+export interface IBookingButtonProps {
+  buttonClassNames: string;
+  text?: string;
+}
+
+export default function CalendlyButton({ buttonClassNames, text }: IBookingButtonProps) {
+
+
   const getRootEelement = () => {
     const element = document.getElementById("root");
 
@@ -24,10 +31,10 @@ export default function CalendlyButton({ buttonClassNames }: { buttonClassNames:
         onClick={() => setShowModal(true)}
         className={buttonClassNames}
       >
-        {buttonText}
+        {text || buttonText}
       </button>
       <PopupModal
-        url="https://calendly.com/liftperformancehk/consultation"
+        url="https://calendly.com/liftperformancehk/free-inperson-video-consultation"
         onModalClose={() => setShowModal(false)}
         open={showModal}
         rootElement={getRootEelement()}
