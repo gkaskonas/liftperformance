@@ -1,10 +1,41 @@
 import { gql } from "graphql-request";
 import { IPost } from "../page";
 import { hygraph } from "../utils/hygraph";
-import Head from "next/head";
 import Image from "next/image"
 import dynamic from "next/dynamic";
 
+import type { Metadata, ResolvingMetadata } from 'next'
+
+type Props = {
+    params: { id: string }
+    searchParams: { [ key: string ]: string | string[] | undefined }
+}
+
+export async function generateMetadata(
+    { params, searchParams }: Props,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    // read route params
+    const id = params.id
+
+    const blog: IBlogPost = await hygraph.request(gql`
+    {
+      post(where: {id: "${id}"}) {
+      id
+      title
+      excerpt
+      }
+    }
+  `)
+
+    return {
+        title: blog.post.title,
+        description: blog.post.excerpt,
+        alternates: {
+            canonical: `https://liftperformance.hk/blog/${id}`,
+        }
+    }
+}
 
 
 interface IBlogPost {
@@ -41,27 +72,18 @@ async function getBlog(id: string): Promise<IPost> {
 }
 
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params, searchParams }: Props) {
 
     const CalendlyButton = dynamic(() => import("../../components/booking2"), {
         ssr: false,
     });
 
-    const blog = await getBlog(params.slug)
+    const blog = await getBlog(params.id)
 
     const length = blog.content.json?.children.length
 
     return (
         <div className="" data-theme="light">
-            <Head>
-                <title>{blog.title}</title>
-                <link
-                    rel="canonical"
-                    href={`https://liftperformance.net/blog/${params.slug}`}
-                    key="canonical"
-                    title="canonical link"
-                />
-            </Head>
             <div className="container my-24 mx-auto md:px-6">
                 <section className="">
                     <Image src={blog.coverImage.url} width={blog.coverImage.width} height={blog.coverImage.height}
