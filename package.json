@@ -31,12 +31,12 @@
   "devDependencies": {
     "@tailwindcss/typography": "0.5.9",
     "@types/mailchimp__mailchimp_marketing": "3.0.9",
-    "aws-cdk-lib": "2.88.0",
-    "constructs": "10.2.69",
+    "aws-cdk-lib": "2.95.1",
+    "constructs": "10.2.70",
     "daisyui": "3.0.2",
     "prettier": "3.0.0",
     "prettier-plugin-tailwindcss": "0.4.1",
     "serve": "14.2.0",
-    "sst": "2.22.3"
+    "sst": "2.24.27"
   }
 }
