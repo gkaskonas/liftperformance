@@ -18,7 +18,6 @@ export default function Hero2() {
             alt="logo"
             className="flex mb-10 mt-14 xl:mt-0 w-1/5 lg:w-[10%] xl:w-[5%]"
             placeholder="blur"
-            width={128}
           />
           <h1 className="mb-10 text-xl font-bold text-slate-950 sm:text-lg md:text-4xl 2xl:text-5xl w-2/3 xl:w-1/2">
             Unleash your potential with our expert trainers
