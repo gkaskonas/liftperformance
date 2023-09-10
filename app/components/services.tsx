@@ -12,6 +12,7 @@ type Service = {
 };
 
 export default function Services() {
+
   const services: Service[] = [
     {
       name: "1-to-1 Training",
@@ -53,9 +54,9 @@ export default function Services() {
       </div>
       <div className="gap-2 sm:gap-5 mt-10 sm:flex-grow flex flex-col sm:w-[90%]">
         {services.map((service: Service, index: number) => (
-          <div className={(index % 2 === 0) ? "card lg:card-side max-w-5xl mx-auto" : "card lg:card-side max-w-5xl mx-auto lg:flex-row-reverse"} key={index}>
+          <div className={(index % 2 === 0) ? "card sm:card-side max-w-5xl mx-auto motion-safe:animate-fadeIn" : "card sm:card-side max-w-5xl mx-auto sm:flex-row-reverse motion-safe:animate-fadeIn"} key={index}>
             <figure className="mb-0">
-              <div className="w-[90%]">
+              <div className="w-[90%] sm:w-[95%]">
                 <Image
                   className="object-contain w-full "
                   src={service.image}
@@ -66,8 +67,8 @@ export default function Services() {
                 />
               </div>
             </figure>
-            <div className="card-body max-w-xl">
-              <h2 className="text-2xl mb-15 mt-0 text-center card-title">{service.name}</h2>
+            <div className="card-body max-w-xl md:max-w-2xl">
+              <h2 className="text-xl md:text-2xl mb-15 mt-0 text-center card-title">{service.name}</h2>
               <p className="text-lg xl:text-xl leading-tight mt-4 text-left">{service.description}</p>
             </div>
           </div>

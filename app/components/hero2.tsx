@@ -26,10 +26,11 @@ export default function Hero2() {
           <CalendlyButton buttonClassNames="btn btn-ghost flex w-2/3 xl:w-1/4 sm:w-1/3 bg-black text-white text-bold text-center text-base sm:text-lg" />
         </div>
       </div>
-      <div className="container mt-10 mx-auto xl:max-w-5xl max-w-2xl">
-        <p className="flex text-left tracking-tighter text-black lg:text-2xl mb-10">
-          Welcome to our prestigious gym, where we redefine fitness and
-          wellness. Our expert team of personal trainers is dedicated to
+      <div className="container mt-10 mx-auto xl:max-w-5xl sm:max-w-2xl prose w-[95%]">
+        <h2> Welcome to our prestigious gym, where we redefine fitness and
+          wellness.</h2>
+        <p className="flex text-left tracking-tighter text-black lg:text-xl mb-10">
+          Our expert team of personal trainers is dedicated to
           helping you unlock your true potential. Whether you're a seasoned
           fitness enthusiast or just starting your journey, we are here to
           guide and support you every step of the way. Discover the

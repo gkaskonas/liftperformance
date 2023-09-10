@@ -106,7 +106,7 @@ export default async function Page({ params, searchParams }: Props) {
                                 return (<div className="flex flex-col items-center">
 
                                     <p className="mt-2 mb-0">{child.children[ 0 ].text}</p>
-                                    {index === length! - 1 && <CalendlyButton buttonClassNames="mt-10 btn btn-ghost flex px-10 bg-black text-white text-bold text-2xl text-center" />}
+                                    {index === length! - 1 && <CalendlyButton buttonClassNames="mt-10 btn btn-ghost flex px-10 bg-black text-white text-bold text-xl sm:text-2xl text-center" />}
                                 </div>)
                             }
                             if (child.type === "heading-two" || child.type === "heading-three") {
@@ -115,7 +115,7 @@ export default async function Page({ params, searchParams }: Props) {
                             if (child.type === "image") {
                                 return (<div className="flex flex-col items-center">
                                     <Image src={child.src} width={child.width} height={child.height} alt="image" />
-                                    <CalendlyButton buttonClassNames="mb-5 btn btn-ghost flex px-10 bg-black text-white text-bold text-xl text-center" />
+                                    <CalendlyButton buttonClassNames="mb-5 btn btn-ghost flex px-10 bg-black text-white text-bold text-xl sm:text-2xl text-center" />
 
                                 </div>)
                             }

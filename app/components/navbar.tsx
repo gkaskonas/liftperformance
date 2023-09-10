@@ -24,39 +24,39 @@ export default function NavBar() {
     <div className="navbar absolute top-0 z-10 text-lg text-white ">
       <div className="navbar-start"></div>
       <div className="navbar-center"></div>
-      <div className="navbar-end mr-10 hidden xl:flex flex-grow w-2/3">
-        <ul className="menu menu-horizontal space-x-4 text-black  shadow-sm transition duration-300 sm:text-base lg:text-lg">
+      <div className="navbar-end mr-10 hidden xl:flex flex-grow w-full">
+        <ul className="menu menu-horizontal space-x-4 text-black  shadow-sm sm:text-base lg:text-xl items-center">
           <Link
             href="#team"
-            className="group  transition duration-300"
+            className="group"
           >
             Team
             <span className="block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full"></span>
           </Link>
           <Link
             href="#services"
-            className="group  transition duration-300"
+            className="group"
           >
             Our Service
             <span className="block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full"></span>
           </Link>
           <Link
             href="#testimonials"
-            className="group  transition duration-300"
+            className="group"
           >
             Testimonials
             <span className="block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full"></span>
           </Link>
           <Link
             href="#contact"
-            className="group  transition duration-300"
+            className="group"
           >
             Contact
             <span className="block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full"></span>
           </Link>
           <Link
             href="/blog"
-            className="group  transition duration-300"
+            className="group"
           >
             Blog
             <span className="block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full"></span>
@@ -69,7 +69,7 @@ export default function NavBar() {
             <span className="block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full"></span>
 
           </Link>
-          <CalendlyButton buttonClassNames="flex bg-white text-center text-base px-1 py-0 text-bold rounded-lg hover:shadow hover:bg-slate-100" text="Book Your Free Consult" />
+          <CalendlyButton buttonClassNames="flex bg-white text-center text-base p-4 text-bold text-xl rounded-lg hover:shadow hover:bg-slate-100 " text="Book Your Free Consult" />
 
         </ul>
       </div>

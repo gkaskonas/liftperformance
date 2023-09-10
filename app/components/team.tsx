@@ -53,23 +53,23 @@ export default function Team() {
   };
 
   return (
-    <section id="team" className="my-12 px-6">
+    <section id="team" className="mt-12">
       <h1 className="mx-auto text-center text-4xl font-bold  sm:text-5xl">
         Meet the Team
       </h1>
       <div className="container mx-auto">
-        <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-2 py-12 sm:my-0 sm:flex-row sm:gap-5 lg:mx-auto lg:w-3/4">
+        <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-2 py-12 sm:my-0 sm:flex-row sm:gap-5 lg:mx-auto md-w-full lg:w-3/4">
           {trainers.map((trainer: Trainer, index: number) => (
             <div
               key={index}
               onClick={() => handleImageClick(index)}
-              className="w-68 card lg:w-[350px] xl:w-[340px] 2xl:w-[250px] 4xl:w-[300px]"
+              className="w-68 sm:w-[350px] card lg:w-[350px] xl:w-[340px] 2xl:w-[250px] 4xl:w-[300px]"
             >
               <figure className="">
                 <Image
                   src={trainer.image}
                   alt={trainer.name}
-                  className="w-full lg:w-full"
+                  className="w-full"
                   placeholder="blur"
                 />
               </figure>
