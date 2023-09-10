@@ -63,7 +63,7 @@ export default function Services() {
                   alt="service image"
                   loading="lazy"
                   placeholder="blur"
-                  width={1000}
+                  width={1024}
                 />
               </div>
             </figure>

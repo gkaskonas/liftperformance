@@ -71,6 +71,7 @@ export default function Team() {
                   alt={trainer.name}
                   className="w-full"
                   placeholder="blur"
+                  width={1024}
                 />
               </figure>
               <div className="card-body items-center">
