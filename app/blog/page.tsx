@@ -1,7 +1,5 @@
 import { gql } from 'graphql-request'
 import { hygraph } from './utils/hygraph'
-import { remark } from 'remark'
-import html from 'remark-html'
 import { Metadata } from 'next'
 import Blogs from './components/blogs'
 import React from 'react'
@@ -113,15 +111,6 @@ const QUERY = gql`
 
 async function getBlogs (): Promise<IPost[]> {
   const blogs: IBlog = await hygraph.request(QUERY)
-
-  blogs.posts.map(async (post) => {
-    // Use remark to convert markdown into HTML string
-    const processedContent = await remark()
-      .use(html)
-      .process(post.content)
-    const contentHtml = processedContent.toString()
-    post.content.html = contentHtml
-  })
 
   return blogs.posts
 }
