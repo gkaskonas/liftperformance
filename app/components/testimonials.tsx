@@ -42,14 +42,14 @@ export default function Testimonials () {
                 data-te-carousel-active data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
-                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
+                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] xl:w-3/4 xl:items-center xl:justify-center xl:mx-auto">
                     <div className="flex flex-wrap items-center">
-                      <div className="block w-full  basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+                      <div className="block w-full  basis-auto sm:flex sm:w-6/12 xl:w-4/12">
                         <Image src={bradley_testimonial} alt="Bradley Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
-                      <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+                      <div className="w-full shrink-0 grow-0 basis-auto sm:w-6/12 xl:w-8/12">
                         <div className="mt-5 md:px-12">
                           <h2 className="mb-6 text-3xl font-bold text-red-700">
                             Bradley
@@ -68,14 +68,14 @@ export default function Testimonials () {
                 data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
-                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
+                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] xl:w-3/4 xl:items-center xl:justify-center xl:mx-auto">
                     <div className="flex flex-wrap items-center">
-                      <div className="block w-full  basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+                      <div className="block w-full  basis-auto sm:flex sm:w-6/12 xl:w-4/12">
                         <Image src={clara_testimonial} alt="Bradley Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
-                      <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+                      <div className="w-full shrink-0 grow-0 basis-auto sm:w-6/12 xl:w-8/12">
                         <div className="mt-5 md:px-12">
                           <h2 className="mb-2 text-3xl font-bold text-red-700">
                             Clara
@@ -94,14 +94,14 @@ export default function Testimonials () {
                 data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
-                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
+                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] xl:w-3/4 xl:items-center xl:justify-center xl:mx-auto">
                     <div className="flex flex-wrap items-center">
-                      <div className="block w-full  basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+                      <div className="block w-full  basis-auto sm:flex sm:w-6/12 xl:w-4/12">
                         <Image src={kochun_testimonial} alt="Bradley Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
-                      <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+                      <div className="w-full shrink-0 grow-0 basis-auto sm:w-6/12 xl:w-8/12">
                         <div className="mt-6 md:px-12">
                           <h2 className="mb-2 text-3xl font-bold text-red-700">
                             Ko Chun
@@ -120,14 +120,14 @@ export default function Testimonials () {
                 data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
-                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
+                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] xl:w-3/4 xl:items-center xl:justify-center xl:mx-auto">
                     <div className="flex flex-wrap items-center">
-                      <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+                      <div className="block w-full shrink-0 grow-0 basis-auto sm:flex sm:w-6/12 xl:w-4/12">
                         <Image src={attiya_testimonial} alt="Bradley Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
-                      <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+                      <div className="w-full shrink-0 grow-0 basis-auto sm:w-6/12 xl:w-8/12">
                         <div className="mt-5 md:px-12">
                           <h2 className="mb-2 text-3xl font-bold text-red-700">
                             Attiya
@@ -146,14 +146,14 @@ export default function Testimonials () {
                 data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
-                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
+                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] xl:w-3/4 xl:items-center xl:justify-center xl:mx-auto">
                     <div className="flex flex-wrap items-center">
-                      <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+                      <div className="block w-full shrink-0 grow-0 basis-auto sm:flex sm:w-6/12 xl:w-4/12">
                         <Image src={christopher_testimonial} alt="Bradley Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
-                      <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+                      <div className="w-full shrink-0 grow-0 basis-auto sm:w-6/12 xl:w-8/12">
                         <div className="mt-5 md:px-12">
                           <h2 className="mb-2 text-3xl font-bold text-red-700">
                             Christopher
@@ -172,14 +172,14 @@ export default function Testimonials () {
                 data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
-                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
+                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] xl:w-3/4 xl:items-center xl:justify-center xl:mx-auto">
                     <div className="flex flex-wrap items-center">
-                      <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+                      <div className="block w-full shrink-0 grow-0 basis-auto sm:flex sm:w-6/12 xl:w-4/12">
                         <Image src={simon_clipped} alt="Bradley Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
-                      <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+                      <div className="w-full shrink-0 grow-0 basis-auto sm:w-6/12 xl:w-8/12">
                         <div className="mt-5 md:px-12">
                           <h2 className="mb-2 text-3xl font-bold text-red-700">
                             Simon
@@ -198,14 +198,14 @@ export default function Testimonials () {
                 data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
-                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
+                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] xl:w-3/4 xl:items-center xl:justify-center xl:mx-auto">
                     <div className="flex flex-wrap items-center">
-                      <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+                      <div className="block w-full shrink-0 grow-0 basis-auto sm:flex sm:w-6/12 xl:w-4/12">
                         <Image src={jon_clipped} alt="Bradley Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
-                      <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+                      <div className="w-full shrink-0 grow-0 basis-auto sm:w-6/12 xl:w-8/12">
                         <div className="mt-5 md:px-12">
                           <h2 className="mb-2 text-3xl font-bold text-red-700">
                             Jonathan
@@ -224,14 +224,14 @@ export default function Testimonials () {
                 data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
-                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
+                    className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] xl:w-3/4 xl:items-center xl:justify-center xl:mx-auto">
                     <div className="flex flex-wrap items-center">
-                      <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+                      <div className="block w-full shrink-0 grow-0 basis-auto sm:flex sm:w-6/12 xl:w-4/12">
                         <Image src={chen_clipped} alt="Chen Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
-                      <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+                      <div className="w-full shrink-0 grow-0 basis-auto sm:w-6/12 xl:w-8/12">
                         <div className="mt-5 md:px-12">
                           <h2 className="mb-2 text-3xl font-bold text-red-700">
                             Chen
@@ -251,7 +251,7 @@ export default function Testimonials () {
               type="button" data-te-target="#carouselExampleCaptions" data-te-slide="prev">
               <span className="inline-block h-8 w-8">
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                  className="text-neutral-100  ">
+                  className="text-neutral-500  ">
                   <path fill="currentColor"
                     d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
                 </svg>
@@ -262,7 +262,7 @@ export default function Testimonials () {
               type="button" data-te-target="#carouselExampleCaptions" data-te-slide="next">
               <span className="inline-block h-8 w-8">
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                  className="text-neutral-100 sm:text-neutral-500">
+                  className="text-neutral-500">
                   <path fill="currentColor"
                     d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                 </svg>

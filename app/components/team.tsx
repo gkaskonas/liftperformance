@@ -14,9 +14,9 @@ type Trainer = {
   description: string;
 };
 
-export default function Team() {
-  const [ showModal, setShowModal ] = useState(false)
-  const [ selectedTrainer, setSelectedTrainer ] = useState<Trainer | null>(null) // specify the type of selectedTrainer
+export default function Team () {
+  const [showModal, setShowModal] = useState(false)
+  const [selectedTrainer, setSelectedTrainer] = useState<Trainer | null>(null) // specify the type of selectedTrainer
   const trainers: Trainer[] = [
     {
       name: 'Jane Cheung',
@@ -50,7 +50,7 @@ export default function Team() {
   ]
 
   const handleImageClick = (index: number) => {
-    setSelectedTrainer(trainers[ index ])
+    setSelectedTrainer(trainers[index])
     setShowModal(true)
   }
 

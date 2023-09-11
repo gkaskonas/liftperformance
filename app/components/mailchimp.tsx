@@ -1,20 +1,28 @@
 'use client'
 
-import { IProps, makeMailchimpRequest } from '@/actions/mailchimp'
 import React, { useState } from 'react'
 
-export default function Subscribe (props: IProps) {
+export default function Subscribe () {
   const [email, setEmail] = useState('')
   const [state, setState] = useState('idle')
   const [errorMsg, setErrorMsg] = useState('')
 
   const subscribe = async (e: any) => {
-    'use client'
     e.preventDefault()
     setState('Loading')
 
     try {
-      const response = await makeMailchimpRequest(email, props)
+      const response = await fetch('/api/mailchimp/', {
+        body: JSON.stringify({
+          email
+        }),
+
+        headers: {
+          'Content-Type': 'application/json'
+        },
+
+        method: 'POST'
+      })
       console.log(response)
       setState('Success')
       setEmail('')

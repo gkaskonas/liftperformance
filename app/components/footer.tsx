@@ -3,19 +3,14 @@ import Subscribe from './mailchimp'
 import { SiWhatsapp } from 'react-icons/si'
 import { MdOutlineEmail } from 'react-icons/md'
 import React from 'react'
-import { IProps } from '@/actions/mailchimp'
 
-export interface IHomeProps extends IProps {
-  year: number;
-}
-
-export default function Footer (props: IHomeProps) {
+export default function Footer ({ year }: { year: number }) {
   return (
     <section aria-label="Site Footer" className="my-12">
       <h2 className="mb-6 text-center text-4xl font-bold  sm:text-5xl">
         Contact Us
       </h2>
-      <Subscribe {...props} />
+      <Subscribe />
 
       <ul
         id="contact"
@@ -65,7 +60,7 @@ export default function Footer (props: IHomeProps) {
         ></iframe>
       </div>
       <h3 className="my-12 flex  place-items-center justify-center ">
-        Copyright @ {props.year} Lift Performance Limited
+        Copyright @ {year} Lift Performance Limited
       </h3>
     </section>
   )

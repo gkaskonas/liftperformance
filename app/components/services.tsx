@@ -14,7 +14,7 @@ type Service = {
   description: string;
 };
 
-export default function Services() {
+export default function Services () {
   const services: Service[] = [
     {
       name: '1-to-1 Training',

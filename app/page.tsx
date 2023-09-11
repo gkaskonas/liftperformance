@@ -1,4 +1,3 @@
-import { Config } from 'sst/node/config'
 import React from 'react'
 import dynamic from 'next/dynamic'
 import About from './components/about'
@@ -18,9 +17,6 @@ export default async function Page () {
   const year = await getYear()
   // Forward fetched data to your Client Component
 
-  const MAILCHIMP_API_KEY = Config.MAILCHIMP_API_KEY
-  const MAILCHIMP_API_SERVER = Config.MAILCHIMP_API_SERVER
-  const MAILCHIMP_AUDIENCE_ID = Config.MAILCHIMP_AUDIENCE_ID
   const Calendly = dynamic(() => import('./components/booking'), {
     ssr: false
   })
@@ -40,7 +36,7 @@ export default async function Page () {
       <Services />
       <Team />
       <Testimonials />
-      <Footer apiKey={MAILCHIMP_API_KEY} audienceId={MAILCHIMP_AUDIENCE_ID} server={MAILCHIMP_API_SERVER} year={year} />
+      <Footer year={year} />
     </div>
   )
 }
