@@ -60,7 +60,7 @@ export default function Team () {
         Meet the Team
       </h1>
       <div className="container mx-auto">
-        <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-2 py-12 sm:my-0 sm:flex-row sm:gap-5 lg:mx-auto md-w-full lg:w-3/4">
+        <ul className="flex list-none flex-col flex-wrap place-items-center items-center justify-center gap-2 py-12 sm:my-0 sm:flex-row sm:gap-5 lg:mx-auto md:w-full lg:w-3/4">
           {trainers.map((trainer: Trainer, index: number) => (
             <div
               key={index}

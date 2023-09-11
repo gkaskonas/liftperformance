@@ -7,7 +7,6 @@ import Hero2 from './components/hero2'
 import NavBar from './components/navbar'
 import Services from './components/services'
 import Team from './components/team'
-import { headers } from 'next/headers'
 import Analytics from './components/analytics'
 
 function getYear () {
@@ -30,14 +29,10 @@ export default async function Page () {
     ssr: false
   })
 
-  const nonce = headers().get('x-nonce')
-
-  if (!nonce) throw new Error('No nonce')
-
   return (
 
     <div className="" data-theme="light">
-      <Analytics nonce={nonce} />
+      <Analytics />
       <NavBar />
       <Calendly />
       <Hero2 />
