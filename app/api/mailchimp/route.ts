@@ -1,5 +1,3 @@
-import client from '@mailchimp/mailchimp_marketing'
-
 import { NextResponse, NextRequest } from 'next/server'
 import { Config } from 'sst/node/config'
 
@@ -22,22 +20,31 @@ export async function POST (request: NextRequest) {
   const MAILCHIMP_API_SERVER = Config.MAILCHIMP_API_SERVER
   const MAILCHIMP_AUDIENCE_ID = Config.MAILCHIMP_AUDIENCE_ID
 
-  client.setConfig({
-    apiKey: MAILCHIMP_API_KEY,
-    server: MAILCHIMP_API_SERVER
-  })
+  const url = `https://${MAILCHIMP_API_SERVER}.api.mailchimp.com/3.0/lists/${MAILCHIMP_AUDIENCE_ID}/members`
 
-  if (!MAILCHIMP_AUDIENCE_ID) throw new Error('No audience id')
+  const data = {
+    email_address: email,
+    status: 'subscribed'
+  }
+
+  const buff = Buffer.from(`apiKey:${MAILCHIMP_API_KEY}`).toString('base64')
 
   try {
-    const response = await client.lists.addListMember(MAILCHIMP_AUDIENCE_ID, {
-      email_address: email,
-      status: 'subscribed'
+    const response = await fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Basic ${buff}`
+      }
     })
-
-    console.log(response.status)
-    return NextResponse.json({ status: response.status })
-  } catch (e: any) {
-    throw new Error(e.message)
+    if (response.status >= 400) {
+      console.log(response.statusText)
+      throw new Error('There was an error subscribing to the newsletter.')
+    }
+    return NextResponse.json({ message: 'Success' })
+  } catch (error) {
+    console.log(error)
+    throw new Error('Something went wrong')
   }
 }

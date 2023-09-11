@@ -23,7 +23,12 @@ export default function Subscribe () {
 
         method: 'POST'
       })
-      console.log(response)
+      console.log(response.statusText)
+
+      if (response.status !== 200) {
+        throw new Error(await response.text())
+      }
+
       setState('Success')
       setEmail('')
     } catch (e: any) {
