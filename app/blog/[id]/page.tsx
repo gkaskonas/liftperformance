@@ -1,23 +1,27 @@
-import { gql } from "graphql-request";
-import { IPost } from "../page";
-import { hygraph } from "../utils/hygraph";
+import { gql } from 'graphql-request'
+import { IPost } from '../page'
+import { hygraph } from '../utils/hygraph'
 
 import type { Metadata, ResolvingMetadata } from 'next'
-import Blog from "../components/blog";
-
+import Blog from '../components/blog'
+import React from 'react'
 type Props = {
-    params: { id: string }
-    searchParams: { [ key: string ]: string | string[] | undefined }
+  params: { id: string }
+  searchParams: { [ key: string ]: string | string[] | undefined }
 }
 
-export async function generateMetadata(
-    { params, searchParams }: Props,
-    parent: ResolvingMetadata
-): Promise<Metadata> {
-    // read route params
-    const id = params.id
+interface IBlogPost {
+  post: IPost
+}
 
-    const blog: IBlogPost = await hygraph.request(gql`
+export async function generateMetadata (
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const id = params.id
+
+  const blog: IBlogPost = await hygraph.request(gql`
     {
       post(where: {id: "${id}"}) {
       id
@@ -27,24 +31,17 @@ export async function generateMetadata(
     }
   `)
 
-    return {
-        title: blog.post.title,
-        description: blog.post.excerpt,
-        alternates: {
-            canonical: `https://djrmsjgzumyjo.cloudfront.net/blog/${id}`,
-        }
+  return {
+    title: blog.post.title,
+    description: blog.post.excerpt,
+    alternates: {
+      canonical: `https://djrmsjgzumyjo.cloudfront.net/blog/${id}`
     }
+  }
 }
 
-
-interface IBlogPost {
-    post: IPost
-}
-
-
-
-async function getBlog(id: string): Promise<IPost> {
-    const blog: IBlogPost = await hygraph.request(gql`
+async function getBlog (id: string): Promise<IPost> {
+  const blog: IBlogPost = await hygraph.request(gql`
     {
       post(where: {id: "${id}"}) {
       id
@@ -67,20 +64,15 @@ async function getBlog(id: string): Promise<IPost> {
     }
   `)
 
-    return blog.post
+  return blog.post
 }
 
+export default async function Page ({ params, searchParams }: Props) {
+  const blog = await getBlog(params.id)
 
-export default async function Page({ params, searchParams }: Props) {
-
-
-
-    const blog = await getBlog(params.id)
-
-
-    return (
-        <div className="" data-theme="light">
-            <Blog blog={blog} />
-        </div>
-    )
+  return (
+    <div className="" data-theme="light">
+      <Blog blog={blog} />
+    </div>
+  )
 }

@@ -1,28 +1,33 @@
-import { getBookingButtonText } from "@/lib/utils";
-import { PopupWidget } from "react-calendly";
+'use client'
 
-export default function Calendly() {
+import { getBookingButtonText } from '@/lib/utils'
+import { PopupWidget } from 'react-calendly'
+import React, { useState } from 'react'
+
+export default function Calendly () {
   const getRootEelement = () => {
-    const element = document.getElementById("hero");
+    const element = document.getElementById('root')
 
     if (!element) {
-      throw new Error("Root element not found");
+      throw new Error('Root element not found')
     }
-    return element;
-  };
+    return element
+  }
+  const [buttonText] = useState(getBookingButtonText())
+
   return (
     <PopupWidget
       url="https://calendly.com/liftperformancehk/free-inperson-video-consultation"
       rootElement={getRootEelement()}
-      text={getBookingButtonText()}
+      text={buttonText}
       textColor="#ffffff"
       color="#BF1E2C"
       branding={false}
       pageSettings={{
         hideEventTypeDetails: true,
         hideGdprBanner: true,
-        hideLandingPageDetails: true,
+        hideLandingPageDetails: true
       }}
     />
-  );
+  )
 }

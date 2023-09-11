@@ -1,30 +1,29 @@
-"use client";
+'use client'
 
-import Image from "next/image";
-import bradley_testimonial from "../../public/photos/bradley_testimonial_clipped.jpg"
-import attiya_testimonial from "../../public/photos/attiya_clipped.jpg"
-import clara_testimonial from "../../public/photos/clara_testimonial_clipped.jpg"
-import kochun_testimonial from "../../public/photos/kochun_clipped.jpg"
-import christopher_testimonial from "../../public/photos/christopher_testimonial.jpg"
-import jon_clipped from "../../public/photos/jon_clipped.jpg"
-import chen_clipped from "../../public/photos/chen_clipped.jpg"
-import simon_clipped from "../../public/photos/simon_clipped.jpg"
-import { useEffect } from "react";
+import Image from 'next/image'
+import bradley_testimonial from '../../public/photos/bradley_testimonial_clipped.jpg'
+import attiya_testimonial from '../../public/photos/attiya_clipped.jpg'
+import clara_testimonial from '../../public/photos/clara_testimonial_clipped.jpg'
+import kochun_testimonial from '../../public/photos/kochun_clipped.jpg'
+import christopher_testimonial from '../../public/photos/christopher_testimonial.jpg'
+import jon_clipped from '../../public/photos/jon_clipped.jpg'
+import chen_clipped from '../../public/photos/chen_clipped.jpg'
+import simon_clipped from '../../public/photos/simon_clipped.jpg'
+import React, { useEffect } from 'react'
 
 export type Testimonial = {
   name: string;
   text: string;
 };
 
-export default function Testimonials() {
-
+export default function Testimonials () {
   useEffect(() => {
     const init = async () => {
-      const { Carousel, initTE } = await import("tw-elements");
-      initTE({ Carousel });
-    };
-    init();
-  }, []);
+      const { Carousel, initTE } = await import('tw-elements')
+      initTE({ Carousel })
+    }
+    init()
+  }, [])
 
   return (
     <section aria-label="Testimonials" className="mt-0" id="testimonials">
@@ -40,13 +39,13 @@ export default function Testimonials() {
             <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
               <div
                 className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-te-carousel-active data-te-carousel-item style={{ backfaceVisibility: "hidden" }}>
+                data-te-carousel-active data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
                     className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full  basis-auto lg:flex lg:w-6/12 xl:w-4/12">
-                        <Image src={bradley_testimonial} alt="Bradley Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+                        <Image src={bradley_testimonial} alt="Bradley Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -66,13 +65,13 @@ export default function Testimonials() {
               </div>
               <div
                 className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-te-carousel-item style={{ backfaceVisibility: "hidden" }}>
+                data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
                     className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full  basis-auto lg:flex lg:w-6/12 xl:w-4/12">
-                        <Image src={clara_testimonial} alt="Bradley Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+                        <Image src={clara_testimonial} alt="Bradley Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -92,13 +91,13 @@ export default function Testimonials() {
               </div>
               <div
                 className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-te-carousel-item style={{ backfaceVisibility: "hidden" }}>
+                data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
                     className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full  basis-auto lg:flex lg:w-6/12 xl:w-4/12">
-                        <Image src={kochun_testimonial} alt="Bradley Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+                        <Image src={kochun_testimonial} alt="Bradley Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -118,13 +117,13 @@ export default function Testimonials() {
               </div>
               <div
                 className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-te-carousel-item style={{ backfaceVisibility: "hidden" }}>
+                data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
                     className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
-                        <Image src={attiya_testimonial} alt="Bradley Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+                        <Image src={attiya_testimonial} alt="Bradley Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -144,13 +143,13 @@ export default function Testimonials() {
               </div>
               <div
                 className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-te-carousel-item style={{ backfaceVisibility: "hidden" }}>
+                data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
                     className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
-                        <Image src={christopher_testimonial} alt="Bradley Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+                        <Image src={christopher_testimonial} alt="Bradley Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -170,13 +169,13 @@ export default function Testimonials() {
               </div>
               <div
                 className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-te-carousel-item style={{ backfaceVisibility: "hidden" }}>
+                data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
                     className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
-                        <Image src={simon_clipped} alt="Bradley Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+                        <Image src={simon_clipped} alt="Bradley Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -196,13 +195,13 @@ export default function Testimonials() {
               </div>
               <div
                 className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-te-carousel-item style={{ backfaceVisibility: "hidden" }}>
+                data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
                     className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
-                        <Image src={jon_clipped} alt="Bradley Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+                        <Image src={jon_clipped} alt="Bradley Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -222,13 +221,13 @@ export default function Testimonials() {
               </div>
               <div
                 className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-te-carousel-item style={{ backfaceVisibility: "hidden" }}>
+                data-te-carousel-item style={{ backfaceVisibility: 'hidden' }}>
                 <section className="mb-10 text-center md:text-left">
                   <div
                     className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
-                        <Image src={chen_clipped} alt="Chen Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+                        <Image src={chen_clipped} alt="Chen Testimonial" placeholder={'blur'} width={1024} onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -275,5 +274,5 @@ export default function Testimonials() {
         </section>
       </div>
     </section>
-  );
+  )
 }

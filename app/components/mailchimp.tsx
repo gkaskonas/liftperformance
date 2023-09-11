@@ -1,36 +1,37 @@
-import { IProps, makeMailchimpRequest } from "@/actions/mailchimp";
-import { useState } from "react";
+'use client'
 
-export default function Subscribe(props: IProps) {
-  "use client";
-  const [email, setEmail] = useState("");
-  const [state, setState] = useState("idle");
-  const [errorMsg, setErrorMsg] = useState("");
+import { IProps, makeMailchimpRequest } from '@/actions/mailchimp'
+import React, { useState } from 'react'
+
+export default function Subscribe (props: IProps) {
+  const [email, setEmail] = useState('')
+  const [state, setState] = useState('idle')
+  const [errorMsg, setErrorMsg] = useState('')
 
   const subscribe = async (e: any) => {
-    "use client";
-    e.preventDefault();
-    setState("Loading");
+    'use client'
+    e.preventDefault()
+    setState('Loading')
 
     try {
-      const response = await makeMailchimpRequest(email, props);
-      console.log(response);
-      setState("Success");
-      setEmail("");
+      const response = await makeMailchimpRequest(email, props)
+      console.log(response)
+      setState('Success')
+      setEmail('')
     } catch (e: any) {
-      console.log(e.message);
+      console.log(e.message)
 
       const error =
-        "Subscription failed. Please try again later or you are already subscribed!";
+        'Subscription failed. Please try again later or you are already subscribed!'
 
-      if (e.message.includes("Email is required")) {
-        setErrorMsg(e.message);
+      if (e.message.includes('Email is required')) {
+        setErrorMsg(e.message)
       } else {
-        setErrorMsg(error);
+        setErrorMsg(error)
       }
-      setState("Error");
+      setState('Error')
     }
-  };
+  }
 
   return (
     <section id="subscribe" className="my-12 mb-0 p-6">
@@ -68,13 +69,13 @@ export default function Subscribe(props: IProps) {
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                   onClick={subscribe}
-                  disabled={state === "Loading" || state === "Success"}
+                  disabled={state === 'Loading' || state === 'Success'}
                 >
                   Subscribe
                 </button>
               </div>
-              {state === "Error" && <div className="">{errorMsg}</div>}
-              {state === "Success" && (
+              {state === 'Error' && <div className="">{errorMsg}</div>}
+              {state === 'Success' && (
                 <div className="">Awesome, you've been subscribed!</div>
               )}
             </div>
@@ -82,5 +83,5 @@ export default function Subscribe(props: IProps) {
         </div>
       </div>
     </section>
-  );
+  )
 }

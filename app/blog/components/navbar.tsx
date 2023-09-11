@@ -1,28 +1,28 @@
-"use client";
+'use client'
 
-import dynamic from "next/dynamic";
-import Link from "next/link";
-import { useState } from "react";
-import { SiInstagram } from "react-icons/si";
+import dynamic from 'next/dynamic'
+import Link from 'next/link'
+import React, { useState } from 'react'
+import { SiInstagram } from 'react-icons/si'
 
-export default function BlogNavBar() {
-    const [ showMe, setShowMe ] = useState(false);
-    function toggle() {
-        setShowMe(!showMe);
-        if (!showMe) {
-            //@ts-ignore
-            window.my_modal_5.showModal();
-        } else {
-            //@ts-ignore
-            window.my_modal_5.close();
-        }
+export default function BlogNavBar () {
+  const [showMe, setShowMe] = useState(false)
+  function toggle () {
+    setShowMe(!showMe)
+    if (!showMe) {
+      // @ts-ignore
+      window.my_modal_5.showModal()
+    } else {
+      // @ts-ignore
+      window.my_modal_5.close()
     }
+  }
 
-    const CalendlyButton = dynamic(() => import("../../components/booking2"), {
-        ssr: false,
-    });
+  const CalendlyButton = dynamic(() => import('../../components/booking2'), {
+    ssr: false
+  })
 
-    return (
+  return (
         <div className="navbar absolute top-0 z-10 text-lg text-white ">
             <div className="navbar-start"></div>
             <div className="navbar-center"></div>
@@ -103,5 +103,5 @@ export default function BlogNavBar() {
                 </dialog>
             </div>
         </div>
-    );
+  )
 }

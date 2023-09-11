@@ -1,12 +1,12 @@
-import dynamic from "next/dynamic";
-import logo from "../../public/photos/logo.png";
-import Image from "next/image";
+import dynamic from 'next/dynamic'
+import logo from '../../public/photos/logo.png'
+import Image from 'next/image'
+import React from 'react'
 
-export default function Hero2() {
-
-  const CalendlyButton = dynamic(() => import("../components/booking2"), {
-    ssr: false,
-  });
+export default function Hero2 () {
+  const CalendlyButton = dynamic(() => import('../components/booking2'), {
+    ssr: false
+  })
 
   return (
     <section>
@@ -42,5 +42,5 @@ export default function Hero2() {
         </p>
       </div>
     </section>
-  );
+  )
 }

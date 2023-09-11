@@ -1,29 +1,26 @@
-"use client";
-import { getBookingButtonText } from "@/lib/utils";
-import { Suspense, useState, useEffect } from "react";
-import { PopupModal } from "react-calendly";
+'use client'
+import { getBookingButtonText } from '@/lib/utils'
+import React, { Suspense, useState } from 'react'
+import { PopupModal } from 'react-calendly'
 
 export interface IBookingButtonProps {
   buttonClassNames: string;
   text?: string;
 }
 
-export default function CalendlyButton({ buttonClassNames, text }: IBookingButtonProps) {
-
-
+export default function CalendlyButton ({ buttonClassNames, text }: IBookingButtonProps) {
   const getRootEelement = () => {
-    const element = document.getElementById("root");
+    const element = document.getElementById('root')
 
     if (!element) {
-      throw new Error("Root element not found");
+      throw new Error('Root element not found')
     }
-    return element;
-  };
+    return element
+  }
 
-  const [ showModal, setShowModal ] = useState(false);
+  const [showModal, setShowModal] = useState(false)
 
-  const [ buttonText ] = useState(getBookingButtonText());
-
+  const [buttonText] = useState(getBookingButtonText())
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -41,9 +38,9 @@ export default function CalendlyButton({ buttonClassNames, text }: IBookingButto
         pageSettings={{
           hideEventTypeDetails: true,
           hideGdprBanner: true,
-          hideLandingPageDetails: true,
+          hideLandingPageDetails: true
         }}
       />
     </Suspense >
-  );
+  )
 }

@@ -8,8 +8,6 @@
   }
 }
 
-@layer base {
-  html {
-    @apply scroll-smooth;
-  }
+html {
+  scroll-behavior: smooth;
 }

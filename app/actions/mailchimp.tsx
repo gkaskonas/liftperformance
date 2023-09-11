@@ -1,6 +1,6 @@
-"use server";
+'use server'
 
-import client from "@mailchimp/mailchimp_marketing";
+import client from '@mailchimp/mailchimp_marketing'
 
 export interface IProps {
   apiKey: string;
@@ -8,32 +8,32 @@ export interface IProps {
   audienceId: string;
 }
 
-export async function makeMailchimpRequest(
+export async function makeMailchimpRequest (
   email: string,
-  props: IProps,
+  props: IProps
 ): Promise<string> {
   if (!email || !email.length) {
-    throw new Error("Email is required");
+    throw new Error('Email is required')
   }
 
   client.setConfig({
     apiKey: props.apiKey,
-    server: props.server,
-  });
+    server: props.server
+  })
 
-  const AUDIENCE_ID = props.audienceId;
+  const AUDIENCE_ID = props.audienceId
 
-  if (!AUDIENCE_ID) throw new Error("No audience id");
+  if (!AUDIENCE_ID) throw new Error('No audience id')
 
   try {
     const response = await client.lists.addListMember(AUDIENCE_ID, {
       email_address: email,
-      status: "subscribed",
-    });
+      status: 'subscribed'
+    })
 
-    console.log(response.status);
-    return "success";
+    console.log(response.status)
+    return 'success'
   } catch (e: any) {
-    throw new Error(e.message);
+    throw new Error(e.message)
   }
 }

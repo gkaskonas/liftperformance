@@ -1,7 +1,9 @@
-import Image from "next/image";
-import about from "../../public/photos/why_lift.jpg";
+'use client'
+import Image from 'next/image'
+import about from '../../public/photos/why_lift.jpg'
+import React from 'react'
 
-export default function About() {
+export default function About () {
   return (
     <div className="container mx-auto my-0 w-4/5 md:px-6 ">
       <section className="mb-12">
@@ -94,12 +96,12 @@ export default function About() {
                 loading="lazy"
                 placeholder="blur"
                 width={750}
-                onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+                onLoadingComplete={(image) => image.classList.remove('opacity-0')}
               />
             </div>
           </div>
         </div>
       </section>
     </div>
-  );
+  )
 }
