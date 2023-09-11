@@ -1,8 +1,6 @@
 import { gql } from "graphql-request";
 import { IPost } from "../page";
 import { hygraph } from "../utils/hygraph";
-import Image from "next/image"
-import dynamic from "next/dynamic";
 
 import type { Metadata, ResolvingMetadata } from 'next'
 import Blog from "../components/blog";

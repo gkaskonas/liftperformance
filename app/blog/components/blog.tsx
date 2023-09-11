@@ -44,7 +44,7 @@ export default function Blog({ blog }: { blog: IPost }) {
                         }
                         if (child.type === "image") {
                             return (<div className="flex flex-col items-center">
-                                <Image src={child.src} width={child.width} height={child.height} alt="image" />
+                                <Image src={child.src} width={child.width} height={child.height} alt="image" className="transition-opacity opacity-0 duration-[0.5s]" onLoadingComplete={(image) => image.classList.remove("opacity-0")} />
                                 <CalendlyButton buttonClassNames="mb-5 btn btn-ghost flex px-10 bg-black text-white text-bold text-xl sm:text-2xl text-center" />
 
                             </div>)

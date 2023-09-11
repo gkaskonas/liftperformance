@@ -65,6 +65,7 @@ export default function Services() {
                   placeholder="blur"
                   width={1024}
                   onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+
                 />
               </div>
             </figure>

@@ -47,7 +47,8 @@ export default function Testimonials() {
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full  basis-auto lg:flex lg:w-6/12 xl:w-4/12">
                         <Image src={bradley_testimonial} alt="Bradley Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
-                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]" />
+                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
+                        />
                       </div>
                       <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
                         <div className="mt-5 md:px-12">
@@ -72,7 +73,8 @@ export default function Testimonials() {
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full  basis-auto lg:flex lg:w-6/12 xl:w-4/12">
                         <Image src={clara_testimonial} alt="Bradley Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
-                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]" />
+                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
+                        />
                       </div>
                       <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
                         <div className="mt-5 md:px-12">
@@ -97,7 +99,8 @@ export default function Testimonials() {
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full  basis-auto lg:flex lg:w-6/12 xl:w-4/12">
                         <Image src={kochun_testimonial} alt="Bradley Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
-                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]" />
+                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
+                        />
                       </div>
                       <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
                         <div className="mt-6 md:px-12">
@@ -122,7 +125,8 @@ export default function Testimonials() {
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
                         <Image src={attiya_testimonial} alt="Bradley Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
-                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]" />
+                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
+                        />
                       </div>
                       <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
                         <div className="mt-5 md:px-12">
@@ -147,7 +151,8 @@ export default function Testimonials() {
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
                         <Image src={christopher_testimonial} alt="Bradley Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
-                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]" />
+                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
+                        />
                       </div>
                       <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
                         <div className="mt-5 md:px-12">
@@ -172,7 +177,8 @@ export default function Testimonials() {
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
                         <Image src={simon_clipped} alt="Bradley Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
-                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]" />
+                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
+                        />
                       </div>
                       <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
                         <div className="mt-5 md:px-12">
@@ -197,7 +203,8 @@ export default function Testimonials() {
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
                         <Image src={jon_clipped} alt="Bradley Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
-                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]" />
+                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
+                        />
                       </div>
                       <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
                         <div className="mt-5 md:px-12">
@@ -222,7 +229,8 @@ export default function Testimonials() {
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
                         <Image src={chen_clipped} alt="Chen Testimonial" placeholder={"blur"} width={1024} onLoadingComplete={(image) => image.classList.remove("opacity-0")}
-                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]" />
+                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
+                        />
                       </div>
                       <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
                         <div className="mt-5 md:px-12">

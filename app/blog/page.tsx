@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Lift Performance Blog",
   description:
     "Discover fitness tips, workout plans, nutrition guides, and expert advice to achieve your gym goals. Elevate your fitness journey with our gym blog's valuable insights and stay motivated on the path to a healthier you.",
-  metadataBase: new URL("https://liftperformance.net"),
+  metadataBase: new URL("https://https://djrmsjgzumyjo.cloudfront.net"),
   alternates: {
     canonical: "/blog",
   },
