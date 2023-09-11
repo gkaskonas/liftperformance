@@ -89,11 +89,12 @@ export default function About() {
             <div>
               <Image
                 src={about}
-                className="mx-auto hidden rounded-lg shadow-lg shadow-black/20 sm:block "
+                className="mx-auto hidden rounded-lg shadow-lg shadow-black/20 sm:block transition-opacity opacity-0 duration-[0.5s]"
                 alt="about us image"
                 loading="lazy"
                 placeholder="blur"
                 width={750}
+                onLoadingComplete={(image) => image.classList.remove("opacity-0")}
               />
             </div>
           </div>

@@ -69,9 +69,10 @@ export default function Team() {
                 <Image
                   src={trainer.image}
                   alt={trainer.name}
-                  className="w-full"
+                  className="w-full transition-opacity opacity-0 duration-[0.5s]"
                   placeholder="blur"
                   width={1024}
+                  onLoadingComplete={(image) => image.classList.remove("opacity-0")}
                 />
               </figure>
               <div className="card-body items-center">
@@ -93,11 +94,10 @@ export default function Team() {
               src={selectedTrainer!.image}
               alt={selectedTrainer!.name}
               placeholder="blur"
-              className="mx-auto mb-6 w-2/3 xl:w-1/2"
-              priority={true}
-              sizes="(min-width: 60em) 24vw,
-              (min-width: 28em) 45vw,
-              100vw"
+              className="mx-auto mb-6 w-2/3 xl:w-1/2 transition-opacity opacity-0 duration-[0.5s]"
+              width={1024}
+              onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+
             />
             <h1 className="mb-2 text-2xl font-bold">{selectedTrainer!.name}</h1>
             <p className="py-5 text-xl font-bold">{selectedTrainer!.title}</p>

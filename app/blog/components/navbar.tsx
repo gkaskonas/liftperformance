@@ -27,7 +27,7 @@ export default function BlogNavBar() {
             <div className="navbar-start"></div>
             <div className="navbar-center"></div>
             <div className="navbar-end mr-10 hidden xl:flex flex-grow w-2/3">
-                <ul className="menu menu-horizontal space-x-4 text-black  shadow-sm transition duration-300 sm:text-base lg:text-lg">
+                <ul className="menu menu-horizontal space-x-4 text-black  shadow-sm sm:text-base lg:text-xl items-center">
                     <Link
                         href="/"
                         className="group  transition duration-300"
@@ -43,14 +43,14 @@ export default function BlogNavBar() {
                         <span className="block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full"></span>
                     </Link>
                     <Link
-                        href="/https://www.instagram.com/liftperformancehk"
+                        href="https://www.instagram.com/liftperformancehk"
                         className="group"
                     >
                         <SiInstagram size={25} />
                         <span className="block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full"></span>
 
                     </Link>
-                    <CalendlyButton buttonClassNames="flex bg-black text-white text-center text-base px-1 py-0 text-bold rounded-lg hover:bg-slate-700" text="Book Your Free Consult" />
+                    <CalendlyButton buttonClassNames="flex bg-black text-white text-center text-base p-4 text-bold text-xl rounded-lg hover:shadow hover:bg-slate-700 " text="Book Your Free Consult" />
 
                 </ul>
             </div>

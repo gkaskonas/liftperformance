@@ -58,12 +58,13 @@ export default function Services() {
             <figure className="mb-0">
               <div className="w-[90%] sm:w-[95%]">
                 <Image
-                  className="object-contain w-full "
+                  className="object-contain w-full transition-opacity opacity-0 duration-[0.5s]"
                   src={service.image}
                   alt="service image"
                   loading="lazy"
                   placeholder="blur"
                   width={1024}
+                  onLoadingComplete={(image) => image.classList.remove("opacity-0")}
                 />
               </div>
             </figure>
