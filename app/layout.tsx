@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import './styles/globals.css'
-import React, { Suspense } from 'react'
-import Analytics from './components/analytiics'
+import React from 'react'
 import { M_PLUS_1 } from 'next/font/google'
 import 'tw-elements/dist/css/tw-elements.min.css'
 
@@ -61,9 +60,6 @@ export default function RootLayout ({
   return (
     <html lang="en" data-theme="light" className={inter.className} id="root">
       <body className="overflow-x-hidden scroll-smooth">
-        <Suspense>
-          <Analytics />
-        </Suspense>
         {children}
       </body>
     </html>

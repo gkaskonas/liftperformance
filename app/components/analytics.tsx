@@ -6,7 +6,7 @@ import { usePathname, useSearchParams } from 'next/navigation'
 import Script from 'next/script'
 import React, { useEffect } from 'react'
 
-export default function Analytics () {
+export default function Analytics (props: { nonce: string }) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
@@ -33,6 +33,7 @@ export default function Analytics () {
       <Script
         id="gtm-script"
         strategy="afterInteractive"
+        nonce={props.nonce}
         dangerouslySetInnerHTML={{
           __html: `
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
