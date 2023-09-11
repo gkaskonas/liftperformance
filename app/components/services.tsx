@@ -14,7 +14,7 @@ type Service = {
   description: string;
 };
 
-export default function Services () {
+export default function Services() {
   const services: Service[] = [
     {
       name: '1-to-1 Training',
@@ -66,6 +66,7 @@ export default function Services () {
                   loading="lazy"
                   placeholder="blur"
                   width={1024}
+                  sizes='(max-width: 1024px) 100vw, 1024px'
                   onLoadingComplete={(image) => image.classList.remove('opacity-0')}
 
                 />

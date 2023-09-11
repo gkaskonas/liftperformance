@@ -2,7 +2,7 @@ import { gql } from 'graphql-request'
 import { hygraph } from './utils/hygraph'
 import { Metadata } from 'next'
 import Blogs from './components/blogs'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: 'Lift Performance Blog',
@@ -120,7 +120,9 @@ export default async function Page () {
 
   return (
     <div className="" data-theme="light">
-      <Blogs blogs={blogs} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Blogs blogs={blogs} />
+      </Suspense>
     </div >
   )
 }

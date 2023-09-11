@@ -3,6 +3,9 @@ module.exports = {
         "browser": true,
         "es2021": true
     },
+    "react": {
+        "version": "detect"
+    },
     "extends": [
         "plugin:react/recommended",
         "standard"

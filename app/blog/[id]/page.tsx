@@ -4,7 +4,7 @@ import { hygraph } from '../utils/hygraph'
 
 import type { Metadata, ResolvingMetadata } from 'next'
 import Blog from '../components/blog'
-import React from 'react'
+import React, { Suspense } from 'react'
 type Props = {
   params: { id: string }
   searchParams: { [ key: string ]: string | string[] | undefined }
@@ -72,7 +72,9 @@ export default async function Page ({ params, searchParams }: Props) {
 
   return (
     <div className="" data-theme="light">
-      <Blog blog={blog} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Blog blog={blog} />
+      </Suspense>
     </div>
   )
 }

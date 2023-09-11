@@ -14,9 +14,9 @@ type Trainer = {
   description: string;
 };
 
-export default function Team () {
-  const [showModal, setShowModal] = useState(false)
-  const [selectedTrainer, setSelectedTrainer] = useState<Trainer | null>(null) // specify the type of selectedTrainer
+export default function Team() {
+  const [ showModal, setShowModal ] = useState(false)
+  const [ selectedTrainer, setSelectedTrainer ] = useState<Trainer | null>(null) // specify the type of selectedTrainer
   const trainers: Trainer[] = [
     {
       name: 'Jane Cheung',
@@ -50,7 +50,7 @@ export default function Team () {
   ]
 
   const handleImageClick = (index: number) => {
-    setSelectedTrainer(trainers[index])
+    setSelectedTrainer(trainers[ index ])
     setShowModal(true)
   }
 
@@ -74,6 +74,7 @@ export default function Team () {
                   className="w-full transition-opacity opacity-0 duration-[0.5s]"
                   placeholder="blur"
                   width={1024}
+                  sizes='(max-width: 1024px) 100vw, 1024px'
                   onLoadingComplete={(image) => image.classList.remove('opacity-0')}
 
                 />
