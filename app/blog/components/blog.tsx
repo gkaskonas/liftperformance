@@ -1,9 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import { IPost } from '../page'
 import dynamic from 'next/dynamic'
 import React from 'react'
+import { IPost } from '@/interfaces/blog'
 
 export default function Blog ({ blog }: { blog: IPost }) {
   const CalendlyButton = dynamic(() => import('../../components/booking2'), {

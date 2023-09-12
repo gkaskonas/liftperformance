@@ -1,17 +1,14 @@
 import { gql } from 'graphql-request'
-import { IPost } from '../page'
 import { hygraph } from '../utils/hygraph'
 
 import type { Metadata, ResolvingMetadata } from 'next'
 import Blog from '../components/blog'
 import React, { Suspense } from 'react'
+import LoadingTemplate from '../components/loading'
+import { IBlogPost, IPost } from '@/interfaces/blog'
 type Props = {
   params: { slug: string }
   searchParams: { [ key: string ]: string | string[] | undefined }
-}
-
-interface IBlogPost {
-  post: IPost
 }
 
 export async function generateMetadata (
@@ -75,7 +72,7 @@ export default async function Page ({ params, searchParams }: Props) {
 
   return (
     <div className="" data-theme="light">
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadingTemplate/>}>
         <Blog blog={blog} />
       </Suspense>
     </div>

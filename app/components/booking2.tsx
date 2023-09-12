@@ -1,4 +1,5 @@
 'use client'
+import LoadingTemplate from '@/blog/components/loading'
 import { getBookingButtonText } from '@/lib/utils'
 import React, { Suspense, useState } from 'react'
 import { PopupModal } from 'react-calendly'
@@ -23,8 +24,8 @@ export default function CalendlyButton ({ buttonClassNames, text }: IBookingButt
   const [buttonText] = useState(getBookingButtonText())
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <button
+    <Suspense fallback={<LoadingTemplate/>}>
+    <button
         onClick={() => setShowModal(true)}
         className={buttonClassNames}
       >

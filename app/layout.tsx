@@ -59,7 +59,7 @@ export default function RootLayout ({
 }) {
   return (
     <html lang="en" data-theme="light" className={inter.className} id="root">
-      <body className="overflow-x-hidden scroll-smooth">
+      <body className="">
         {children}
       </body>
     </html>

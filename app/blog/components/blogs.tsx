@@ -1,16 +1,14 @@
 'use client'
 
+import { IPost } from '@/interfaces/blog'
 import Image from 'next/image'
-import { IPost } from '../page'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
+import ReactPaginate from 'react-paginate'
 
-export default function Blogs ({ blogs }: { blogs: IPost[] }) {
-  return (<div className="container my-24 mx-auto md:px-6">
-        <section className="mb-32">
-            <h1 className="mb-16 text-center text-2xl font-bold">Latest Blogs</h1>
-
-            {blogs.map((blog, index) => (
+function Blogs ({ currentBlogs }: { currentBlogs: IPost[] }) {
+  return (<>
+            {currentBlogs && currentBlogs.map((blog, index) => (
                 <div className="mb-16 flex flex-wrap" key={index}>
                     <div className="mb-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pr-6">
                         <div
@@ -37,6 +35,47 @@ export default function Blogs ({ blogs }: { blogs: IPost[] }) {
                 </div>
             ))
             }
-        </section >
-    </div >)
+    </>)
+}
+
+export default function PaginatedBlogs ({ blogs, itemsPerPage }: {blogs: IPost[], itemsPerPage: number }) {
+  // Here we use item offsets; we could also use page offsets
+  // following the API or data you're working with.
+  const [itemOffset, setItemOffset] = useState(0)
+
+  // Simulate fetching items from another resources.
+  // (This could be items from props; or items loaded in a local state
+  // from an API endpoint with useEffect and useState)
+  const endOffset = itemOffset + itemsPerPage
+  console.log(`Loading items from ${itemOffset} to ${endOffset}`)
+  const currentItems = blogs.slice(itemOffset, endOffset)
+  const pageCount = Math.ceil(blogs.length / itemsPerPage)
+
+  // Invoke when user click to request another page.
+  const handlePageClick = (event: any) => {
+    const newOffset = (event.selected * itemsPerPage) % blogs.length
+    console.log(
+        `User requested page number ${event.selected}, which is offset ${newOffset}`
+    )
+    setItemOffset(newOffset)
+  }
+
+  return (
+    <div className="container my-24 mx-auto md:px-6">
+        <section className="">
+        <h1 className="mb-16 text-center text-2xl font-bold">Latest Blogs</h1>
+        <Blogs currentBlogs={currentItems} />
+        <ReactPaginate
+        className='flex justify-center my-10 gap-x-5'
+          breakLabel="..."
+          nextLabel="next >"
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={5}
+          pageCount={pageCount}
+          previousLabel="< previous"
+          renderOnZeroPageCount={null}
+        />
+    </section>
+    </div>
+  )
 }
