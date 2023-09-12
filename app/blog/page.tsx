@@ -9,10 +9,9 @@ import { IPost, IBlog } from '@/interfaces/blog'
 export const metadata: Metadata = {
   title: 'Lift Performance Blog',
   description:
-    "Discover fitness tips, workout plans, nutrition guides, and expert advice to achieve your gym goals. Elevate your fitness journey with our gym blog's valuable insights and stay motivated on the path to a healthier you.",
-  metadataBase: new URL('https://djrmsjgzumyjo.cloudfront.net/blog'),
+    'Discover fitness tips, workout plans, nutrition guides, and expert advice to achieve your gym goals',
   alternates: {
-    canonical: '/'
+    canonical: 'https://djrmsjgzumyjo.cloudfront.net/blog'
   }
 }
 

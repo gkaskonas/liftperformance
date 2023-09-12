@@ -21,6 +21,7 @@ export default {
       const site = new NextjsSite(stack, 'site', {
         bind: [MAILCHIMP_API_KEY, MAILCHIMP_API_SERVER, MAILCHIMP_AUDIENCE_ID],
         warm: app.stage === 'prod' ? 15 : 2,
+        buildCommand: 'npx open-next@2.1.4 build',
         cdk: {
           server: {
             logRetention: 7
