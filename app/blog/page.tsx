@@ -52,6 +52,9 @@ export interface IPost {
     id: string
     name: string
   }
+  description: string;
+  date: string;
+  slug: string;
   coverImage: {
     id: string;
     height: number;
@@ -87,8 +90,9 @@ export interface IBlog {
 
 const QUERY = gql`
   {
-    posts(orderBy: createdAt_DESC) {
+    posts(orderBy: date_DESC) {
     id
+    slug
     title
     excerpt
     publishedAt
@@ -96,14 +100,12 @@ const QUERY = gql`
       id
       name
     }
+    date
     coverImage {
       id
       height
       width
       url
-    }
-    content {
-      markdown
     }
   }
   }

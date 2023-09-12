@@ -20,7 +20,7 @@ export default function Blog ({ blog }: { blog: IPost }) {
 
                 <div className="mb-6 flex items-center">
                     <div>
-                        <span> Published <u>{new Date(blog.publishedAt).toDateString()}</u> by </span>
+                        <span> Published <u>{new Date(blog.date).toDateString()}</u> by </span>
                         <p className="font-medium">{blog.publishedBy?.name ?? 'liftperformance'}</p>
                     </div>
                 </div>

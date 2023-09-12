@@ -20,11 +20,16 @@ export default {
       })
       const site = new NextjsSite(stack, 'site', {
         bind: [MAILCHIMP_API_KEY, MAILCHIMP_API_SERVER, MAILCHIMP_AUDIENCE_ID],
-        warm: app.stage === 'prod' ? 5 : 2,
-        imageOptimization: {
-          memorySize: 2048
+        warm: app.stage === 'prod' ? 15 : 2,
+        cdk: {
+          server: {
+            logRetention: 7
+          }
         },
-        memorySize: 2048,
+        imageOptimization: {
+          memorySize: 1024
+        },
+        memorySize: 1024,
         environment: {
           NEXT_PUBLIC_VERCEL_ENV: app.stage === 'prod' ? 'production' : 'development',
           NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID: app.stage === 'prod' ? 'GTM-KWXC4F4' : 'whatever'

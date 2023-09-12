@@ -6,7 +6,7 @@ import type { Metadata, ResolvingMetadata } from 'next'
 import Blog from '../components/blog'
 import React, { Suspense } from 'react'
 type Props = {
-  params: { id: string }
+  params: { slug: string }
   searchParams: { [ key: string ]: string | string[] | undefined }
 }
 
@@ -19,31 +19,33 @@ export async function generateMetadata (
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   // read route params
-  const id = params.id
+  const slug = params.slug
 
   const blog: IBlogPost = await hygraph.request(gql`
     {
-      post(where: {id: "${id}"}) {
+      post(where: {slug: "${slug}"}) {
       id
+      slug
       title
       excerpt
+      description
       }
     }
   `)
 
   return {
     title: blog.post.title,
-    description: blog.post.excerpt,
+    description: blog.post.description,
     alternates: {
-      canonical: `https://djrmsjgzumyjo.cloudfront.net/blog/${id}`
+      canonical: `https://djrmsjgzumyjo.cloudfront.net/blog/${slug}`
     }
   }
 }
 
-async function getBlog (id: string): Promise<IPost> {
+async function getBlog (slug: string): Promise<IPost> {
   const blog: IBlogPost = await hygraph.request(gql`
     {
-      post(where: {id: "${id}"}) {
+      post(where: {slug: "${slug}"}) {
       id
       title
       publishedAt
@@ -51,6 +53,7 @@ async function getBlog (id: string): Promise<IPost> {
         id
         name
       }
+      date
       coverImage {
         id
         height
@@ -68,7 +71,7 @@ async function getBlog (id: string): Promise<IPost> {
 }
 
 export default async function Page ({ params, searchParams }: Props) {
-  const blog = await getBlog(params.id)
+  const blog = await getBlog(params.slug)
 
   return (
     <div className="" data-theme="light">
