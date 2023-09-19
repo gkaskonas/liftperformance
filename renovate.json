@@ -16,12 +16,7 @@
     {
       "automerge": true,
       "groupName": "testing",
-      "packageNames": [
-        "@typescript-eslint/eslint-plugin",
-        "prettier",
-        "jest",
-        "ts-jest"
-      ],
+      "packageNames": ["@typescript-eslint/eslint-plugin", "prettier", "jest", "ts-jest"],
       "packagePatterns": ["^eslint"]
     },
     {

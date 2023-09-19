@@ -1,34 +1,31 @@
-'use client'
-import LoadingTemplate from '@/blog/components/loading'
-import { getBookingButtonText } from '@/lib/utils'
-import React, { Suspense, useState } from 'react'
-import { PopupModal } from 'react-calendly'
+"use client";
+import LoadingTemplate from "@/blog/components/loading";
+import { getBookingButtonText } from "@/lib/utils";
+import React, { Suspense, useState } from "react";
+import { PopupModal } from "react-calendly";
 
 export interface IBookingButtonProps {
   buttonClassNames: string;
   text?: string;
 }
 
-export default function CalendlyButton ({ buttonClassNames, text }: IBookingButtonProps) {
+export default function CalendlyButton({ buttonClassNames, text }: IBookingButtonProps) {
   const getRootEelement = () => {
-    const element = document.getElementById('root')
+    const element = document.getElementById("root");
 
     if (!element) {
-      throw new Error('Root element not found')
+      throw new Error("Root element not found");
     }
-    return element
-  }
+    return element;
+  };
 
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
 
-  const [buttonText] = useState(getBookingButtonText())
+  const [buttonText] = useState(getBookingButtonText());
 
   return (
-    <Suspense fallback={<LoadingTemplate/>}>
-    <button
-        onClick={() => setShowModal(true)}
-        className={buttonClassNames}
-      >
+    <Suspense fallback={<LoadingTemplate />}>
+      <button onClick={() => setShowModal(true)} className={buttonClassNames}>
         {text || buttonText}
       </button>
       <PopupModal
@@ -39,9 +36,9 @@ export default function CalendlyButton ({ buttonClassNames, text }: IBookingButt
         pageSettings={{
           hideEventTypeDetails: true,
           hideGdprBanner: true,
-          hideLandingPageDetails: true
+          hideLandingPageDetails: true,
         }}
       />
-    </Suspense >
-  )
+    </Suspense>
+  );
 }

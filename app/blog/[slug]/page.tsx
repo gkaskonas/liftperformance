@@ -1,22 +1,19 @@
-import { gql } from 'graphql-request'
-import { hygraph } from '../utils/hygraph'
+import { gql } from "graphql-request";
+import { hygraph } from "../utils/hygraph";
 
-import type { Metadata, ResolvingMetadata } from 'next'
-import Blog from '../components/blog'
-import React, { Suspense } from 'react'
-import LoadingTemplate from '../components/loading'
-import { IBlogPost, IPost } from '@/interfaces/blog'
+import type { Metadata, ResolvingMetadata } from "next";
+import Blog from "../components/blog";
+import React, { Suspense } from "react";
+import LoadingTemplate from "../components/loading";
+import { IBlogPost, IPost } from "@/interfaces/blog";
 type Props = {
-  params: { slug: string }
-  searchParams: { [ key: string ]: string | string[] | undefined }
-}
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
 
-export async function generateMetadata (
-  { params, searchParams }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: Props, parent: ResolvingMetadata): Promise<Metadata> {
   // read route params
-  const slug = params.slug
+  const slug = params.slug;
 
   const blog: IBlogPost = await hygraph.request(gql`
     {
@@ -27,18 +24,18 @@ export async function generateMetadata (
       description
       }
     }
-  `)
+  `);
 
   return {
     title: blog.post.title,
     description: blog.post.description,
     alternates: {
-      canonical: `https://djrmsjgzumyjo.cloudfront.net/blog/${slug}`
-    }
-  }
+      canonical: `https://djrmsjgzumyjo.cloudfront.net/blog/${slug}`,
+    },
+  };
 }
 
-async function getBlog (slug: string): Promise<IPost> {
+async function getBlog(slug: string): Promise<IPost> {
   const blog: IBlogPost = await hygraph.request(gql`
     {
       post(where: {slug: "${slug}"}) {
@@ -61,19 +58,19 @@ async function getBlog (slug: string): Promise<IPost> {
       }
     }
     }
-  `)
+  `);
 
-  return blog.post
+  return blog.post;
 }
 
-export default async function Page ({ params, searchParams }: Props) {
-  const blog = await getBlog(params.slug)
+export default async function Page({ params, searchParams }: Props) {
+  const blog = await getBlog(params.slug);
 
   return (
     <div className="" data-theme="light">
-      <Suspense fallback={<LoadingTemplate/>}>
+      <Suspense fallback={<LoadingTemplate />}>
         <Blog blog={blog} />
       </Suspense>
     </div>
-  )
+  );
 }

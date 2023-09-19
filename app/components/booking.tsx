@@ -1,19 +1,19 @@
-'use client'
+"use client";
 
-import { getBookingButtonText } from '@/lib/utils'
-import { PopupWidget } from 'react-calendly'
-import React, { useState } from 'react'
+import { getBookingButtonText } from "@/lib/utils";
+import { PopupWidget } from "react-calendly";
+import React, { useState } from "react";
 
-export default function Calendly () {
+export default function Calendly() {
   const getRootEelement = () => {
-    const element = document.getElementById('root')
+    const element = document.getElementById("root");
 
     if (!element) {
-      throw new Error('Root element not found')
+      throw new Error("Root element not found");
     }
-    return element
-  }
-  const [buttonText] = useState(getBookingButtonText())
+    return element;
+  };
+  const [buttonText] = useState(getBookingButtonText());
 
   return (
     <PopupWidget
@@ -26,8 +26,8 @@ export default function Calendly () {
       pageSettings={{
         hideEventTypeDetails: true,
         hideGdprBanner: true,
-        hideLandingPageDetails: true
+        hideLandingPageDetails: true,
       }}
     />
-  )
+  );
 }
