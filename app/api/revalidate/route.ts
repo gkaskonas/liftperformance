@@ -1,12 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { revalidateTag } from 'next/cache'
+import { Config } from 'sst/node/config';
  
 // e.g a webhook to `your-website.com/api/revalidate?tag=collection&secret=<token>`
 export async function POST(request: NextRequest) {
-  const secret = request.nextUrl.searchParams.get('secret')
-  const tag = request.nextUrl.searchParams.get('tag')
+  const secret = request.nextUrl.searchParams.get('secret');
+  const tag = request.nextUrl.searchParams.get('tag');
+  const REVALIDATE_TOKEN = Config.REVALIDATE_TOKEN;
  
-  if (secret !== process.env.REVALIDATE_TOKEN) {
+  if (secret !== REVALIDATE_TOKEN) {
     return NextResponse.json({ message: 'Invalid secret' }, { status: 401 })
   }
  

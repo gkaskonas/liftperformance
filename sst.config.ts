@@ -12,6 +12,7 @@ export default {
   stacks(app) {
     app.stack(function Site({ stack }) {
       const MAILCHIMP_API_KEY = new Config.Secret(stack, "MAILCHIMP_API_KEY");
+      const REVALIDATE_TOKEN = new Config.Secret(stack, "REVALIDATE_TOKEN");
       const MAILCHIMP_API_SERVER = new Config.Parameter(stack, "MAILCHIMP_API_SERVER", {
         value: "us17",
       });
@@ -19,7 +20,7 @@ export default {
         value: "59ec9e6181",
       });
       const site = new NextjsSite(stack, "site", {
-        bind: [MAILCHIMP_API_KEY, MAILCHIMP_API_SERVER, MAILCHIMP_AUDIENCE_ID],
+        bind: [MAILCHIMP_API_KEY, MAILCHIMP_API_SERVER, MAILCHIMP_AUDIENCE_ID, REVALIDATE_TOKEN],
         warm: app.stage === "prod" ? 15 : 2,
         buildCommand: "npx open-next@2.1.4 build",
         cdk: {
