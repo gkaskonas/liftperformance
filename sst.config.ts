@@ -21,15 +21,15 @@ export default {
       });
       const site = new NextjsSite(stack, "site", {
         bind: [MAILCHIMP_API_KEY, MAILCHIMP_API_SERVER, MAILCHIMP_AUDIENCE_ID, REVALIDATE_TOKEN],
-        warm: app.stage === "prod" ? 15 : 2,
-        buildCommand: "npx open-next@2.1.4 build",
+        warm: app.stage === "prod" ? 15 : 10,
+        buildCommand: "npx open-next@2.1.5 build",
         cdk: {
           server: {
-            logRetention: 7,
+            logRetention: 3,
           },
         },
         imageOptimization: {
-          memorySize: 4096,
+          memorySize: 2048,
         },
         memorySize: 1024,
         environment: {

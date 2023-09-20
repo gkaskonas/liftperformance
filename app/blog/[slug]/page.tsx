@@ -8,7 +8,7 @@ import LoadingTemplate from "../components/loading";
 import { IBlogPost, IPost } from "@/interfaces/blog";
 type Props = {
   params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: { [ key: string ]: string | string[] | undefined };
 };
 
 export async function generateMetadata({ params, searchParams }: Props, parent: ResolvingMetadata): Promise<Metadata> {
@@ -63,7 +63,7 @@ async function getBlog(slug: string): Promise<IPost> {
   return blog.post;
 }
 
-export default async function Page({ params, searchParams }: Props) {
+export default async function Page({ params }: Props) {
   const blog = await getBlog(params.slug);
 
   return (

@@ -1,10 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   images: {
-    minimumCacheTTL: 86400,
-    deviceSizes: [320, 640, 768, 1024, 1280, 1536, 1820, 2000],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    formats: ["image/webp", "image/avif"],
     remotePatterns: [
       {
         protocol: "https",
@@ -34,7 +30,7 @@ module.exports = {
     ];
   },
   webpack(config) {
-    config.experiments = { ...config.experiments, topLevelAwait: true };
+    config.experiments = { ...config.experiments, topLevelAwait: true, };
     return config;
   },
 };

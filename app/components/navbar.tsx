@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { SiInstagram } from "react-icons/si";
 
 export default function NavBar() {
-  const [showMe, setShowMe] = useState(false);
+  const [ showMe, setShowMe ] = useState(false);
   function toggle() {
     setShowMe(!showMe);
     if (!showMe) {

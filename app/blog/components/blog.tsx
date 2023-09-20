@@ -24,7 +24,6 @@ export default function Blog({ blog }: { blog: IPost }) {
           priority
           onLoadingComplete={image => image.classList.remove("opacity-0")}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-
         />
 
         <div className="mb-6 flex items-center">

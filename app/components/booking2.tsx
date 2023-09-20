@@ -19,9 +19,9 @@ export default function CalendlyButton({ buttonClassNames, text }: IBookingButto
     return element;
   };
 
-  const [showModal, setShowModal] = useState(false);
+  const [ showModal, setShowModal ] = useState(false);
 
-  const [buttonText] = useState(getBookingButtonText());
+  const [ buttonText ] = useState(getBookingButtonText());
 
   return (
     <Suspense fallback={<LoadingTemplate />}>

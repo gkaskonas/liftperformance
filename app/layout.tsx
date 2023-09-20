@@ -6,7 +6,7 @@ import "tw-elements/dist/css/tw-elements.min.css";
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = M_PLUS_1({
-  subsets: ["latin"],
+  subsets: [ "latin" ],
   display: "swap",
   preload: true,
 });

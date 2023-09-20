@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
 import About from "./components/about";
 import Footer from "./components/footer";
@@ -27,7 +27,9 @@ export default async function Page() {
 
   return (
     <div className="" data-theme="light">
-      <Analytics />
+      <Suspense>
+        <Analytics />
+      </Suspense>
       <NavBar />
       <Calendly />
       <Hero2 />
