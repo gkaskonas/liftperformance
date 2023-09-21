@@ -1,9 +1,12 @@
+"use client";
+
 import Image, { StaticImageData } from "next/image";
 import group from "../../public/photos/group.jpeg";
 import natal from "../../public/photos/natal.jpeg";
 import service1 from "../../public/photos/personal.jpeg";
 import pilates from "../../public/photos/pilates.jpeg";
 import flexibility from "../../public/photos/flexibility_clipped.jpg";
+import React from "react";
 
 type Service = {
   name: string;
@@ -47,31 +50,37 @@ export default function Services() {
   return (
     <section id="services" aria-label="Services" className="my-12">
       <div className="mx-auto max-w-2xl text-center">
-        <h1 className="mb-2 text-center text-4xl font-bold  sm:text-5xl">
-          Services
-        </h1>
+        <h1 className="mb-2 text-center text-4xl font-bold  sm:text-5xl">Services</h1>
       </div>
-      <div className="container mx-auto p-6">
-        <div className="gap-2 mt-10 sm:flex-row flex flex-col sm:flex-wrap ">
+      <div className="gap-2 sm:gap-5 mt-10 sm:flex-grow flex flex-col sm:w-[90%] mx-auto">
         {services.map((service: Service, index: number) => (
-          <div className="card w-60 shadow-lg item-stretch mx-auto flex-grow-1 mt-5 "  key={index}>
-            <figure className="mb-0">
-            <Image
-                className="mx-auto w-3/4  rounded-lg mb-0"
+          <div
+            className={
+              index % 2 === 0
+                ? "card sm:card-side max-w-5xl mx-auto motion-safe:animate-fadeIn"
+                : "card sm:card-side max-w-5xl mx-auto sm:flex-row-reverse motion-safe:animate-fadeIn"
+            }
+            key={index}
+          >
+            <figure className="mb-4 flex">
+              <Image
+                className="w-full transition-opacity opacity-0 duration-[0.5s]"
                 src={service.image}
                 alt="service image"
                 loading="lazy"
                 placeholder="blur"
-                width={384}
+                width={1024}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                onLoadingComplete={image => image.classList.remove("opacity-0")}
+                quality={60}
               />
             </figure>
-            <div className="card-body items-center prose py-2 text-black">
-              <h2 className="text-base mb-0 mt-0 text-center">{service.name}</h2>
-              <p className="text-sm md:text-sm leading-tight mb-5 text-left">{service.description}</p>
+            <div className="card-body max-w-xl md:max-w-2xl p-2">
+              <h2 className="text-xl sm:text-lg md:text-2xl xl:text-2xl mb-15 mt-0 text-center card-title">{service.name}</h2>
+              <p className="text-base xl:text-xl leading-tight mt-4 text-left">{service.description}</p>
             </div>
           </div>
         ))}
-      </div>
       </div>
     </section>
   );

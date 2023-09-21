@@ -1,92 +1,76 @@
-import Image from "next/image";
+"use client";
+
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useState } from "react";
-import logo from "../../public/photos/lift-logo-1.png";
+import React, { useState } from "react";
+import { SiInstagram } from "react-icons/si";
 
 export default function NavBar() {
-  const [showMe, setShowMe] = useState(false);
+  const [ showMe, setShowMe ] = useState(false);
   function toggle() {
     setShowMe(!showMe);
     if (!showMe) {
-      //@ts-ignore
+      // @ts-ignore
       window.my_modal_5.showModal();
     } else {
-      //@ts-ignore
+      // @ts-ignore
       window.my_modal_5.close();
     }
   }
+
+  const CalendlyButton = dynamic(() => import("../components/booking2"), {
+    ssr: false,
+  });
+
   return (
     <div className="navbar absolute top-0 z-10 text-lg text-white ">
-      <div className="navbar-start">
-        <Link href="#hero" className="">
-          <Image
-            loading="lazy"
-            src={logo}
-            alt="logo"
-            className="ml-10 w-1/4 sm:w-1/3 lg:w-1/3"
-          />
-        </Link>
-      </div>
-      <div className="navbar-end hidden flex-row sm:flex mr-10">
-        <ul className="menu menu-horizontal space-x-7 px-1 text-white  transition duration-300 sm:text-base lg:text-lg xl:text-xl">
-          <Link
-            href="#team"
-            className="group text-white transition duration-300"
-          >
+      <div className="navbar-start"></div>
+      <div className="navbar-center"></div>
+      <div className="navbar-end mr-10 hidden xl:flex flex-grow w-full">
+        <ul className="menu menu-horizontal space-x-4 text-black  shadow-sm sm:text-base lg:text-xl items-center">
+          <Link href="#team" className="group">
             Team
             <span className="block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full"></span>
           </Link>
-          <Link
-            href="#services"
-            className="group text-white transition duration-300"
-          >
-            Services
+          <Link href="#services" className="group">
+            Our Service
             <span className="block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full"></span>
           </Link>
-          <Link
-            href="#testimonials"
-            className="group text-white transition duration-300"
-          >
+          <Link href="#testimonials" className="group">
             Testimonials
             <span className="block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full"></span>
           </Link>
-          <Link
-            href="#contact"
-            className="group text-white transition duration-300"
-          >
+          <Link href="#contact" className="group">
             Contact
             <span className="block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full"></span>
           </Link>
+          <Link href="/blog" className="group">
+            Blog
+            <span className="block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full"></span>
+          </Link>
+          <Link href="https://www.instagram.com/liftperformancehk" className="group">
+            <SiInstagram size={25} />
+            <span className="block h-0.5 max-w-0 bg-white transition-all duration-500 group-hover:max-w-full"></span>
+          </Link>
+          <CalendlyButton
+            buttonClassNames="flex bg-white text-center text-base p-4 text-bold text-xl rounded-lg hover:shadow hover:bg-slate-100 "
+            text="Book Your Free Consult"
+          />
         </ul>
       </div>
-      <div className="navbar-end sm:hidden">
-        <label
-          tabIndex={0}
-          className="btn-ghost btn sm:hidden"
-          onClick={toggle}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h8m-8 6h16"
-            />
+      <div className="navbar-end xl:hidden">
+        <label tabIndex={0} className="btn-ghost btn xl:hidden" onClick={toggle}>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="black">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
           </svg>
         </label>
         {/* Open the modal using ID.showModal() method */}
         <dialog id="my_modal_5" className="modal modal-bottom">
           <form method="dialog" className="modal-box bg-black bg-opacity-50">
-            <ul className="flex flex-col gap-y-5">
+            <ul className="flex flex-col gap-y-10">
               <Link
                 href="#team"
-                className="btn border-none bg-transparent text-2xl text-white"
+                className="btn border-none bg-transparent text-2xl lg:text-4xl text-white"
                 onClick={toggle}
               >
                 Team
@@ -94,25 +78,36 @@ export default function NavBar() {
 
               <Link
                 href="#services"
-                className="btn border-none bg-transparent text-2xl text-white hover:underline"
+                className="btn border-none bg-transparent text-2xl lg:text-4xl text-white hover:underline"
                 onClick={toggle}
               >
                 Services
               </Link>
               <Link
                 href="#testimonials"
-                className="btn border-none bg-transparent text-2xl text-white hover:underline"
+                className="btn border-none bg-transparent text-2xl lg:text-4xl text-white hover:underline"
                 onClick={toggle}
               >
                 Testimonials
               </Link>
               <Link
                 href="#contact"
-                className="btn border-none bg-transparent text-2xl text-white hover:underline"
+                className="btn border-none bg-transparent text-2xl lg:text-4xl text-white hover:underline"
                 onClick={toggle}
               >
                 Contact
               </Link>
+              <Link
+                href="/blog"
+                className="btn border-none bg-transparent text-2xl lg:text-4xl text-white hover:underline"
+                onClick={toggle}
+              >
+                Blog
+              </Link>
+              <CalendlyButton
+                buttonClassNames="btn border-none bg-transparent text-2xl lg:text-4xl text-white"
+                text="Book Your Free Consult"
+              />
             </ul>
           </form>
           <form method="dialog" className="modal-backdrop">
