@@ -30,7 +30,7 @@ export async function generateMetadata({ params, searchParams }: Props, parent: 
     title: blog.post.title,
     description: blog.post.description,
     alternates: {
-      canonical: `https://djrmsjgzumyjo.cloudfront.net/blog/${slug}`,
+      canonical: `https://liftperformance.net/blog/${slug}`,
     },
   };
 }

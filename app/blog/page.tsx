@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Lift Performance Blog",
   description: "Discover fitness tips, workout plans, nutrition guides, and expert advice to achieve your gym goals",
   alternates: {
-    canonical: "https://djrmsjgzumyjo.cloudfront.net/blog",
+    canonical: "https://liftperformance.net/blog",
   },
 };
 
