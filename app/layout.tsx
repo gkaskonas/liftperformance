@@ -1,8 +1,6 @@
 import { Metadata } from "next";
-import "./styles/globals.css";
 import React from "react";
 import { M_PLUS_1 } from "next/font/google";
-import "tw-elements/dist/css/tw-elements.min.css";
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = M_PLUS_1({

@@ -7,6 +7,7 @@ import service1 from "../../public/photos/personal.jpeg";
 import pilates from "../../public/photos/pilates.jpeg";
 import flexibility from "../../public/photos/flexibility_clipped.jpg";
 import React from "react";
+import Fade from "react-reveal/Fade";
 
 type Service = {
   name: string;
@@ -54,32 +55,34 @@ export default function Services() {
       </div>
       <div className="gap-2 sm:gap-5 mt-10 sm:flex-grow flex flex-col sm:w-[90%] mx-auto">
         {services.map((service: Service, index: number) => (
-          <div
-            className={
-              index % 2 === 0
-                ? "card sm:card-side max-w-5xl mx-auto motion-safe:animate-fadeIn"
-                : "card sm:card-side max-w-5xl mx-auto sm:flex-row-reverse motion-safe:animate-fadeIn"
-            }
-            key={index}
-          >
-            <figure className="mb-4 flex">
-              <Image
-                className="w-full transition-opacity opacity-0 duration-[0.5s]"
-                src={service.image}
-                alt="service image"
-                loading="lazy"
-                placeholder="blur"
-                width={1024}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                onLoadingComplete={image => image.classList.remove("opacity-0")}
-                quality={60}
-              />
-            </figure>
-            <div className="card-body max-w-xl md:max-w-2xl p-2">
-              <h2 className="text-xl sm:text-lg md:text-2xl xl:text-2xl mb-15 mt-0 text-center card-title">{service.name}</h2>
-              <p className="text-base xl:text-xl leading-tight mt-4 text-left">{service.description}</p>
+          <Fade left={index % 2 === 0} right={index % 2 !== 0} key={index}>
+            <div
+              className={
+                index % 2 === 0
+                  ? "card sm:card-side max-w-5xl mx-auto motion-safe:animate-fadeIn"
+                  : "card sm:card-side max-w-5xl mx-auto sm:flex-row-reverse motion-safe:animate-fadeIn"
+              }
+
+            >
+              <figure className="mb-4 flex">
+                <Image
+                  className="w-full transition-opacity opacity-0 duration-[0.5s]"
+                  src={service.image}
+                  alt="service image"
+                  loading="lazy"
+                  placeholder="blur"
+                  width={1024}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  onLoadingComplete={image => image.classList.remove("opacity-0")}
+                  quality={60}
+                />
+              </figure>
+              <div className="card-body max-w-xl md:max-w-2xl p-2">
+                <h2 className="text-xl sm:text-lg md:text-2xl xl:text-2xl mb-15 mt-0 text-center card-title">{service.name}</h2>
+                <p className="text-base xl:text-xl leading-tight mt-4 text-left">{service.description}</p>
+              </div>
             </div>
-          </div>
+          </Fade>
         ))}
       </div>
     </section>
