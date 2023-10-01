@@ -1,12 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import bradley_testimonial from "../../public/photos/bradley_testimonial_clipped.jpg";
-import attiya_testimonial from "../../public/photos/attiya_clipped.jpg";
-import clara_testimonial from "../../public/photos/clara_testimonial_clipped.jpg";
-import kochun_testimonial from "../../public/photos/kochun_clipped.jpg";
-import jon_clipped from "../../public/photos/jon_clipped.jpg";
-import simon_clipped from "../../public/photos/simon_clipped.jpg";
+import NextImage from "next/image";
+import { Image } from "@nextui-org/image";
 import React, { useEffect } from "react";
 
 export type Testimonial = {
@@ -43,13 +38,12 @@ export default function Testimonials() {
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full  basis-auto sm:flex sm:w-6/12 xl:w-4/12">
                         <Image
-                          src={bradley_testimonial}
+                          src="/photos/bradley_testimonial_clipped.jpg"
+                          as={NextImage}
                           alt="Bradley Testimonial"
-                          placeholder={"blur"}
                           width={1024}
-                          quality={60}
+                          height={1024}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          onLoadingComplete={image => image.classList.remove("opacity-0")}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -77,13 +71,12 @@ export default function Testimonials() {
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full  basis-auto sm:flex sm:w-6/12 xl:w-4/12">
                         <Image
-                          src={clara_testimonial}
-                          alt="Bradley Testimonial"
-                          placeholder={"blur"}
+                          src="/photos/clara_testimonial_clipped.jpg"
+                          alt="Clara Testimonial"
                           width={1024}
-                          quality={60}
+                          height={1024}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          onLoadingComplete={image => image.classList.remove("opacity-0")}
+
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -111,13 +104,12 @@ export default function Testimonials() {
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full  basis-auto sm:flex sm:w-6/12 xl:w-4/12">
                         <Image
-                          src={kochun_testimonial}
-                          alt="Bradley Testimonial"
-                          placeholder={"blur"}
+                          src="/photos/kochun_clipped.jpg"
+                          as={NextImage}
+                          alt="Ko Chun Testimonial"
                           width={1024}
-                          quality={60}
+                          height={1024}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          onLoadingComplete={image => image.classList.remove("opacity-0")}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -144,13 +136,12 @@ export default function Testimonials() {
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full shrink-0 grow-0 basis-auto sm:flex sm:w-6/12 xl:w-4/12">
                         <Image
-                          src={attiya_testimonial}
-                          alt="Bradley Testimonial"
-                          placeholder={"blur"}
+                          as={NextImage}
+                          src="/photos/attiya_clipped.jpg"
+                          alt="Attiya Testimonial"
                           width={1024}
-                          quality={60}
+                          height={1024}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          onLoadingComplete={image => image.classList.remove("opacity-0")}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -178,13 +169,12 @@ export default function Testimonials() {
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full shrink-0 grow-0 basis-auto sm:flex sm:w-6/12 xl:w-4/12">
                         <Image
-                          src={simon_clipped}
-                          alt="Bradley Testimonial"
-                          placeholder={"blur"}
+                          as={NextImage}
+                          src="/photos/simon_clipped.jpg"
+                          alt="Simon Testimonial"
                           width={1024}
-                          quality={60}
+                          height={1024}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          onLoadingComplete={image => image.classList.remove("opacity-0")}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -211,13 +201,12 @@ export default function Testimonials() {
                     <div className="flex flex-wrap items-center">
                       <div className="block w-full shrink-0 grow-0 basis-auto sm:flex sm:w-6/12 xl:w-4/12">
                         <Image
-                          src={jon_clipped}
-                          alt="Bradley Testimonial"
-                          placeholder={"blur"}
+                          src="/photos/jon_clipped.jpg"
+                          as={NextImage}
+                          alt="Jon Testimonial"
                           width={1024}
-                          quality={60}
+                          height={1024}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          onLoadingComplete={image => image.classList.remove("opacity-0")}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>

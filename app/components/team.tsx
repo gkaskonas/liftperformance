@@ -1,16 +1,13 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
+import NextImage from "next/image";
+import { Image } from "@nextui-org/react";
 import React, { useState } from "react";
-import brian from "../../public/photos/clipped_brian.jpg";
-import dennis from "../../public/photos/clipped_dennis.jpg";
-import eunice from "../../public/photos/clipped_eunice.jpg";
-import jane from "../../public/photos/clipped_jane.jpg";
 
 type Trainer = {
   name: string;
   title: string;
-  image: StaticImageData;
+  image: string;
   description: string;
 };
 
@@ -21,28 +18,28 @@ export default function Team() {
     {
       name: "Jane Cheung",
       title: "Lead Coach / Co-Founder",
-      image: jane,
+      image: "/photos/clipped_jane.jpg",
       description:
         "Experience transformative fitness with Jane, an expert in injury rehab, mobility improvement, and prenatal/postnatal programs. With a scientific approach, she helps clients make lifestyle changes, achieve body shape goals, and unleash inner strength. Get results with Jane's precision and passion.",
     },
     {
       name: "Brian Lee",
       title: "Lead Coach / Co-Founder",
-      image: brian,
+      image: "/photos/clipped_brian.jpg",
       description:
         "Brian, an elite athlete and former national sportsman, empowers busy professionals to achieve their peak physical shape. He understands the unparalleled benefits of strength and health, boosting confidence, performance, and longevity. From personalized training sessions to lifestyle choices, Brian's meticulous approach ensures optimal performance. Join Brian and unlock your full potential.",
     },
     {
       name: "Dennis Cheng",
       title: "Lead Coach / Co-Founder",
-      image: dennis,
+      image: "/photos/clipped_dennis.jpg",
       description:
         "Meet Dennis, a highly qualified trainer and accomplished physique competitor. With expertise in body transformation and nutrition, he helps clients achieve their fitness goals. Whether you're a beginner or advanced, Dennis is dedicated to guiding you towards optimal health and strength. Elevate your fitness journey with his knowledge and support.",
     },
     {
       name: "Eunice Lai",
       title: "Lead Coach / Co-Founder",
-      image: eunice,
+      image: "/photos/clipped_eunice.jpg",
       description:
         "Eunice, a former national rugby player, specializes in identifying and addressing the root cause of clients' aches and pains. Her bespoke programs restore strength, flexibility, and endurance through tailored mobility drills and client education. Experience pain-free living and a revitalized body with Eunice's expert guidance.",
     },
@@ -67,13 +64,14 @@ export default function Team() {
             >
               <figure className="">
                 <Image
+                  isZoomed
+                  as={NextImage}
                   src={trainer.image}
                   alt={trainer.name}
-                  className="w-full transition-opacity opacity-0 duration-[0.5s]"
-                  placeholder="blur"
+                  className="w-full"
                   width={1024}
+                  height={1024}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  onLoadingComplete={image => image.classList.remove("opacity-0")}
                 />
               </figure>
               <div className="card-body items-center">
@@ -92,12 +90,12 @@ export default function Team() {
         >
           <div className="max-h-sm sticky mx-auto max-w-sm scroll-m-3 rounded-lg bg-slate-100 p-6 text-center text-black shadow-lg sm:max-h-screen sm:max-w-lg">
             <Image
+              as={NextImage}
               src={selectedTrainer!.image}
               alt={selectedTrainer!.name}
-              placeholder="blur"
               className="mx-auto mb-6 w-2/3 xl:w-1/2 transition-opacity opacity-0 duration-[0.5s]"
               width={1024}
-              onLoadingComplete={image => image.classList.remove("opacity-0")}
+              height={768}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             <h1 className="mb-2 text-2xl font-bold">{selectedTrainer!.name}</h1>

@@ -1,14 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
+  content: {
+    files: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}", // <-- Add this line
     "./node_modules/tw-elements/dist/js/**/*.js",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
+  relative: true,
+    transform: (content) => content.replace(/taos:/g, ''),},
   plugins: [
     "@tailwindcss/forms",
     require("@tailwindcss/typography"),
     require("tw-elements/dist/plugin.cjs"),
     require("daisyui"),
+    require('taos/plugin'),
+    require("@nextui-org/react")
+  ],
+  safelist: [
+    '!duration-[0ms]',
+    '!delay-[0ms]',
+    'html.js :where([class*="taos:"]:not(.taos-init))'
   ],
   theme: {
     container: {

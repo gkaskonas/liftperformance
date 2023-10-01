@@ -14,9 +14,11 @@
   },
   "dependencies": {
     "@aws-sdk/client-cloudfront": "3.414.0",
+    "@nextui-org/react": "2.1.13",
+    "framer-motion": "^10.16.4",
     "graphql": "^16.8.0",
     "graphql-request": "^6.1.0",
-    "next": "13.5.1",
+    "next": "canary",
     "open-next": "2.1.5",
     "postcss": "8.4.29",
     "react": "18.2.0",
@@ -26,6 +28,7 @@
     "react-paginate": "^8.2.0",
     "sharp": "0.32.6",
     "tailwindcss": "3.3.3",
+    "taos": "^1.0.5",
     "tw-elements": "1.0.0",
     "typescript": "5.2.2"
   },

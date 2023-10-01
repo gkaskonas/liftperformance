@@ -1,15 +1,19 @@
 "use client";
-import Image from "next/image";
-import about from "../../public/photos/why_lift.jpg";
-import React from "react";
+import NextImage from "next/image";
+import { Image } from "@nextui-org/react";
+import React, { useEffect } from "react";
 
 export default function About() {
+  useEffect(() => {
+    console.log("hello from about compoinent")
+  }
+  )
   return (
     <div className="container mx-auto my-0 w-4/5 md:px-6 ">
       <section className="mb-12">
         <div className="container mx-auto text-center lg:text-left xl:px-32">
           <div className="flex items-center flex-row w-full sm:gap-x-10">
-            <div className="mb-12 lg:mb-0">
+            <div className="mb-12 lg:mb-0 sm:delay-[100ms] sm:duration-[600ms] sm:taos:translate-x-[-200px] sm:taos:opacity-0 [animation-iteration-count:infinite]">
               <div className="prose relative z-[1] block rounded-lg bg-slate-50 px-6 py-12 text-black shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] shadow-black/20 backdrop-blur-[30px] sm:px-2 md:-mr-14 3xl:py-24">
                 <h1 className="mb-8 text-center text-3xl font-bold ">Why LIFT?</h1>
                 <p className="mb-2 pb-2 text-sm  tracking-tighter lg:pb-0 lg:text-lg">
@@ -83,16 +87,17 @@ export default function About() {
               </div>
             </div>
 
-            <div>
+            <div className="relative z-[0] sm:delay-[700ms] sm:duration-[600ms] sm:taos:translate-x-[200px] sm:taos:opacity-0 [animation-iteration-count:infinite]">
               <Image
-                src={about}
-                className="mx-auto hidden rounded-lg shadow-lg shadow-black/20 sm:block transition-opacity opacity-0 duration-[0.5s]"
+                as={NextImage}
+                src="/photos/why_lift.jpg"
+                classNames={{
+                  img: "mx-auto hidden rounded-lg shadow-lg shadow-black/20 sm:block"
+                }}
                 alt="about us image"
-                loading="lazy"
-                placeholder="blur"
                 width={750}
+                height={500}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                onLoadingComplete={image => image.classList.remove("opacity-0")}
               />
             </div>
           </div>

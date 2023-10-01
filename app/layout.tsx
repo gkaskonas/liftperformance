@@ -1,21 +1,23 @@
 import { Metadata } from "next";
-import "./styles/globals.css";
 import React from "react";
 import { M_PLUS_1 } from "next/font/google";
-import "tw-elements/dist/css/tw-elements.min.css";
+import Script from "next/script";
+import { Providers } from "./providers";
+
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = M_PLUS_1({
   subsets: [ "latin" ],
   display: "swap",
   preload: true,
+
 });
 
 export const metadata: Metadata = {
   title: "Lift Performance | Personal Training | Hong Kong Island",
   description:
     "At Lift Performance, our elite coaches have one goal in mind - to elevate every aspect of your health and fitness",
-  metadataBase: new URL("https://djrmsjgzumyjo.cloudfront.net"),
+  metadataBase: new URL("https://liftperformance.net"),
   alternates: {
     canonical: "/",
   },
@@ -57,9 +59,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+
   return (
     <html lang="en" data-theme="light" className={inter.className} id="root">
-      <body className="">{children}</body>
+      <Script id="taos">document.documentElement.classList.add('js')</Script>
+      <body className="">
+        <Script id="taosv2" src="https://unpkg.com/taos@1.0.5/dist/taos.js" />
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
