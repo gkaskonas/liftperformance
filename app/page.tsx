@@ -7,7 +7,6 @@ import NavBar from "./components/navbar";
 import Services from "./components/services";
 import Team from "./components/team";
 import Analytics from "./components/analytics";
-import "./styles/globals.css";
 
 function getYear() {
   return new Date().getFullYear();
