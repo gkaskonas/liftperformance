@@ -26,6 +26,8 @@ export default async function Page() {
     ssr: false,
   });
 
+  const date = new Date().getTime().toString();
+
   return (
     <div className="" data-theme="light">
       <Suspense>
@@ -34,7 +36,7 @@ export default async function Page() {
       <NavBar />
       <Calendly />
       <Hero2 />
-      <About />
+      <About key={date} />
       <Services />
       <Team />
       <Testimonials />

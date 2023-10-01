@@ -1,13 +1,16 @@
 "use client";
 
-import NextImage from "next/image";
+import Image, { StaticImageData } from "next/image";
+import group from "../../public/photos/group.jpeg";
+import natal from "../../public/photos/natal.jpeg";
+import service1 from "../../public/photos/personal.jpeg";
+import pilates from "../../public/photos/pilates.jpeg";
+import flexibility from "../../public/photos/flexibility_clipped.jpg";
 import React from "react";
-import { Image } from "@nextui-org/react";
-
 
 type Service = {
   name: string;
-  image: string;
+  image: StaticImageData | string;
   description: string;
 };
 
@@ -18,31 +21,31 @@ export default function Services() {
       name: "1-to-1 Training",
       description:
         "Get personalized results with One-to-One Training! Our coaches will design a program tailored to your body, starting with a 1-hour consultation. From the training floor to check-ins, we're committed to helping you achieve your goals.",
-      image: "/photos/personal.jpeg",
+      image: service1
     },
     {
       name: "Small Group Training ",
       description:
         "Join Lift's Small Group Trainings for big results! Build muscle, improve cardio fitness, and lose weight in a supportive and motivating environment. Our coaches and your group will keep you working hard towards your helth and fitness goals.",
-      image: "/photos/group.jpeg",
+      image: group
     },
     {
       name: "Reformer Pilates Training",
       description:
         "Transform your body with Reformer Pilates training! Improve your body awareness, posture, flexibility, and develop a strong core. Our Reformers allow for greater range of motion and resistance during exercises for even better results.",
-      image: "/photos/pilates.jpeg",
+      image: pilates
     },
     {
       name: "Pre & Post-Natal Training",
       description:
         "Prepare for motherhood and recover with our Pre and Postnatal Training! Our program addresses common pregnancy-related injuries, stabilizes your pelvis postpartum, and repairs and strengthens your muscles. Trust us to support you on this journey!",
-      image: "/photos/natal.jpeg",
+      image: natal
     },
     {
       name: "Flexibility & Mobility Training",
       description:
         "Enhance your flexibility and mobility with our transformative training program. From beginners to advanced practitioners, our class offers a diverse range of exercises that cater to all skill levels. Join us today and unlock the full potential of your body's movement capabilities!",
-      image: "/photos/flexibility_clipped.jpg",
+      image: flexibility
     },
   ];
   return (
@@ -60,16 +63,15 @@ export default function Services() {
             }
             key={index}
           >
-            <figure className="mb-4 flex">
+            <figure className="mb-4 ">
               <Image
-                as={NextImage}
                 className="w-full transition-opacity opacity-0 duration-[0.5s]"
                 src={service.image}
                 alt="service image"
                 width={1024}
                 height={768}
+                loading="lazy"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                quality={60}
               />
             </figure>
             <div className="card-body max-w-xl md:max-w-2xl p-2">

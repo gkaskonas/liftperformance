@@ -64,8 +64,8 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light" className={inter.className} id="root">
       <Script id="taos">document.documentElement.classList.add('js')</Script>
-      <body className="">
-        <Script id="taosv2" src="https://unpkg.com/taos@1.0.5/dist/taos.js" />
+      <body>
+        <Script id="taosv2" src="scripts/taos.js" />
         <Providers>{children}</Providers>
       </body>
     </html>

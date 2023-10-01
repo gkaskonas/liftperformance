@@ -13,7 +13,7 @@ export default function Testimonials() {
   useEffect(() => {
     const init = async () => {
       const { Carousel, initTE } = await import("tw-elements");
-      initTE({ Carousel });
+      initTE({ Carousel }, { allowReinits: true });
     };
     init();
   }, []);
