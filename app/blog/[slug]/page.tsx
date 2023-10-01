@@ -6,7 +6,7 @@ import Blog from "../components/blog";
 import React, { Suspense } from "react";
 import LoadingTemplate from "../components/loading";
 import { IBlogPost, IPost } from "@/interfaces/blog";
-import "./styles/globals.css";
+import "@/styles/globals.css"
 
 type Props = {
   params: { slug: string };
