@@ -60,7 +60,7 @@
     "start-server-and-test": "1.15.2"
   },
   "browserslist": [
-    "defaults and fully supports es6-module",
-    "maintained node versions"
+    "last 2 versions",
+    "last 2 node versions"
   ]
 }
