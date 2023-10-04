@@ -18,6 +18,9 @@ jobs:
 
       - name: Run install
         uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Deploy
         run: |
           yarn sst deploy --stage prod
