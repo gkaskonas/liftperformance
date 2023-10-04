@@ -5,7 +5,6 @@ module.exports = {
     "./node_modules/tw-elements/dist/js/**/*.js",
   ],
   plugins: [
-    "@tailwindcss/forms",
     require("@tailwindcss/typography"),
     require("tw-elements/dist/plugin.cjs"),
     require("daisyui"),
@@ -49,4 +48,5 @@ module.exports = {
   variants: {
     animation: ["motion-safe"],
   },
+  safelist: ['animate-[fade-in_1s_ease-in-out]', 'animate-[fade-in-down_1s_ease-in-out]']
 };

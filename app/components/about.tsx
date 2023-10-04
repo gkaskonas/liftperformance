@@ -13,7 +13,7 @@ export default function About() {
 
             <Fade left>
               <div className="mb-12 lg:mb-0">
-                <div className="prose relative z-[1] block rounded-lg bg-slate-50 px-6 py-12 text-black shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] shadow-black/20 backdrop-blur-[30px] sm:px-2 md:-mr-14 3xl:py-24">
+                <div className="prose relative z-[1] block rounded-lg bg-slate-50 px-6 py-12 text-black shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] shadow-black/20 backdrop-blur-[30px] sm:px-2 3xl:py-24">
                   <h1 className="mb-8 text-center text-3xl font-bold ">Why LIFT?</h1>
                   <p className="mb-2 pb-2 text-sm  tracking-tighter lg:pb-0 lg:text-lg">
                     At Lift Performance, our elite coaches have one goal in mind - to elevate every aspect of your health
@@ -93,7 +93,7 @@ export default function About() {
                 alt="about us image"
                 loading="lazy"
                 placeholder="blur"
-                width={750}
+                width={650}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 onLoadingComplete={image => image.classList.remove("opacity-0")}
               />

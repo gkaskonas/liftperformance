@@ -5,7 +5,7 @@ export default function Hero2() {
   return (
     <section>
       <div
-        className="hero bg-[url('/photos/hero_latest.webp')] bg-cover bg-no-repeat bg-top min-h-[75vh] sm:min-h-[80vh] xl:min-h-[90vh]"
+        className="hero bg-[url('/photos/hero_latest2.webp')] bg-cover bg-no-repeat bg-top min-h-[75vh] sm:min-h-[80vh] xl:min-h-[90vh]"
         id="hero"
       >
         <HeroLogoSection />
