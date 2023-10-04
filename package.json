@@ -1,6 +1,6 @@
 {
   "name": "liftperformance",
-  "version": "0.1.0",
+  "version": "1.2.5",
   "private": true,
   "scripts": {
     "dev": "sst bind next dev",
@@ -13,7 +13,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@aws-sdk/client-cloudfront": "3.423.0",
+    "aws-cdk-lib": "2.99.1",
     "graphql": "16.8.1",
     "graphql-request": "6.1.0",
     "next": "13.5.4",
@@ -26,19 +26,20 @@
     "react-paginate": "8.2.0",
     "react-reveal": "1.2.2",
     "sharp": "0.32.6",
-    "tailwindcss": "3.3.3",
-    "tw-elements": "1.0.0",
-    "typescript": "5.2.2"
+    "sst": "2.26.11",
+    "typescript": "5.2.2",
+    "tw-elements": "1.0.0"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^13.5.4",
     "@tailwindcss/typography": "0.5.10",
     "@types/mailchimp__mailchimp_marketing": "3.0.9",
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.7.4",
     "autoprefixer": "10.4.16",
-    "aws-cdk-lib": "2.99.1",
     "constructs": "10.2.70",
     "cssnano": "6.0.1",
     "cypress": "13.3.0",
@@ -53,12 +54,13 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
+    "postcss-import": "^15.1.0",
     "prettier": "3.0.0",
     "prettier-plugin-tailwindcss": "0.5.5",
     "serve": "14.2.1",
-    "sst": "2.26.11",
-    "start-server-and-test": "1.15.4"
-  },
+    "start-server-and-test": "1.15.4",
+    "tailwindcss": "3.3.3"
+    },
   "browserslist": [
     "last 2 versions",
     "last 2 node versions"

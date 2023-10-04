@@ -14,9 +14,8 @@ jobs:
           node-version: 18.x
 
       - name: Run install
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install # will run `yarn install` command
+        uses: pnpm/action-setup@v2
+
       - name: Test sst
         run: |
           yarn sst diff --stage prod

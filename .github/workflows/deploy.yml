@@ -17,12 +17,11 @@ jobs:
           node-version: 18.x
 
       - name: Run install
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install # will run `yarn install` command
+        uses: pnpm/action-setup@v2
       - name: Deploy
         run: |
           yarn sst deploy --stage prod
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          NODE_ENV: production
