@@ -9375,7 +9375,7 @@ packages:
       remeda: 1.27.0
       sst-aws-cdk: 2.95.1
       tree-kill: 1.2.2
-      undici: 5.25.4
+      undici: 5.26.3
       uuid: 9.0.1
       ws: 8.14.2
       yargs: 17.7.2
@@ -9986,8 +9986,8 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
-  /undici@5.25.4:
-    resolution: {integrity: sha512-450yJxT29qKMf3aoudzFpIciqpx6Pji3hEWaXqXmanbXF58LTAGCKxcJjxMXWu3iG+Mudgo3ZUfDB6YDFd/dAw==}
+  /undici@5.26.3:
+    resolution: {integrity: sha512-H7n2zmKEWgOllKkIUkLvFmsJQj062lSm3uA4EYApG8gLuiOM0/go9bIoC3HVaSnfg4xunowDE2i9p8drkXuvDw==}
     engines: {node: '>=14.0'}
     dependencies:
       '@fastify/busboy': 2.0.0
