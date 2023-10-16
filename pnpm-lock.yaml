@@ -18,8 +18,8 @@ dependencies:
     specifier: 13.5.4
     version: 13.5.4(@babel/core@7.23.0)(react-dom@18.2.0)(react@18.2.0)
   open-next:
-    specifier: 2.2.0
-    version: 2.2.0
+    specifier: 2.2.3
+    version: 2.2.3
   postcss:
     specifier: 8.4.31
     version: 8.4.31
@@ -27,8 +27,8 @@ dependencies:
     specifier: 18.2.0
     version: 18.2.0
   react-calendly:
-    specifier: 4.1.1
-    version: 4.1.1(react-dom@18.2.0)(react@18.2.0)
+    specifier: 4.2.0
+    version: 4.2.0(react-dom@18.2.0)(react@18.2.0)
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
@@ -56,7 +56,7 @@ dependencies:
 
 devDependencies:
   '@next/eslint-plugin-next':
-    specifier: ^13.5.4
+    specifier: 13.5.4
     version: 13.5.4
   '@tailwindcss/typography':
     specifier: 0.5.10
@@ -77,7 +77,7 @@ devDependencies:
     specifier: ^6.6.0
     version: 6.7.4(@typescript-eslint/parser@6.7.4)(eslint@8.45.0)(typescript@5.2.2)
   '@typescript-eslint/parser':
-    specifier: ^6.7.4
+    specifier: 6.7.4
     version: 6.7.4(eslint@8.45.0)(typescript@5.2.2)
   autoprefixer:
     specifier: 10.4.16
@@ -89,11 +89,11 @@ devDependencies:
     specifier: 6.0.1
     version: 6.0.1(postcss@8.4.31)
   cypress:
-    specifier: 13.3.0
-    version: 13.3.0
+    specifier: 13.3.1
+    version: 13.3.1
   daisyui:
-    specifier: 3.8.3
-    version: 3.8.3
+    specifier: 3.9.2
+    version: 3.9.2
   encoding:
     specifier: 0.1.13
     version: 0.1.13
@@ -125,14 +125,14 @@ devDependencies:
     specifier: ^7.33.2
     version: 7.33.2(eslint@8.45.0)
   postcss-import:
-    specifier: ^15.1.0
+    specifier: 15.1.0
     version: 15.1.0(postcss@8.4.31)
   prettier:
     specifier: 3.0.0
     version: 3.0.0
   prettier-plugin-tailwindcss:
-    specifier: 0.5.5
-    version: 0.5.5(prettier@3.0.0)
+    specifier: 0.5.6
+    version: 0.5.6(prettier@3.0.0)
   serve:
     specifier: 14.2.1
     version: 14.2.1
@@ -4125,7 +4125,17 @@ packages:
       '@aws-cdk/asset-awscli-v1': 2.2.200
       '@aws-cdk/asset-kubectl-v20': 2.1.2
       '@aws-cdk/asset-node-proxy-agent-v6': 2.0.1
+      '@balena/dockerignore': 1.0.2
+      case: 1.6.3
       constructs: 10.3.0
+      fs-extra: 11.1.1
+      ignore: 5.2.4
+      jsonschema: 1.4.1
+      minimatch: 3.1.2
+      punycode: 2.3.0
+      semver: 7.5.4
+      table: 6.8.1
+      yaml: 1.10.2
     dev: false
     bundledDependencies:
       - '@balena/dockerignore'
@@ -5017,8 +5027,8 @@ packages:
     resolution: {integrity: sha512-TDDkd5DkaZxZFM8p+1I3yAlvM3rSr1wbrOliG4yJiwinMZN8z/iGL7BTlDkrJcYTmgUSb4ywVCc3ZaUtOtC76w==}
     dev: false
 
-  /cypress@13.3.0:
-    resolution: {integrity: sha512-mpI8qcTwLGiA4zEQvTC/U1xGUezVV4V8HQCOYjlEOrVmU1etVvxOjkCXHGwrlYdZU/EPmUiWfsO3yt1o+Q2bgw==}
+  /cypress@13.3.1:
+    resolution: {integrity: sha512-g4mJLZxYN+UAF2LMy3Znd4LBnUmS59Vynd81VES59RdW48Yt+QtR2cush3melOoVNz0PPbADpWr8DcUx6mif8Q==}
     engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
     hasBin: true
     requiresBuild: true
@@ -5068,8 +5078,8 @@ packages:
       yauzl: 2.10.0
     dev: true
 
-  /daisyui@3.8.3:
-    resolution: {integrity: sha512-64QuR6niTv58E5YyAVBkoXQGngp04jt6XOcKGxnq1C/7r5ZE3bDuOSc4ktT7CPacTRjl5cCeNYY13VxLpZP+7A==}
+  /daisyui@3.9.2:
+    resolution: {integrity: sha512-yJZ1QjHUaL+r9BkquTdzNHb7KIgAJVFh0zbOXql2Wu0r7zx5qZNLxclhjN0WLoIpY+o2h/8lqXg7ijj8oTigOw==}
     engines: {node: '>=16.9.0'}
     dependencies:
       colord: 2.9.3
@@ -7931,8 +7941,8 @@ packages:
     dependencies:
       mimic-fn: 2.1.0
 
-  /open-next@2.2.0:
-    resolution: {integrity: sha512-1+RTk4z3yCR2dm3sTb5slxA0TmqFaDq13whp2vlOvPWxjfThZ4aRktDFE/vE8PiMcSzmVL7dS0lKtOokIn4ufg==}
+  /open-next@2.2.3:
+    resolution: {integrity: sha512-zyq5qz4ooXNcG0olM+9Zp+7F/aKcin5/VHNNdj0IcQHC16tf9Dq99yJyz+/oSwBupdzP4PQ05F13oShM4Q1DLQ==}
     hasBin: true
     dependencies:
       '@aws-sdk/client-dynamodb': 3.423.0
@@ -8557,8 +8567,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-tailwindcss@0.5.5(prettier@3.0.0):
-    resolution: {integrity: sha512-voy0CjWv/CM8yeaduv5ZwovovpTGMR5LbzlhGF+LtEvMJt9wBeVTVnW781hL38R/RcDXCJwN2rolsgr94B/n0Q==}
+  /prettier-plugin-tailwindcss@0.5.6(prettier@3.0.0):
+    resolution: {integrity: sha512-2Xgb+GQlkPAUCFi3sV+NOYcSI5XgduvDBL2Zt/hwJudeKXkyvRS65c38SB0yb9UB40+1rL83I6m0RtlOQ8eHdg==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
@@ -8766,8 +8776,8 @@ packages:
       minimist: 1.2.8
       strip-json-comments: 2.0.1
 
-  /react-calendly@4.1.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-NEVYY3BXvDb11jmEh7ttMzXRKHSZA2POxNI64wh9sqXgcwvWzy/pfDGOxfM3UCgCvH1iXyPmdy+qntHDEprh4w==}
+  /react-calendly@4.2.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-MCewRpk9phveX+1qxXDZ7dAcMmAdWkspU7C9XqChIItQeQ+pTWguM/eAC7yVaAA988mpwXx61wS63TKZq3Znpw==}
     engines: {node: '>=8', npm: '>=5'}
     peerDependencies:
       react: '>=16.8.0'
