@@ -50,7 +50,7 @@ export default async function Page() {
   return (
     <div className="" data-theme="light">
       <Suspense fallback={<LoadingTemplate />}>
-        <PaginatedBlogs itemsPerPage={10} blogs={blogs} />
+        <PaginatedBlogs itemsPerPage={3} blogs={blogs} />
       </Suspense>
     </div>
   );

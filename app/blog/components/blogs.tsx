@@ -79,7 +79,7 @@ export default function PaginatedBlogs({ blogs, itemsPerPage }: { blogs: IPost[]
           breakLabel="..."
           nextLabel="next >"
           onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
+          pageRangeDisplayed={3}
           pageCount={pageCount}
           previousLabel="< previous"
           renderOnZeroPageCount={null}
