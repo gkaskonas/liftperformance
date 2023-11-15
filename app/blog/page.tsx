@@ -38,7 +38,7 @@ const QUERY = gql`
   }
 `;
 
-async function getBlogs(): Promise<IPost[]> {
+export async function getBlogs(): Promise<IPost[]> {
   const blogs: IBlog = await hygraph.request(QUERY);
 
   return blogs.posts;

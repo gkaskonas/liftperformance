@@ -7,6 +7,7 @@ import React, { Suspense } from "react";
 import LoadingTemplate from "../components/loading";
 import { IBlogPost, IPost } from "@/interfaces/blog";
 import "@/styles/globals.css"
+import { getBlogs } from "../page";
 
 type Props = {
   params: { slug: string };
@@ -63,6 +64,14 @@ async function getBlog(slug: string): Promise<IPost> {
   `);
 
   return blog.post;
+}
+
+export async function generateStaticParams() {
+  const posts = await getBlogs();
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }))
 }
 
 export default async function Page({ params }: Props) {
