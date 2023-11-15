@@ -6,7 +6,7 @@ export const hygraph = new GraphQLClient(
     fetch,
     next: {
       tags: ["hygraph"],
-      revalidate: 60,
+      revalidate: 86400,
     },
   },
 );

@@ -22,6 +22,9 @@ export default {
       const site = new NextjsSite(stack, "site", {
         bind: [MAILCHIMP_API_KEY, MAILCHIMP_API_SERVER, MAILCHIMP_AUDIENCE_ID, REVALIDATE_TOKEN],
         warm: app.stage === "prod" ? 15 : 10,
+        experimental: {
+          streaming: true,
+        },
         cdk: {
           server: {
             logRetention: 3,

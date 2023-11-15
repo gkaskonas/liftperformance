@@ -73,7 +73,7 @@ export default function Team() {
                   placeholder="blur"
                   width={1024}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  onLoadingComplete={image => image.classList.remove("opacity-0")}
+                  onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                 />
               </figure>
               <div className="card-body items-center">
@@ -97,7 +97,7 @@ export default function Team() {
               placeholder="blur"
               className="mx-auto mb-6 w-2/3 xl:w-1/2 transition-opacity opacity-0 duration-[0.5s]"
               width={1024}
-              onLoadingComplete={image => image.classList.remove("opacity-0")}
+              onLoad={image => image.currentTarget.classList.remove("opacity-0")}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             <h1 className="mb-2 text-2xl font-bold">{selectedTrainer!.name}</h1>

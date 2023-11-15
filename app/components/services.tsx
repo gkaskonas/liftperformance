@@ -73,7 +73,7 @@ export default function Services() {
                   placeholder="blur"
                   width={1024}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  onLoadingComplete={image => image.classList.remove("opacity-0")}
+                  onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                   quality={60}
                 />
               </figure>

@@ -19,7 +19,7 @@ export default function HeroLogoSection() {
         alt="logo"
         className="flex mb-10 mt-14 xl:mt-0 w-1/5 sm:w-[10%] lg:w-[10%] xl:w-[6%] 2xl:w-[6%] transition-opacity opacity-0 duration-[0.5s]"
         placeholder="blur"
-        onLoadingComplete={image => image.classList.remove("opacity-0")}
+        onLoad={image => image.currentTarget.classList.remove("opacity-0")}
       />
       <h1
         className="mb-16 text-xl font-bold text-slate-950 sm:text-2xl md:text-4xl 2xl:text-5xl w-2/3 xl:w-1/2 drop-shadow-[0_1.2px_1.2px_rgba(255,255,255,0.9)]

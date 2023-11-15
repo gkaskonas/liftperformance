@@ -51,7 +51,7 @@ export default function Testimonials() {
                           width={1024}
                           quality={60}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          onLoadingComplete={image => image.classList.remove("opacity-0")}
+                          onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -85,7 +85,7 @@ export default function Testimonials() {
                           width={1024}
                           quality={60}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          onLoadingComplete={image => image.classList.remove("opacity-0")}
+                          onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -119,7 +119,7 @@ export default function Testimonials() {
                           width={1024}
                           quality={60}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          onLoadingComplete={image => image.classList.remove("opacity-0")}
+                          onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -152,7 +152,7 @@ export default function Testimonials() {
                           width={1024}
                           quality={60}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          onLoadingComplete={image => image.classList.remove("opacity-0")}
+                          onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -186,7 +186,7 @@ export default function Testimonials() {
                           width={1024}
                           quality={60}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          onLoadingComplete={image => image.classList.remove("opacity-0")}
+                          onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
@@ -219,7 +219,7 @@ export default function Testimonials() {
                           width={1024}
                           quality={60}
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          onLoadingComplete={image => image.classList.remove("opacity-0")}
+                          onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                           className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
                         />
                       </div>
