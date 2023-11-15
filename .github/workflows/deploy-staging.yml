@@ -23,7 +23,7 @@ jobs:
 
       - name: Deploy
         run: |
-          yarn sst deploy --stage ${{ github.event.number }}
+          yarn sst deploy --stage pr-${{ github.event.number }}
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
