@@ -8,7 +8,6 @@ import kochun_testimonial from "../../public/photos/kochun_clipped.jpg";
 import jon_clipped from "../../public/photos/jon_clipped.jpg";
 import simon_clipped from "../../public/photos/simon_clipped.jpg";
 import React, { useEffect } from "react";
-import "tw-elements/dist/css/tw-elements.min.css";
 
 export type Testimonial = {
   name: string;
