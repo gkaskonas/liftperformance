@@ -1,3 +1,4 @@
+import { Architecture } from "aws-cdk-lib/aws-lambda";
 import { SSTConfig } from "sst";
 import { Config, NextjsSite } from "sst/constructs";
 
@@ -24,16 +25,18 @@ export default {
         warm: app.stage === "prod" ? 15 : 10,
         buildCommand: "pnpm open-next build --minify",
         experimental: {
-          streaming: true,
+          streaming: false,
         },
         cdk: {
           server: {
             logRetention: 3,
+            architecture: Architecture.ARM_64,
           },
         },
         imageOptimization: {
           memorySize: 2048,
         },
+        logging: "combined",
         memorySize: 1024,
         environment: {
           NEXT_PUBLIC_VERCEL_ENV: app.stage === "prod" ? "production" : "development",
