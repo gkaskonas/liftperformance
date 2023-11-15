@@ -25,7 +25,7 @@ function Blogs({ currentBlogs }: { currentBlogs: IPost[] }) {
                   className="w-full transition-opacity opacity-0 duration-[0.5s]"
                   alt="Blog Cover Image"
                   priority
-                  onLoadingComplete={image => image.classList.remove("opacity-0")}
+                  onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <Link href={`/blog/${blog.slug}`}>

@@ -22,7 +22,7 @@ export default function Blog({ blog }: { blog: IPost }) {
           className="mb-6 xl:w-2/3 rounded-lg shadow-lg dark:shadow-black/20 transition-opacity opacity-0 duration-[0.5s]"
           alt="cover image"
           priority
-          onLoadingComplete={image => image.classList.remove("opacity-0")}
+          onLoad={image => image.currentTarget.classList.remove("opacity-0")}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
 
@@ -66,7 +66,7 @@ export default function Blog({ blog }: { blog: IPost }) {
                     height={child.height}
                     alt="image"
                     className="transition-opacity opacity-0 duration-[0.5s]"
-                    onLoadingComplete={image => image.classList.remove("opacity-0")}
+                    onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <CalendlyButton buttonClassNames="mb-5 btn btn-ghost flex px-10 bg-black text-white text-bold text-xl sm:text-2xl text-center" />

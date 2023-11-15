@@ -1,3 +1,4 @@
+import { Architecture } from "aws-cdk-lib/aws-lambda";
 import { SSTConfig } from "sst";
 import { Config, NextjsSite } from "sst/constructs";
 
@@ -22,14 +23,20 @@ export default {
       const site = new NextjsSite(stack, "site", {
         bind: [MAILCHIMP_API_KEY, MAILCHIMP_API_SERVER, MAILCHIMP_AUDIENCE_ID, REVALIDATE_TOKEN],
         warm: app.stage === "prod" ? 15 : 10,
+        buildCommand: "pnpm open-next build --minify",
+        experimental: {
+          streaming: false,
+        },
         cdk: {
           server: {
             logRetention: 3,
+            architecture: Architecture.ARM_64,
           },
         },
         imageOptimization: {
           memorySize: 2048,
         },
+        logging: "combined",
         memorySize: 1024,
         environment: {
           NEXT_PUBLIC_VERCEL_ENV: app.stage === "prod" ? "production" : "development",
