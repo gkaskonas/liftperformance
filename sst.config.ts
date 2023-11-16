@@ -23,9 +23,10 @@ export default {
       const site = new NextjsSite(stack, "site", {
         bind: [MAILCHIMP_API_KEY, MAILCHIMP_API_SERVER, MAILCHIMP_AUDIENCE_ID, REVALIDATE_TOKEN],
         warm: app.stage === "prod" ? 15 : 10,
-        buildCommand: "pnpm open-next build --minify",
+        timeout: "30 seconds",
+        buildCommand: "pnpm open-next build --minify --streaming",
         experimental: {
-          streaming: false,
+          streaming: true,
         },
         cdk: {
           server: {
