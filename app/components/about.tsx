@@ -2,7 +2,7 @@
 import Image from "next/image";
 import about from "../../public/photos/why_lift.jpg";
 import React from "react";
-import Fade from "react-reveal/Fade"
+import { Fade } from "react-awesome-reveal"
 
 export default function About() {
   return (
@@ -11,7 +11,7 @@ export default function About() {
         <div className="container mx-auto text-center lg:text-left xl:px-32">
           <div className="flex items-center flex-row w-full sm:gap-x-10">
 
-            <Fade left>
+            <Fade direction="left">
               <div className="mb-12 lg:mb-0">
                 <div className="prose relative z-[1] block rounded-lg bg-slate-50 px-6 py-12 text-black shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] shadow-black/20 backdrop-blur-[30px] sm:px-2 3xl:py-24">
                   <h1 className="mb-8 text-center text-3xl font-bold ">Why LIFT?</h1>
@@ -86,7 +86,7 @@ export default function About() {
                 </div>
               </div>
             </Fade>
-            <Fade right>
+            <Fade direction="right">
               <Image
                 src={about}
                 className="mx-auto hidden rounded-lg shadow-lg shadow-black/20 sm:block transition-opacity opacity-0 duration-[0.5s]"
