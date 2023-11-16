@@ -8,6 +8,7 @@ import LoadingTemplate from "../components/loading";
 import { IBlogPost, IPost } from "@/interfaces/blog";
 import "@/styles/globals.css"
 import { getBlogs } from "../page";
+import Analytics from "@/components/analytics";
 
 type Props = {
   params: { slug: string };
@@ -79,6 +80,9 @@ export default async function Page({ params }: Props) {
 
   return (
     <div className="" data-theme="light">
+      <Suspense>
+        <Analytics />
+      </Suspense>
       <Suspense fallback={<LoadingTemplate />}>
         <Blog blog={blog} />
       </Suspense>

@@ -9,6 +9,7 @@ import Team from "./components/team";
 import Analytics from "./components/analytics";
 import "./styles/globals.css";
 
+
 function getYear() {
   return new Date().getFullYear();
 }

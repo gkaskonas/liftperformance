@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@graphcms/rich-text-react-renderer':
+    specifier: ^0.6.1
+    version: 0.6.1(react-dom@18.2.0)(react@18.2.0)
   aws-cdk-lib:
     specifier: 2.108.1
     version: 2.108.1(constructs@10.3.0)
@@ -52,6 +55,9 @@ dependencies:
     version: 5.2.2
 
 devDependencies:
+  '@graphcms/rich-text-types':
+    specifier: ^0.5.0
+    version: 0.5.0
   '@next/eslint-plugin-next':
     specifier: 13.5.6
     version: 13.5.6
@@ -2507,6 +2513,24 @@ packages:
     resolution: {integrity: sha512-+KpH+QxZU7O4675t3mnkQKcZZg56u+K/Ct2K+N2AZYNVK8kyeo/bI18tI8aPm3tvNNRyTWfj6s5tnGNlcbQRsA==}
     engines: {node: '>=14'}
     dev: false
+
+  /@graphcms/rich-text-react-renderer@0.6.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-w0OtKf9Fzmf0vI5bzgR502AndRLEeRlmb8x6nxUweDhfNRVKTOiwSEQKetMPpodSZUnXO+PI8J7rqxQvJof2kA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      '@graphcms/rich-text-types': 0.5.0
+      escape-html: 1.0.3
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@graphcms/rich-text-types@0.5.0:
+    resolution: {integrity: sha512-3oKVp2V1f9zYn9dYpLvePeu/8w8nQhZyv3FWm7yUtY/AlVXRwU3HJtIXvvdwAkmTuNANNhcDkBOzfkZaKJNADw==}
+    dependencies:
+      tslib: 2.6.2
 
   /@graphql-tools/executor@0.0.18(graphql@16.8.1):
     resolution: {integrity: sha512-xZC0C+/npXoSHBB5bsJdwxDLgtl1Gu4fL9J2TPQmXoZC3L2N506KJoppf9LgWdHU/xK04luJrhP6WjhfkIN0pQ==}
