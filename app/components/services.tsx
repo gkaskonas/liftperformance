@@ -55,7 +55,7 @@ export default function Services() {
       </div>
       <div className="gap-2 sm:gap-5 mt-10 sm:flex-grow flex flex-col sm:w-[90%] mx-auto">
         {services.map((service: Service, index: number) => (
-          <Fade direction={index % 2 === 0 ? "left" : "right"} key={index}>
+          <Fade direction={index % 2 === 0 ? "left" : "right"} key={index} duration={1500}>
             <div
               className={
                 index % 2 === 0
