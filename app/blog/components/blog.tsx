@@ -40,7 +40,7 @@ export default function Blog({ blog }: { blog: IPost }) {
         <article className="prose flex flex-col w-full text-lg text-justify max-w-4xl">
           <RichText content={blog.content.json?.children} renderers={{
             img: ({ src, altText, height, width }) => (
-              <div>
+              <div className="flex flex-col">
                 <Image
                   loading="lazy"
                   src={src ?? ""}
@@ -50,7 +50,7 @@ export default function Blog({ blog }: { blog: IPost }) {
                   className="transition-opacity opacity-0 duration-[0.5s]"
                   onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                 />
-                <CalendlyButton buttonClassNames="mb-5 btn btn-ghost flex px-10 bg-black text-white text-bold text-xl sm:text-2xl text-center" />
+                <CalendlyButton buttonClassNames="btn btn-ghost flex bg-black text-white text-bold text-xl sm:text-2xl text-center w-1/2 mx-auto" />
               </div>
             ),
           }} />

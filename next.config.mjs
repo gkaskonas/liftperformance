@@ -1,5 +1,8 @@
+import million from 'million/compiler';
+
+
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig  = {
   images: {
     remotePatterns: [
       {
@@ -34,3 +37,11 @@ module.exports = {
     return config;
   },
 };
+
+const millionConfig = {
+  auto: true,
+  // if you're using RSC:
+  // auto: { rsc: true },
+}
+ 
+export default million.next(nextConfig, millionConfig);
