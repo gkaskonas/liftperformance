@@ -1,5 +1,5 @@
 import { gql } from "graphql-request";
-import { hygraph } from "./utils/hygraph";
+import { hygraph } from "../utils/hygraph";
 import { Metadata } from "next";
 import PaginatedBlogs from "./components/blogs";
 import React, { Suspense } from "react";

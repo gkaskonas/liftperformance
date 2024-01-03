@@ -36,6 +36,10 @@ const nextConfig  = {
     config.experiments = { ...config.experiments, topLevelAwait: true, };
     return config;
   },
+  experimental: {
+    workerThreads: false,
+    cpus: 1,
+  }
 };
 
 const millionConfig = {

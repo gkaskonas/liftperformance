@@ -1,5 +1,5 @@
 import { gql } from "graphql-request";
-import { hygraph } from "../utils/hygraph";
+import { hygraph } from "../../utils/hygraph";
 
 import type { Metadata, ResolvingMetadata } from "next";
 import Blog from "../components/blog";
