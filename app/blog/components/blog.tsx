@@ -4,13 +4,12 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import React from "react";
 import { IPost } from "@/interfaces/blog";
+import { RichText } from "@graphcms/rich-text-react-renderer";
 
 export default function Blog({ blog }: { blog: IPost }) {
   const CalendlyButton = dynamic(() => import("../../components/booking2"), {
     ssr: false,
   });
-
-  const length = blog.content.json?.children.length;
 
   return (
     <div className="container my-24 mx-auto md:px-6">
@@ -39,42 +38,22 @@ export default function Blog({ blog }: { blog: IPost }) {
         <h1 className="mb-6 text-3xl font-bold">{blog.title}</h1>
 
         <article className="prose flex flex-col w-full text-lg text-justify max-w-4xl">
-          {blog.content.json?.children.map((child, index: number) => {
-            if (child.type === "paragraph") {
-              return (
-                <div className="flex flex-col items-center" key={index}>
-                  <p className="mt-2 mb-0">{child.children[ 0 ].text}</p>
-                  {index === length! - 1 && (
-                    <CalendlyButton buttonClassNames="mt-10 btn btn-ghost flex px-10 bg-black text-white text-bold text-xl sm:text-2xl text-center" />
-                  )}
-                </div>
-              );
-            }
-            if (child.type === "heading-two" || child.type === "heading-three") {
-              return (
-                <h2 className="bold text-left" key={index}>
-                  {child.children[ 0 ].text}
-                </h2>
-              );
-            }
-            if (child.type === "image") {
-              return (
-                <div className="flex flex-col items-center" key={index}>
-                  <Image
-                    src={child.src}
-                    width={child.width}
-                    height={child.height}
-                    alt="image"
-                    className="transition-opacity opacity-0 duration-[0.5s]"
-                    onLoad={image => image.currentTarget.classList.remove("opacity-0")}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <CalendlyButton buttonClassNames="mb-5 btn btn-ghost flex px-10 bg-black text-white text-bold text-xl sm:text-2xl text-center" />
-                </div>
-              );
-            }
-            return "";
-          })}
+          <RichText content={blog.content.json?.children} renderers={{
+            img: ({ src, altText, height, width }) => (
+              <div className="flex flex-col">
+                <Image
+                  loading="lazy"
+                  src={src ?? ""}
+                  alt={altText ?? ""}
+                  height={height ?? 0}
+                  width={width ?? 0}
+                  className="transition-opacity opacity-0 duration-[0.5s]"
+                  onLoad={image => image.currentTarget.classList.remove("opacity-0")}
+                />
+                <CalendlyButton buttonClassNames="btn btn-ghost flex bg-black text-white text-bold text-xl sm:text-2xl text-center w-1/2 mx-auto" />
+              </div>
+            ),
+          }} />
         </article>
       </section>
     </div>

@@ -1,3 +1,5 @@
+import { ElementNode } from "@graphcms/rich-text-types";
+
 export interface IPost {
   id: string;
   excerpt: string;
@@ -19,22 +21,8 @@ export interface IPost {
   content: {
     markdown?: string;
     html?: string;
-    json?: {
-      children: [
-        {
-          type: string;
-          src: string;
-          title: string;
-          width: number;
-          height: number;
-          mimeType: string;
-          children: [
-            {
-              text: string;
-            },
-          ];
-        },
-      ];
+    json: {
+      children: ElementNode[];
     };
   };
 }

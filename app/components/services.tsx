@@ -7,7 +7,7 @@ import service1 from "../../public/photos/personal.jpeg";
 import pilates from "../../public/photos/pilates.jpeg";
 import flexibility from "../../public/photos/flexibility_clipped.jpg";
 import React from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 
 type Service = {
   name: string;
@@ -55,7 +55,7 @@ export default function Services() {
       </div>
       <div className="gap-2 sm:gap-5 mt-10 sm:flex-grow flex flex-col sm:w-[90%] mx-auto">
         {services.map((service: Service, index: number) => (
-          <Fade left={index % 2 === 0} right={index % 2 !== 0} key={index}>
+          <Fade direction={index % 2 === 0 ? "left" : "right"} key={index} duration={1500}>
             <div
               className={
                 index % 2 === 0

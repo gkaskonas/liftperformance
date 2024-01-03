@@ -6,6 +6,7 @@ import React, { Suspense } from "react";
 import LoadingTemplate from "./components/loading";
 import { IPost, IBlog } from "@/interfaces/blog";
 import "@/styles/globals.css"
+import Analytics from "@/components/analytics";
 
 export const metadata: Metadata = {
   title: "Lift Performance Blog",
@@ -49,6 +50,9 @@ export default async function Page() {
 
   return (
     <div className="" data-theme="light">
+      <Suspense>
+        <Analytics />
+      </Suspense>
       <Suspense fallback={<LoadingTemplate />}>
         <PaginatedBlogs itemsPerPage={3} blogs={blogs} />
       </Suspense>
