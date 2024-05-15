@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import bradley_testimonial from "../../public/photos/bradley_testimonial_clipped.jpg";
 import attiya_testimonial from "../../public/photos/attiya_clipped.jpg";
 import clara_testimonial from "../../public/photos/clara_testimonial_clipped.jpg";
 import kochun_testimonial from "../../public/photos/kochun_clipped.jpg";
@@ -35,42 +34,8 @@ export default function Testimonials() {
             <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
               <div
                 className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-te-carousel-item
                 data-te-carousel-active
-                data-te-carousel-item
-                style={{ backfaceVisibility: "hidden" }}
-              >
-                <section className="mb-10 text-center md:text-left">
-                  <div className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] xl:w-3/4 xl:items-center xl:justify-center xl:mx-auto">
-                    <div className="flex flex-wrap items-center">
-                      <div className="block w-full  basis-auto sm:flex sm:w-6/12 xl:w-4/12">
-                        <Image
-                          src={bradley_testimonial}
-                          alt="Bradley Testimonial"
-                          placeholder={"blur"}
-                          width={1024}
-                          quality={60}
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          onLoad={image => image.currentTarget.classList.remove("opacity-0")}
-                          className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg transition-opacity opacity-0 duration-[0.5s]"
-                        />
-                      </div>
-                      <div className="w-full shrink-0 grow-0 basis-auto sm:w-6/12 xl:w-8/12">
-                        <div className="mt-5 md:px-12">
-                          <h2 className="mb-6 text-3xl font-bold text-red-700">Bradley</h2>
-                          <p className="mb-6 text-black text-lg sm:text-xl">
-                            "My PT sessions with Jane have always been tough, but measured. She has increased my
-                            strength, corrected imbalance and my form. I have benefited from her consistent dedication
-                            to learning her craft!"
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div
-                className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                data-te-carousel-item
                 style={{ backfaceVisibility: "hidden" }}
               >
                 <section className="mb-10 text-center md:text-left">

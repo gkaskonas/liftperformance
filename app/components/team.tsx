@@ -16,11 +16,11 @@ export type Trainer = {
 };
 
 export default function Team({ trainers }: { trainers: Trainer[] }) {
-  const [ showModal, setShowModal ] = useState(false);
-  const [ selectedTrainer, setSelectedTrainer ] = useState<Trainer | null>(null); // specify the type of selectedTrainer
+  const [showModal, setShowModal] = useState(false);
+  const [selectedTrainer, setSelectedTrainer] = useState<Trainer | null>(null); // specify the type of selectedTrainer
 
   const handleImageClick = (index: number) => {
-    setSelectedTrainer(trainers[ index ]);
+    setSelectedTrainer(trainers[index]);
     setShowModal(true);
   };
 
