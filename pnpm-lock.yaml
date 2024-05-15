@@ -20,9 +20,6 @@ dependencies:
   graphql-request:
     specifier: 6.1.0
     version: 6.1.0(encoding@0.1.13)(graphql@16.8.1)
-  install:
-    specifier: ^0.13.0
-    version: 0.13.0
   million:
     specifier: 2.6.4
     version: 2.6.4
@@ -7384,11 +7381,6 @@ packages:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
-    dev: false
-
-  /install@0.13.0:
-    resolution: {integrity: sha512-zDml/jzr2PKU9I8J/xyZBQn8rPCAY//UOYNmR01XwNwyfhEWObo2SWfSl1+0tm1u6PhxLwDnfsT/6jB7OUxqFA==}
-    engines: {node: '>= 0.10'}
     dev: false
 
   /internal-slot@1.0.6:
