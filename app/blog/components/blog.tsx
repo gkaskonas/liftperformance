@@ -5,6 +5,8 @@ import dynamic from "next/dynamic";
 import React from "react";
 import { IPost } from "@/interfaces/blog";
 import { RichText } from "@graphcms/rich-text-react-renderer";
+import { Button } from "../../components/ui/button";
+import { getBookingButtonText } from "@/lib/utils";
 
 export default function Blog({ blog }: { blog: IPost }) {
   const CalendlyButton = dynamic(() => import("../../components/booking2"), {
@@ -50,7 +52,12 @@ export default function Blog({ blog }: { blog: IPost }) {
                   className="transition-opacity opacity-0 duration-[0.5s]"
                   onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                 />
-                <CalendlyButton buttonClassNames="btn btn-ghost flex bg-black text-white text-bold text-xl sm:text-2xl text-center w-1/2 mx-auto" />
+                <div className="flex justify-center mt-4">
+                  <CalendlyButton
+                    buttonClassNames="bg-black text-white hover:bg-gray-800 px-8 py-3 text-xl font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+                    text={getBookingButtonText()}
+                  />
+                </div>
               </div>
             ),
           }} />
