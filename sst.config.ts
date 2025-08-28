@@ -7,7 +7,6 @@ export default {
     return {
       name: "liftperformance",
       region: "ap-east-1",
-      profile: "website",
     };
   },
   stacks(app) {
@@ -43,9 +42,9 @@ export default {
         customDomain:
           app.stage === "prod"
             ? {
-                domainName: "liftperformance.net",
-                domainAlias: "www.liftperformance.net",
-              }
+              domainName: "liftperformance.net",
+              domainAlias: "www.liftperformance.net",
+            }
             : undefined,
       });
 

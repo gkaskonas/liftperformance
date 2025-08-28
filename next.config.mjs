@@ -12,6 +12,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "ap-northeast-1.cdn.hygraph.com",
       },
+      {
+        protocol: "https",
+        hostname: "ap-northeast-1.graphassets.com",
+      },
     ],
   },
   async headers() {
