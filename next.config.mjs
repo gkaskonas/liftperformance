@@ -1,13 +1,16 @@
-import million from 'million/compiler';
-
+import million from "million/compiler";
 
 /** @type {import('next').NextConfig} */
-const nextConfig  = {
+const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: "https",
         hostname: "media.graphassets.com",
+      },
+      {
+        protocol: "https",
+        hostname: "ap-northeast-1.cdn.hygraph.com",
       },
     ],
   },
@@ -33,19 +36,19 @@ const nextConfig  = {
     ];
   },
   webpack(config) {
-    config.experiments = { ...config.experiments, topLevelAwait: true, };
+    config.experiments = { ...config.experiments, topLevelAwait: true };
     return config;
   },
   experimental: {
     workerThreads: false,
     cpus: 1,
-  }
+  },
 };
 
 const millionConfig = {
   auto: true,
   // if you're using RSC:
   // auto: { rsc: true },
-}
- 
+};
+
 export default million.next(nextConfig, millionConfig);
