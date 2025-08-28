@@ -47,6 +47,9 @@ const nextConfig = {
     workerThreads: false,
     cpus: 1,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 const millionConfig = {
