@@ -39,7 +39,7 @@ export default function Team({ trainers }: { trainers: Trainer[] }) {
               <DialogTrigger asChild>
                 <div
                   onClick={() => handleImageClick(trainer)}
-                  className="w-68 sm:w-[250px] card lg:w-[250px] xl:w-[330x] 2xl:w-[240px] 4xl:w-[270px] cursor-pointer"
+                  className="w-80 sm:w-[250px] card lg:w-[250px] xl:w-[330x] 2xl:w-[240px] 4xl:w-[270px] cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105"
                 >
                   <figure className="">
                     <Image
@@ -48,7 +48,7 @@ export default function Team({ trainers }: { trainers: Trainer[] }) {
                       height={trainer.image.height}
                       className="w-full transition-opacity opacity-0 duration-[0.5s]"
                       width={trainer.image.width}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      sizes="(max-width: 640px) 320px, (max-width: 768px) 250px, (max-width: 1200px) 50vw, 33vw"
                       onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                     />
                   </figure>
@@ -69,15 +69,16 @@ export default function Team({ trainers }: { trainers: Trainer[] }) {
                 <div className="text-center">
                   {selectedTrainer && (
                     <>
-                      <Image
-                        src={selectedTrainer.image.url}
-                        alt={selectedTrainer.name}
-                        className="mx-auto mb-6 w-2/3 rounded-lg transition-opacity opacity-0 duration-[0.5s]"
-                        width={selectedTrainer.image.width}
-                        height={selectedTrainer.image.height}
-                        onLoad={image => image.currentTarget.classList.remove("opacity-0")}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
+                      <div className="mx-auto mb-6 w-2/3 rounded-lg overflow-hidden">
+                        <Image
+                          src={selectedTrainer.image.url}
+                          alt={selectedTrainer.name}
+                          className="w-full h-auto"
+                          width={selectedTrainer.image.width}
+                          height={selectedTrainer.image.height}
+                          sizes="(max-width: 640px) 320px, (max-width: 768px) 250px, (max-width: 1200px) 50vw, 33vw"
+                        />
+                      </div>
                       <p className="mb-4 text-xl font-semibold text-gray-700">
                         {selectedTrainer.title}
                       </p>

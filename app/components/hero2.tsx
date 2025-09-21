@@ -1,14 +1,24 @@
 import React from "react";
+import Image from "next/image";
 import HeroLogoSection from "./hero-logo-section";
 
 export default function Hero2() {
   return (
     <section>
       <div
-        className="hero bg-[url('/photos/hero_latest.webp')] bg-cover bg-no-repeat bg-top min-h-[75vh] sm:min-h-[80vh] xl:min-h-[90vh]"
+        className="hero relative min-h-[75vh] sm:min-h-[80vh] xl:min-h-[90vh] z-0"
         id="hero"
       >
-        <HeroLogoSection />
+        <Image
+          src="/photos/hero_latest.webp"
+          alt="Hero background"
+          fill
+          className="object-cover object-top z-0"
+          priority
+        />
+        <div className="relative z-10">
+          <HeroLogoSection />
+        </div>
       </div>
       <div className="container mt-10 mx-auto xl:max-w-5xl sm:max-w-2xl prose w-[95%]">
         <h2> Welcome to our prestigious gym, where we redefine fitness and wellness.</h2>

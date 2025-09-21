@@ -88,8 +88,8 @@ export default function Testimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="-left-4 lg:-left-8" />
-          <CarouselNext className="-right-4 lg:-right-8" />
+          <CarouselPrevious className="left-2 top-1/2 -translate-y-1/2" />
+          <CarouselNext className="right-2 top-1/2 -translate-y-1/2" />
         </Carousel>
       </div>
     </section>

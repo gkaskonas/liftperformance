@@ -2,7 +2,7 @@
 
 import Image, { StaticImageData } from "next/image";
 import group from "../../public/photos/group.jpeg";
-import natal from "../../public/photos/natal.jpeg";
+import natal from "../../public/photos/natal2.jpeg";
 import service1 from "../../public/photos/personal.jpeg";
 import pilates from "../../public/photos/pilates.jpeg";
 import flexibility from "../../public/photos/flexibility_clipped.jpg";
@@ -54,32 +54,32 @@ export default function Services() {
       <div className="mx-auto max-w-2xl text-center">
         <h1 className="mb-2 text-center text-4xl font-bold  sm:text-5xl">Services</h1>
       </div>
-      <div className="gap-8 mt-10 max-w-6xl mx-auto px-4">
+      <div className="gap-6 sm:gap-8 mt-8 sm:mt-10 max-w-6xl mx-auto px-4 sm:px-6">
         {services.map((service: Service, index: number) => (
           <Fade direction={index % 2 === 0 ? "left" : "right"} key={index} duration={1500}>
-            <Card className={`overflow-hidden border-0 shadow-none ${index % 2 === 0
+            <Card className={`overflow-hidden border-0 shadow-none mb-6 sm:mb-8 ${index % 2 === 0
               ? "flex flex-col sm:flex-row"
               : "flex flex-col sm:flex-row-reverse"
               } motion-safe:animate-fadeIn`}>
-              <figure className="flex sm:w-1/2 sm:justify-center p-1 sm:p-2">
-                <div className="w-72 h-72 sm:w-96 sm:h-96 overflow-hidden rounded-lg">
+              <figure className="flex w-full sm:w-1/2 sm:justify-center p-2 sm:p-4">
+                <div className="w-full max-w-sm sm:max-w-none sm:w-96 sm:h-96 h-80 overflow-hidden rounded-lg mx-auto">
                   <Image
                     className="w-full h-full object-cover transition-opacity opacity-0 duration-[0.5s]"
                     src={service.image}
-                    alt="service image"
+                    alt={`${service.name} service image`}
                     loading="lazy"
                     placeholder="blur"
                     width={384}
                     height={384}
-                    sizes="(max-width: 768px) 288px, 384px"
+                    sizes="(max-width: 640px) 320px, (max-width: 768px) 384px, 384px"
                     onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                     quality={60}
                   />
                 </div>
               </figure>
-              <CardContent className="flex-1 p-1 sm:p-2 flex flex-col justify-center">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">{service.name}</h2>
-                <p className="text-gray-600 leading-relaxed text-base sm:text-lg">{service.description}</p>
+              <CardContent className="flex-1 p-4 sm:p-6 flex flex-col justify-center">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 text-gray-900">{service.name}</h2>
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base lg:text-lg">{service.description}</p>
               </CardContent>
             </Card>
           </Fade>

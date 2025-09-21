@@ -21,7 +21,7 @@ export default function NavBar() {
   });
 
   return (
-    <header className="absolute top-0 w-full z-10">
+    <header className="absolute top-0 w-full z-20">
       <div className="container flex h-24 items-center px-4">
         {/* Logo */}
         <Link href="/" className="mr-6 flex items-center space-x-2">

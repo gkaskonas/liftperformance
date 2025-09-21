@@ -14,7 +14,7 @@ export default function HeroLogoSection() {
   return (
     <div className="flex flex-col items-start justify-start min-h-[80vh] px-6 sm:px-8 md:px-12 lg:px-16 pt-24 sm:pt-32 md:pt-40 lg:pt-48">
       <div className="space-y-6 max-w-2xl">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight drop-shadow-lg">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight drop-shadow-lg" style={{ textShadow: '1px 1px 0 rgba(255,255,255,0.3), -1px -1px 0 rgba(255,255,255,0.3), 1px -1px 0 rgba(255,255,255,0.3), -1px 1px 0 rgba(255,255,255,0.3)' }}>
           Unleash your potential with our expert trainers
         </h1>
 
