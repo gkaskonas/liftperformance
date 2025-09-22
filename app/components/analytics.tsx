@@ -14,7 +14,7 @@ export default function Analytics() {
     if (pathname) {
       pageview(pathname);
     }
-  }, [ pathname, searchParams ]);
+  }, [pathname, searchParams]);
 
   if (process.env.NEXT_PUBLIC_VERCEL_ENV !== "production") {
     return null;
@@ -32,7 +32,7 @@ export default function Analytics() {
       </noscript>
       <Script
         id="gtm-script"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         async
         dangerouslySetInnerHTML={{
           __html: `

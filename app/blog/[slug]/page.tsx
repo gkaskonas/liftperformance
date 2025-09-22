@@ -1,5 +1,6 @@
 import { gql } from "graphql-request";
-import { hygraph } from "../../utils/hygraph";
+import { rateLimitedHygraph } from "../../utils/rate-limited-hygraph";
+import { getBlogs } from "../page";
 
 import type { Metadata, ResolvingMetadata } from "next";
 import Blog from "../components/blog";
@@ -7,19 +8,18 @@ import React, { Suspense } from "react";
 import LoadingTemplate from "../components/loading";
 import { IBlogPost, IPost } from "@/interfaces/blog";
 import "@/styles/globals.css"
-import { getBlogs } from "../page";
 import Analytics from "@/components/analytics";
 
 type Props = {
   params: { slug: string };
-  searchParams: { [ key: string ]: string | string[] | undefined };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
 export async function generateMetadata({ params, searchParams }: Props, parent: ResolvingMetadata): Promise<Metadata> {
   // read route params
   const slug = params.slug;
 
-  const blog: IBlogPost = await hygraph.request(gql`
+  const blog: IBlogPost = await rateLimitedHygraph.request(gql`
     {
       post(where: {slug: "${slug}"}) {
       id
@@ -40,7 +40,7 @@ export async function generateMetadata({ params, searchParams }: Props, parent: 
 }
 
 async function getBlog(slug: string): Promise<IPost> {
-  const blog: IBlogPost = await hygraph.request(gql`
+  const blog: IBlogPost = await rateLimitedHygraph.request(gql`
     {
       post(where: {slug: "${slug}"}) {
       id

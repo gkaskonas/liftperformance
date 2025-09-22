@@ -45,8 +45,7 @@ const nextConfig = {
     return config;
   },
   experimental: {
-    workerThreads: false,
-    cpus: 1,
+    optimizePackageImports: ["lucide-react", "react-icons"],
   },
   eslint: {
     ignoreDuringBuilds: true,

@@ -1,5 +1,5 @@
 import { gql } from "graphql-request";
-import { hygraph } from "../utils/hygraph";
+import { rateLimitedHygraph } from "../utils/rate-limited-hygraph";
 import { Metadata } from "next";
 import PaginatedBlogs from "./components/blogs";
 import React, { Suspense } from "react";
@@ -40,7 +40,7 @@ const QUERY = gql`
 `;
 
 export async function getBlogs(): Promise<IPost[]> {
-  const blogs: IBlog = await hygraph.request(QUERY);
+  const blogs: IBlog = await rateLimitedHygraph.request(QUERY);
 
   return blogs.posts;
 }

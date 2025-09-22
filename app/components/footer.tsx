@@ -4,7 +4,8 @@ import { SiWhatsapp } from "react-icons/si";
 import { MdOutlineEmail } from "react-icons/md";
 import React from "react";
 
-export default function Footer({ year }: { year: number }) {
+export default function Footer() {
+  const year = new Date().getFullYear();
   return (
     <section aria-label="Site Footer" className="my-12">
       <h2 className="mb-6 text-center text-4xl font-bold  sm:text-5xl">Contact Us</h2>

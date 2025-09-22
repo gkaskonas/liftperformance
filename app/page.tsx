@@ -10,13 +10,10 @@ import Analytics from "./components/analytics";
 import "./styles/globals.css";
 import { hygraph } from "./utils/hygraph";
 import { gql } from "graphql-request";
+import { Metadata } from "next";
 
 type TrainerData = {
   trainers: Trainer[];
-}
-
-function getYear() {
-  return new Date().getFullYear();
 }
 
 async function getTrainers() {
@@ -33,39 +30,48 @@ async function getTrainers() {
       width
       url
     }
-  }}`);
+  }}`, {
+    next: { revalidate: false }
+  });
 
   return data.trainers;
 }
 
 export default async function Page() {
-  // Fetch data directly in a Server Component
-  const year = getYear();
-  // Forward fetched data to your Client Component
+  // Load trainers in parallel with page render
+  const trainersPromise = getTrainers();
 
   const Calendly = dynamic(() => import("./components/booking"), {
     ssr: false,
+    loading: () => null,
   });
 
   const Testimonials = dynamic(() => import("./components/testimonials"), {
     ssr: false,
+    loading: () => null,
   });
-
-  const trainers = await getTrainers();
 
   return (
     <div className="" data-theme="light">
-      <Suspense>
+      <Suspense fallback={null}>
         <Analytics />
       </Suspense>
       <NavBar />
-      <Calendly />
       <Hero2 />
       <About />
       <Services />
-      <Team trainers={trainers} />
+      <Suspense fallback={<div className="min-h-[400px] flex items-center justify-center">Loading team...</div>}>
+        <TeamWrapper trainersPromise={trainersPromise} />
+      </Suspense>
       <Testimonials />
-      <Footer year={year} />
+      <Calendly />
+      <Footer />
     </div>
   );
+}
+
+// Separate component to handle async trainer loading
+async function TeamWrapper({ trainersPromise }: { trainersPromise: Promise<Trainer[]> }) {
+  const trainers = await trainersPromise;
+  return <Team trainers={trainers} />;
 }

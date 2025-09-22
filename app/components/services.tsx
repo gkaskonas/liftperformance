@@ -62,7 +62,7 @@ export default function Services() {
               : "flex flex-col sm:flex-row-reverse"
               } motion-safe:animate-fadeIn`}>
               <figure className="flex w-full sm:w-1/2 sm:justify-center p-2 sm:p-4">
-                <div className="w-full max-w-sm sm:max-w-none sm:w-96 sm:h-96 h-80 overflow-hidden rounded-lg mx-auto">
+                <div className="w-full max-w-xs sm:max-w-none sm:w-96 sm:h-96 h-64 overflow-hidden rounded-lg mx-auto">
                   <Image
                     className="w-full h-full object-cover transition-opacity opacity-0 duration-[0.5s]"
                     src={service.image}
@@ -71,7 +71,7 @@ export default function Services() {
                     placeholder="blur"
                     width={384}
                     height={384}
-                    sizes="(max-width: 640px) 320px, (max-width: 768px) 384px, 384px"
+                    sizes="(max-width: 640px) 288px, (max-width: 768px) 384px, 384px"
                     onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                     quality={60}
                   />
