@@ -6,7 +6,7 @@ export default function Hero2() {
   return (
     <section>
       <div
-        className="hero relative min-h-[75vh] sm:min-h-[80vh] xl:min-h-[90vh] z-0"
+        className="hero relative min-h-[75vh] sm:min-h-[80vh] xl:min-h-[90vh] z-0 bg-white"
         id="hero"
       >
         <Image
