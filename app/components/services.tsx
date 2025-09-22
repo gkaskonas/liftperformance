@@ -2,7 +2,7 @@
 
 import Image, { StaticImageData } from "next/image";
 import group from "../../public/photos/group.jpeg";
-import natal from "../../public/photos/natal2.jpeg";
+import natal from "../../public/photos/natal2.jpg";
 import service1 from "../../public/photos/personal.jpeg";
 import pilates from "../../public/photos/pilates.jpeg";
 import flexibility from "../../public/photos/flexibility_clipped.jpg";
