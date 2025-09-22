@@ -25,7 +25,16 @@ export default function NavBar() {
       <div className="container flex h-24 items-center px-4">
         {/* Logo */}
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Image src={logo} alt="Lift Performance Logo" width={100} height={100} />
+          <Image
+            src={logo}
+            alt="Lift Performance Logo"
+            width={100}
+            height={100}
+            priority
+            quality={90}
+            sizes="(max-width: 768px) 80px, 100px"
+            className="w-16 sm:w-20 md:w-24 lg:w-25 h-auto"
+          />
         </Link>
 
         {/* Spacer to push everything to the right */}
@@ -35,31 +44,31 @@ export default function NavBar() {
         <div className="hidden md:flex items-center space-x-6">
           <Link
             href="#team"
-            className="transition-colors hover:text-black text-gray-800 text-xl font-medium"
+            className="transition-all duration-200 hover:text-black text-gray-800 text-xl font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-white after:rounded after:transition-all after:duration-300 hover:after:w-full"
           >
             Team
           </Link>
           <Link
             href="#services"
-            className="transition-colors hover:text-black text-gray-800 text-xl font-medium"
+            className="transition-all duration-200 hover:text-black text-gray-800 text-xl font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-white after:rounded after:transition-all after:duration-300 hover:after:w-full"
           >
             Our Service
           </Link>
           <Link
             href="#testimonials"
-            className="transition-colors hover:text-black text-gray-800 text-xl font-medium"
+            className="transition-all duration-200 hover:text-black text-gray-800 text-xl font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-white after:rounded after:transition-all after:duration-300 hover:after:w-full"
           >
             Testimonials
           </Link>
           <Link
             href="#contact"
-            className="transition-colors hover:text-black text-gray-800 text-xl font-medium"
+            className="transition-all duration-200 hover:text-black text-gray-800 text-xl font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-white after:rounded after:transition-all after:duration-300 hover:after:w-full"
           >
             Contact
           </Link>
           <Link
             href="/blog"
-            className="transition-colors hover:text-black text-gray-800 text-xl font-medium"
+            className="transition-all duration-200 hover:text-black text-gray-800 text-xl font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-white after:rounded after:transition-all after:duration-300 hover:after:w-full"
           >
             Blog
           </Link>
@@ -82,10 +91,10 @@ export default function NavBar() {
           <SheetTrigger asChild>
             <Button
               variant="ghost"
-              className="ml-auto md:hidden"
-              size="sm"
+              className="ml-auto md:hidden p-3"
+              size="lg"
             >
-              <Menu className="h-5 w-5" />
+              <Menu className="h-8 w-8" />
               <span className="sr-only">Toggle Menu</span>
             </Button>
           </SheetTrigger>
@@ -93,31 +102,31 @@ export default function NavBar() {
             <nav className="flex flex-col gap-4">
               <Link
                 href="#team"
-                className="text-xl font-medium text-gray-800 hover:text-black transition-colors"
+                className="text-xl font-medium text-gray-800 hover:text-black transition-all duration-200 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-white after:rounded after:transition-all after:duration-300 hover:after:w-full"
               >
                 Team
               </Link>
               <Link
                 href="#services"
-                className="text-xl font-medium text-gray-800 hover:text-black transition-colors"
+                className="text-xl font-medium text-gray-800 hover:text-black transition-all duration-200 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-white after:rounded after:transition-all after:duration-300 hover:after:w-full"
               >
                 Our Service
               </Link>
               <Link
                 href="#testimonials"
-                className="text-xl font-medium text-gray-800 hover:text-black transition-colors"
+                className="text-xl font-medium text-gray-800 hover:text-black transition-all duration-200 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-white after:rounded after:transition-all after:duration-300 hover:after:w-full"
               >
                 Testimonials
               </Link>
               <Link
                 href="#contact"
-                className="text-xl font-medium text-gray-800 hover:text-black transition-colors"
+                className="text-xl font-medium text-gray-800 hover:text-black transition-all duration-200 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-white after:rounded after:transition-all after:duration-300 hover:after:w-full"
               >
                 Contact
               </Link>
               <Link
                 href="/blog"
-                className="text-xl font-medium text-gray-800 hover:text-black transition-colors"
+                className="text-xl font-medium text-gray-800 hover:text-black transition-all duration-200 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-white after:rounded after:transition-all after:duration-300 hover:after:w-full"
               >
                 Blog
               </Link>
