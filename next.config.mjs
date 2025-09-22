@@ -17,6 +17,7 @@ const nextConfig = {
         hostname: "ap-northeast-1.graphassets.com",
       },
     ],
+    minimumCacheTTL: 7776000,
   },
   async headers() {
     return [
