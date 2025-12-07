@@ -8,6 +8,8 @@ import { IPost, IBlog } from "@/interfaces/blog";
 import "@/styles/globals.css"
 import Analytics from "@/components/analytics";
 
+export const revalidate = 3600; // Revalidate every hour
+
 export const metadata: Metadata = {
   title: "Lift Performance Blog",
   description: "Discover fitness tips, workout plans, nutrition guides, and expert advice to achieve your gym goals",

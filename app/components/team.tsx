@@ -48,7 +48,8 @@ export default function Team({ trainers }: { trainers: Trainer[] }) {
                       height={trainer.image.height}
                       className="w-full transition-opacity opacity-0 duration-[0.5s]"
                       width={trainer.image.width}
-                      sizes="(max-width: 640px) 320px, (max-width: 768px) 250px, (max-width: 1200px) 50vw, 33vw"
+                      loading={index < 3 ? undefined : "lazy"}
+                      sizes="(max-width: 640px) 320px, (max-width: 768px) 250px, 270px"
                       onLoad={image => image.currentTarget.classList.remove("opacity-0")}
                     />
                   </figure>
@@ -76,7 +77,7 @@ export default function Team({ trainers }: { trainers: Trainer[] }) {
                           className="w-full h-auto"
                           width={selectedTrainer.image.width}
                           height={selectedTrainer.image.height}
-                          sizes="(max-width: 640px) 320px, (max-width: 768px) 250px, (max-width: 1200px) 50vw, 33vw"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1200px) 66vw, 600px"
                         />
                       </div>
                       <p className="mb-4 text-xl font-semibold text-gray-700">

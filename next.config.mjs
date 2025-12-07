@@ -37,6 +37,28 @@ const nextConfig = {
             key: "Strict-Transport-Security",
             value: "max-age=3571000; includeSubDomains; preload",
           },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=3600, stale-while-revalidate=86400",
+          },
+        ],
+      },
+      {
+        source: "/_next/static/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/photos/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
         ],
       },
     ];
@@ -48,6 +70,9 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react", "react-icons"],
   },
+  compress: true,
+  poweredByHeader: false,
+  reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
   },

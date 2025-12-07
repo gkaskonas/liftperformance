@@ -24,9 +24,10 @@ function Blogs({ currentBlogs }: { currentBlogs: IPost[] }) {
                   height={blog.coverImage.height}
                   className="w-full transition-opacity opacity-0 duration-[0.5s]"
                   alt="Blog Cover Image"
-                  priority
+                  priority={index === 0}
+                  loading={index === 0 ? undefined : "lazy"}
                   onLoad={image => image.currentTarget.classList.remove("opacity-0")}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 />
                 <Link href={`/blog/${blog.slug}`}>
                   <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
@@ -58,14 +59,12 @@ export default function PaginatedBlogs({ blogs, itemsPerPage }: { blogs: IPost[]
   // (This could be items from props; or items loaded in a local state
   // from an API endpoint with useEffect and useState)
   const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentItems = blogs.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(blogs.length / itemsPerPage);
 
   // Invoke when user click to request another page.
   const handlePageClick = (event: any) => {
     const newOffset = (event.selected * itemsPerPage) % blogs.length;
-    console.log(`User requested page number ${event.selected}, which is offset ${newOffset}`);
     setItemOffset(newOffset);
   };
 

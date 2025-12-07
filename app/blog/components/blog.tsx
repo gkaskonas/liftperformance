@@ -24,7 +24,7 @@ export default function Blog({ blog }: { blog: IPost }) {
           alt="cover image"
           priority
           onLoad={image => image.currentTarget.classList.remove("opacity-0")}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px"
         />
 
         <div className="mb-6 flex items-center">
@@ -51,6 +51,7 @@ export default function Blog({ blog }: { blog: IPost }) {
                   width={width ?? 0}
                   className="transition-opacity opacity-0 duration-[0.5s]"
                   onLoad={image => image.currentTarget.classList.remove("opacity-0")}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
                 />
                 <div className="flex justify-center mt-4">
                   <CalendlyButton

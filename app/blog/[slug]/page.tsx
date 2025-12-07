@@ -10,14 +10,9 @@ import { IBlogPost, IPost } from "@/interfaces/blog";
 import "@/styles/globals.css"
 import Analytics from "@/components/analytics";
 
-type Props = {
-  params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
-
-export async function generateMetadata({ params, searchParams }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }, parent: ResolvingMetadata): Promise<Metadata> {
   // read route params
-  const slug = params.slug;
+  const { slug } = await params;
 
   const blog: IBlogPost = await rateLimitedHygraph.request(gql`
     {
@@ -67,6 +62,8 @@ async function getBlog(slug: string): Promise<IPost> {
   return blog.post;
 }
 
+export const revalidate = 3600; // Revalidate every hour
+
 export async function generateStaticParams() {
   const posts = await getBlogs();
 
@@ -75,8 +72,8 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function Page({ params }: Props) {
-  const blog = await getBlog(params.slug);
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const blog = await getBlog((await params).slug);
 
   return (
     <div className="" data-theme="light">

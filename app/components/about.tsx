@@ -94,7 +94,8 @@ export default function About() {
                 loading="lazy"
                 placeholder="blur"
                 width={650}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                height={433}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 650px"
                 onLoad={image => image.currentTarget.classList.remove("opacity-0")}
               />
             </Fade>

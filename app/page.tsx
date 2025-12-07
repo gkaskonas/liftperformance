@@ -10,7 +10,6 @@ import Analytics from "./components/analytics";
 import "./styles/globals.css";
 import { hygraph } from "./utils/hygraph";
 import { gql } from "graphql-request";
-import { Metadata } from "next";
 
 type TrainerData = {
   trainers: Trainer[];
@@ -31,11 +30,14 @@ async function getTrainers() {
       url
     }
   }}`, {
-    next: { revalidate: false }
+    next: { revalidate: 3600 } // Cache for 1 hour
   });
 
   return data.trainers;
 }
+
+// Enable static generation with revalidation
+export const revalidate = 3600; // Revalidate every hour
 
 export default async function Page() {
   // Load trainers in parallel with page render
