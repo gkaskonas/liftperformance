@@ -35,6 +35,7 @@ export default {
         },
         logging: "combined",
         memorySize: 1024,
+        runtime: "nodejs20.x",
         environment: {
           NEXT_PUBLIC_VERCEL_ENV: app.stage === "prod" ? "production" : "development",
           NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID: app.stage === "prod" ? "GTM-KWXC4F4" : "whatever",
