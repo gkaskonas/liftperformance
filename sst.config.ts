@@ -33,7 +33,6 @@ export default {
         imageOptimization: {
           memorySize: 2048,
         },
-        logging: "combined",
         memorySize: 1024,
         runtime: "nodejs20.x",
         environment: {
