@@ -25,8 +25,8 @@ importers:
         specifier: ^1.2.4
         version: 1.2.4(@types/react@19.2.7)(react@19.2.1)
       aws-cdk-lib:
-        specifier: 2.117.0
-        version: 2.117.0(constructs@10.3.0)
+        specifier: 2.189.0
+        version: 2.189.0(constructs@10.3.0)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -192,9 +192,6 @@ packages:
   '@aws-cdk/asset-awscli-v1@2.2.257':
     resolution: {integrity: sha512-8F3CfFWbaN1kgMpzCvqpLO948lEOvD5t++AGUnPNjNLPTkbdi1v8gY85HvrkXHvKkKjHrlo8u+twGmQb6le4FA==}
 
-  '@aws-cdk/asset-kubectl-v20@2.1.4':
-    resolution: {integrity: sha512-Ps2MkmjYgMyflagqQ4dgTElc7Vwpqj8spw8dQVFiSeaaMPsuDSNsPax3/HjuDuwqsmLdaCZc6umlxYLpL0kYDA==}
-
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0':
     resolution: {integrity: sha512-7bY3J8GCVxLupn/kNmpPc5VJz8grx+4RKfnnJiO1LG+uxkZfANZG3RMHhE+qQxxwkyQ9/MfPtTpf748UhR425A==}
 
@@ -211,6 +208,13 @@ packages:
   '@aws-cdk/cli-plugin-contract@2.181.1':
     resolution: {integrity: sha512-sUwN8aCs7rYhoRWgANse2QtFPRjh+3VwKmDZ1lMSBAX953r3sKhfKBvgDUSgclLfn6dtQMAzsbG+yJkTAvK+vA==}
     engines: {node: '>= 18.0.0'}
+
+  '@aws-cdk/cloud-assembly-schema@41.2.0':
+    resolution: {integrity: sha512-JaulVS6z9y5+u4jNmoWbHZRs9uGOnmn/ktXygNWKNu1k6lF3ad4so3s18eRu15XCbUIomxN9WPYT6Ehh7hzONw==}
+    engines: {node: '>= 14.15.0'}
+    bundledDependencies:
+      - jsonschema
+      - semver
 
   '@aws-cdk/cloud-assembly-schema@44.5.0':
     resolution: {integrity: sha512-/dk9YtqF+BnBS6k4m7YWIp7Pd80m7jdjT8ED8gb3Rd9hAuAEUoJubO0M3EOlLFmknIesQNm95LYU6vt/MIQhWg==}
@@ -2877,8 +2881,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  aws-cdk-lib@2.117.0:
-    resolution: {integrity: sha512-My5T4hn34H6+tnZxKK2VlcvGI2N5SjqGt9lXWADcahdobuUcNizYrls7h/vcQ3BfwcZ5/tHTKtivkNyL8I1LDg==}
+  aws-cdk-lib@2.189.0:
+    resolution: {integrity: sha512-B5Uha7uRntOAyuKfU0eFtxij3ZVTzGAbetw5qaXlURa68wsWpKlU72/OyKugB6JYkhjCZkSTVVBxd1pVTosxEw==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
@@ -2893,6 +2897,7 @@ packages:
       - semver
       - table
       - yaml
+      - mime-types
 
   aws-cdk-lib@2.201.0:
     resolution: {integrity: sha512-0ioqzM5dkJl02uchOfgeCY3thV3jTn9YkyZ/UF5P4Hq9iNGHQqmPu5xE/VcAV7+P72Z/zV+QLV0xkVT6iLF/bw==}
@@ -6461,8 +6466,6 @@ snapshots:
 
   '@aws-cdk/asset-awscli-v1@2.2.257': {}
 
-  '@aws-cdk/asset-kubectl-v20@2.1.4': {}
-
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0': {}
 
   '@aws-cdk/aws-lambda-python-alpha@2.201.0-alpha.0(aws-cdk-lib@2.201.0(constructs@10.3.0))(constructs@10.3.0)':
@@ -6476,6 +6479,8 @@ snapshots:
       '@cdklabs/tskb': 0.0.4
 
   '@aws-cdk/cli-plugin-contract@2.181.1': {}
+
+  '@aws-cdk/cloud-assembly-schema@41.2.0': {}
 
   '@aws-cdk/cloud-assembly-schema@44.5.0': {}
 
@@ -11393,11 +11398,11 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
-  aws-cdk-lib@2.117.0(constructs@10.3.0):
+  aws-cdk-lib@2.189.0(constructs@10.3.0):
     dependencies:
       '@aws-cdk/asset-awscli-v1': 2.2.257
-      '@aws-cdk/asset-kubectl-v20': 2.1.4
       '@aws-cdk/asset-node-proxy-agent-v6': 2.1.0
+      '@aws-cdk/cloud-assembly-schema': 41.2.0
       constructs: 10.3.0
 
   aws-cdk-lib@2.201.0(constructs@10.3.0):
@@ -13191,7 +13196,7 @@ snapshots:
 
   ini@2.0.0: {}
 
-  ink-spinner@5.0.0(ink@4.4.1(@types/react@19.2.7)(react@19.2.1))(react@18.2.0):
+  ink-spinner@5.0.0(ink@4.4.1(@types/react@19.2.7)(react@18.2.0))(react@18.2.0):
     dependencies:
       cli-spinners: 2.9.2
       ink: 4.4.1(@types/react@19.2.7)(react@18.2.0)
@@ -14877,7 +14882,7 @@ snapshots:
       graphql-yoga: 3.9.1(graphql@16.8.1)
       immer: 9.0.21
       ink: 4.4.1(@types/react@19.2.7)(react@18.2.0)
-      ink-spinner: 5.0.0(ink@4.4.1(@types/react@19.2.7)(react@19.2.1))(react@18.2.0)
+      ink-spinner: 5.0.0(ink@4.4.1(@types/react@19.2.7)(react@18.2.0))(react@18.2.0)
       kysely: 0.25.0
       kysely-codegen: 0.10.1(kysely@0.25.0)
       kysely-data-api: 0.2.1(@aws-sdk/client-rds-data@3.699.0(aws-crt@1.27.5))(kysely@0.25.0)
