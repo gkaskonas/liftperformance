@@ -27,14 +27,14 @@ class RateLimitedHygraph {
         const now = Date.now();
 
         // Reset counter every minute
-        if (now - this.minuteStart > 60000) {
+        if (now - this.minuteStart > 30000) {
             this.requestCount = 0;
             this.minuteStart = now;
         }
 
         // Check if we've exceeded the rate limit
         if (this.requestCount >= MAX_REQUESTS_PER_MINUTE) {
-            const waitTime = 60000 - (now - this.minuteStart);
+            const waitTime = 30000 - (now - this.minuteStart);
             console.log(`Rate limit exceeded. Waiting ${waitTime}ms...`);
             await new Promise(resolve => setTimeout(resolve, waitTime));
             this.requestCount = 0;
