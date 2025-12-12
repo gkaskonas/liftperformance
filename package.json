@@ -52,7 +52,7 @@
     "@typescript-eslint/eslint-plugin": "6.17.0",
     "@typescript-eslint/parser": "6.17.0",
     "autoprefixer": "10.4.16",
-    "constructs": "10.3.0",
+    "constructs": "10.4.4",
     "cssnano": "6.0.2",
     "cypress": "13.6.2",
     "encoding": "0.1.13",
