@@ -57,7 +57,7 @@
     "cypress": "13.6.2",
     "encoding": "0.1.13",
     "esbuild": "0.19.11",
-    "eslint": "8.56.0",
+    "eslint": "9.26.0",
     "eslint-config-next": "15.5.7",
     "eslint-config-prettier": "9.1.0",
     "eslint-config-standard": "17.1.0",
